@@ -1,0 +1,100 @@
+@prefix gx: <https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+gx:PostalAddressShape a sh:NodeShape ;
+  sh:targetClass gx:headquarterAddress,
+    gx:legalAddress,
+    gx:locationAddress ;
+  sh:property [
+    sh:path gx:countryCode ;
+    sh:name "Country code" ;
+    sh:description "An ISO 3166-2 format value is expected." ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:pattern "^[a-zA-Z]{2}-(?:[a-zA-Z]{1,3}|[0-9]{1,3})$" ;
+    sh:flags "i" ;
+    sh:message "An ISO 3166-2 format value is expected."
+  ] .
+
+gx:LocationShape a sh:NodeShape ;
+  sh:targetClass gx:location ;
+  sh:property [
+    sh:path gx:gps ;
+    sh:name "GPS" ;
+    sh:description "A physical GPS value in ISO 6709:2008/Cor 1:2009 format." ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:message "A physical GPS value in ISO 6709:2008/Cor 1:2009 format is expected"
+  ] .
+
+gx:PhysicalResourceShape a sh:NodeShape ;
+  sh:targetClass gx:PhysicalResource ;
+  sh:property [
+    sh:path gx:name ;
+    sh:name "Name" ;
+    sh:description "A human readable name of the data resource" ;
+    sh:datatype xsd:string ;
+    sh:order 0 ;
+    sh:minCount 0 ;
+    sh:maxCount 1
+  ],
+  [
+    sh:path gx:description ;
+    sh:name "Description" ;
+    sh:description "A free text description of the data resource" ;
+    sh:datatype xsd:string ;
+    sh:order 1 ;
+    sh:minCount 0 ;
+    sh:maxCount 1
+  ],
+  [
+    sh:path gx:aggregationOf ;
+    sh:name "Aggregation of" ;
+    sh:description "resources related to the resource and that can exist independently of it." ;
+    sh:datatype xsd:string ;
+    sh:order 2 ;
+    sh:minCount 0
+  ],
+  [
+    sh:path gx:maintainedBy ;
+    sh:name "Maintained by" ;
+    sh:description "a list of resolvable link to the participants maintaining the resource in operational condition and thus having physical access to it." ;
+    sh:datatype xsd:string ;
+    sh:order 3 ;
+    sh:minCount 1
+  ],
+  [
+    sh:path gx:ownedBy ;
+    sh:name "Owned by" ;
+    sh:description "a list of resolvable link to the participants owning the resource." ;
+    sh:datatype xsd:string ;
+    sh:order 4 ;
+    sh:minCount 0
+  ],
+  [
+    sh:path gx:manufacturedBy ;
+    sh:name "Manufactured by" ;
+    sh:description "a list of resolvable link to the participants manufacturing the resource." ;
+    sh:datatype xsd:string ;
+    sh:order 5 ;
+    sh:minCount 0
+  ],
+  [
+    sh:path gx:locationAddress ;
+    sh:description "a list of physical locations in ISO 3166-2 alpha2, alpha-3 or numeric format." ;
+    sh:minCount 1 ;
+    sh:order 6 ;
+    sh:node gx:PostalAddressShape
+  ],
+  [
+    sh:path gx:location ;
+    sh:description "a list of physical GPS in ISO 6709:2008/Cor 1:2009 format." ;
+    sh:minCount 0 ;
+    sh:order 7 ;
+    sh:node gx:LocationShape
+  ] .
