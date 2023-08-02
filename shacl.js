@@ -48,15 +48,10 @@ async function transformToStream(raw, parser) {
   return await rdf.dataset().import(parser.import(stream));
 }
 
-// const filePath1 = "./smartsense/physical-resource/PhysicalResourceShape.ttl";
-// const filePath2 = "./smartsense/physical-resource/physical-resource.json";
+const filePath1 = "./smartsense/physical-resource/PhysicalResourceShape.ttl";
+const filePath2 = "./smartsense/physical-resource/physical-resource.json";
 
 
-const filePath1 = "./smartsense/virtual-data-resource/VirtualDataResourceShape.ttl";
-const filePath2 = "./smartsense/virtual-data-resource/virtual-data-resource.json";
-
-// const filePath1 = "./trustframework.ttl";
-// const filePath2 = "./legal-participant.json";
 
 async function validate() {
   const shapesDataset = await readFileAsync(filePath1);

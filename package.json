@@ -1,5 +1,5 @@
 {
-  "name": "demo1",
+  "name": "resource-shacl",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,12 +11,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@rdfjs/dataset": "^2.0.1",
     "@rdfjs/parser-jsonld": "^2.1.0",
     "@rdfjs/parser-n3": "^2.0.1",
-    "crypto": "^1.0.1",
     "jsonld": "^5.2.0",
-    "pem": "^1.14.8",
     "rdf-ext": "^2.2.0",
     "rdf-validate-shacl": "^0.4.5"
   }
