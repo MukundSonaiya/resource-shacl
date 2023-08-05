@@ -1,0 +1,144 @@
+@prefix gx: <https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+gx:LegalParticipantShape a sh:NodeShape ;
+    sh:targetClass gx:LegalParticipant ;
+    sh:property [
+        sh:path gx:legalRegistrationNumber ;
+        sh:node gx:legalRegistrationNumberShape ;
+        sh:minCount 1 ;
+    ], [
+        sh:path gx:parentOrganization ;
+        sh:node gx:LegalParticipantShape ;
+    ], [
+        sh:path gx:subOrganization ;
+        sh:node gx:LegalParticipantShape ;
+    ], [
+        sh:path gx:headquarterAddress ;
+        sh:minCount 1 ;
+        sh:node gx:PostalAddressShape ;
+    ], [
+        sh:path gx:legalAddress ;
+        sh:minCount 1 ;
+        sh:node gx:PostalAddressShape ;
+    ] .
+
+gx:legalRegistrationNumberShape a sh:NodeShape ;
+    sh:targetClass gx:legalRegistrationNumber ;
+    sh:message "At least one of taxID, vatID, EUID, EORI or leiCode must be defined." ;
+    sh:property [
+        sh:path gx:taxID ;
+        sh:datatype xsd:string ;
+        sh:minLength 3 ;
+    ];
+    sh:property [
+        sh:path gx:EUID ;
+        sh:datatype xsd:string ;
+        sh:minLength 3 ;
+    ];
+    sh:property [
+        sh:path gx:EORI ;
+        sh:datatype xsd:string ;
+        sh:minLength 3 ;
+    ];
+    sh:property [
+        sh:path gx:vatID ;
+        sh:datatype xsd:string ;
+        sh:minLength 3 ;
+    ];
+    sh:property [
+        sh:path gx:leiCode ;
+        sh:datatype xsd:string ;
+        sh:minLength 3 ;
+    ];
+    sh:or (
+        [
+            sh:path gx:taxID ;
+            sh:minCount 1 ;
+        ]
+        [
+            sh:path gx:EUID ;
+            sh:minCount 1 ;
+        ]
+        [
+            sh:path gx:EORI ;
+            sh:minCount 1 ;
+        ]
+        [
+            sh:path gx:vatID ;
+            sh:minCount 1 ;
+        ]
+        [
+            sh:path gx:leiCode ;
+            sh:minCount 1 ;
+        ]
+    ) .
+
+gx:GaiaXTermsAndConditionsShape a sh:NodeShape ;
+    sh:targetClass gx:GaiaXTermsAndConditions;
+    sh:property [
+        sh:path gx:termsAndConditions ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:hasValue '''The PARTICIPANT signing the Self-Description agrees as follows:
+- to update its descriptions about any changes, be it technical, organizational, or legal - especially but not limited to contractual in regards to the indicated attributes present in the descriptions.
+
+The keypair used to sign Verifiable Credentials will be revoked where Gaia-X Association becomes aware of any inaccurate statements in regards to the claims which result in a non-compliance with the Trust Framework and policy rules defined in the Policy Rules and Labelling Document (PRLD).''' ;
+    ] .
+    
+
+gx:VirtualSoftwareResourceShape a sh:NodeShape ;
+  sh:targetClass gx:VirtualSoftwareResource ;
+  sh:property [
+    sh:path gx:name ;
+    sh:name "Name" ;
+    sh:description "A human readable name of the data resource" ;
+    sh:datatype xsd:string ;
+    sh:order 0 ;
+    sh:minCount 0 ;
+    sh:maxCount 1
+  ],
+  [
+    sh:path gx:description ;
+    sh:name "Description" ;
+    sh:description "A free text description of the data resource" ;
+    sh:datatype xsd:string ;
+    sh:order 1 ;
+    sh:minCount 0 ;
+    sh:maxCount 1
+  ],
+  [
+    sh:path gx:aggregationOf ;
+    sh:name "Aggregation of" ;
+    sh:description "Resources related to the resource and that can exist independently of it." ;
+    sh:node gx:VirtualSoftwareResourceShape ;
+    sh:order 2 ;
+    sh:minCount 0
+  ],
+  [
+    sh:path gx:copyrightOwnedBy ;
+    sh:name "Copyright owned by" ;
+    sh:description "A list of copyright owners either as a free form string or participant URIs from which Self-Descriptions can be retrieved. A copyright owner is a person or organization that has the right to exploit the resource. Copyright owner does not necessarily refer to the author of the resource, who is a natural person and may differ from copyright owner." ;
+    sh:node gx:LegalParticipantShape ;
+    sh:order 3 ;
+    sh:minCount 1
+  ],
+  [
+    sh:path gx:license ;
+    sh:name "License" ;
+    sh:description "A list of SPDX identifiers or URL to document" ;
+    sh:datatype xsd:string ;
+    sh:order 4 ;
+    sh:minCount 1
+  ],
+  [
+    sh:path gx:policy ;
+    sh:name "Policy" ;
+    sh:description "A list of policy expressed using a DSL (e.g., Rego or ODRL) (access control, throttling, usage, retention, …)" ;
+    sh:datatype xsd:string ;
+    sh:order 5 ;
+    sh:minCount 1
+  ] .

@@ -1,0 +1,27 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
+  ],
+  "type": ["VerifiableCredential"],
+  "id": "http://smartproof.in/.well-known/test-resource-3.json",
+  "issuer": "did:web:dev.smartproof.in",
+  "issuanceDate": "2023-04-14T06:44:40.828Z",
+  "credentialSubject": {
+    "@context": "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#",
+    "@id": "http://smartproof.in/.well-known/test-resource-4.json",
+    "@type": "gx:VirtualSoftwareResource",
+    "gx:name": "Test Resource",
+    "gx:description": "Test Resource description",
+    "gx:copyrightOwnedBy": [
+      "https://dev.smartproof.in/.well-known/participant.json"
+    ],
+    "gx:license": [
+      "https://dev.smartproof.in/.well-known/resource-30-license-1",
+      "https://dev.smartproof.in/.well-known/resource-30-license-2"
+    ],
+    "gx:policy": [
+      "{\n        \"@context\": \"http://www.w3.org/ns/odrl.jsonld\",\n        \"@type\": \"Offer\",\n        \"uid\": \"http://example.com/policy:1011\",\n        \"profile\": \"http://example.com/odrl:profile:01\",\n        \"permission\": [\n          {\n            \"target\": \"http://example.com/asset:9898.movie\",\n            \"assigner\": \"http://example.com/party:org:abc\",\n            \"action\": \"play\"\n          }\n        ]\n      }"
+    ]
+  }
+}
