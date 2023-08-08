@@ -48,14 +48,22 @@ async function transformToStream(raw, parser) {
   return await rdf.dataset().import(parser.import(stream));
 }
 
+// Validate Participant
+// const filePath1 = "./gaia-x/trustframework.ttl";
+// const filePath2 = "./gaia-x/legal-participant.json";
+
 // Validate Physical Resource
 // const filePath1 = "./smartsense/physical-resource/PhysicalResourceShape.ttl";
 // const filePath2 = "./smartsense/physical-resource/physical-resource.json";
 
-// Validate Virtual Software Resource
-const filePath1 = "./smartsense/virtual-data-resource/VirtualDataResourceShape.ttl";
-const filePath2 = "./smartsense/virtual-data-resource/virtual-data-resource-1.json";
+// Validate virtual software resource
+// const filePath1 = "./smartsense/virtual-software-resource/VirtualSoftwareResourceShape.ttl";
+// const filePath2 = "./smartsense/virtual-software-resource/virtual-software-resource.json";
 
+
+// Validate virtual data Resource
+const filePath1 = "./smartsense/virtual-data-resource/VirtualDataResourceShape.ttl";
+const filePath2 = "./smartsense/virtual-data-resource/virtual-data-resource.json";
 
 
 

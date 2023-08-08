@@ -191,8 +191,8 @@ gx:ServiceOfferingShape
                      sh:node    gx:DataAccountExportShape ; ] .
 
 
-gx:VirtualDataResourceShape a sh:NodeShape ;
-  sh:targetClass gx:VirtualDataResource ;
+gx:VirtualSoftwareResourceShape a sh:NodeShape ;
+  sh:targetClass gx:VirtualSoftwareResource ;
   sh:property [
     sh:path gx:name ;
     sh:name "Name" ;
@@ -249,73 +249,4 @@ gx:VirtualDataResourceShape a sh:NodeShape ;
     sh:datatype xsd:string ;
     sh:order 5 ;
     sh:minCount 1
-  ],
-  [
-    sh:path gx:producedBy ;
-    sh:name "Produced by" ;
-    sh:description "A resolvable link to the participant self-description legally enabling the data usage" ;
-    sh:node gx:LegalParticipantShape ;
-    sh:order 6 ;
-    sh:minCount 1;
-    sh:maxCount 1
-  ],
-  [
-    sh:path gx:exposedThrough ;
-    sh:name "Exposed through" ;
-    sh:description "A resolvable link to the data exchange component that exposes the data resource." ;
-    sh:datatype xsd:string ;
-    sh:order 7 ;
-    sh:minCount 1
-  ],
-  [
-    sh:path gx:obsoleteDateTime ;
-    sh:name "Obsolete Date Time" ;
-    sh:description "Date time in ISO 8601 format after which data is obsolete." ;
-    sh:datatype xsd:string ;
-    sh:order 8;
-    sh:minCount 0;
-    sh:maxCount 1
-  ],[
-    sh:path gx:expirationDateTime ;
-    sh:name "Expiration Date Time" ;
-    sh:description "Date time in ISO 8601 format after which data is expired and shall be deleted." ;
-    sh:datatype xsd:string ;
-    sh:order 9;
-    sh:minCount 0;
-    sh:maxCount 1
-  ],
-  [
-    sh:path gx:containsPII ;
-    sh:name "Produced by" ;
-    sh:description "Boolean determined by Participant owning the Data Resource" ;
-    sh:datatype xsd:boolean ;
-    sh:order 10 ;
-    sh:minCount 1;
-    sh:maxCount 1
-  ],
-  [
-    sh:path gx:legalBasis ;
-    sh:name "Legal basis" ;
-    sh:description "One of the reasons as detailed in the identified Personal Data Protection Regimes, such as [GDPR2018]. Potential Legal Bases can be article 6, article 7 or article 9. It shall be expressed as a string matching 6.1.[a-f], 6.1.4, 7 or 9.2.[a-j]." ;
-    sh:datatype xsd:string ;
-    sh:in ("6.1.[a-f]" "6.1.4" "7" "9.2.[a-j]" );
-    sh:order 11 ;
-    sh:minCount 1;
-    sh:maxCount 1;
-    sh:property [
-            sh:path gx:containsPII ;
-            sh:hasValue true ;
-        ] ;
-  ],[
-    sh:path gx:dataProtectionContact ;
-    sh:name "Data protection contact" ;
-    sh:description "Means to address distinct personal data protection related questions related to the Data Source, either an URL pointing to a contact form or an emailaddress." ;
-    sh:datatype xsd:string ;
-    sh:order 12 ;
-    sh:minCount 1;
-    sh:maxCount 1;
-    sh:property [
-            sh:path gx:containsPII ;
-            sh:hasValue true ;
-        ] ;
   ] .
