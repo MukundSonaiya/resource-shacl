@@ -52,18 +52,12 @@ async function transformToStream(raw, parser) {
 // const filePath1 = "./gaia-x/trustframework.ttl";
 // const filePath2 = "./gaia-x/legal-participant.json";
 
-// Validate Physical Resource
-const filePath1 = "./smartsense/resource.ttl";
-// const filePath2 = "./smartsense/physical-resource.json";
 
-// Validate virtual software resource
-// const filePath2 = "./smartsense/virtual-software-resource.json";
-
-// Validate virtual data Resource
-const filePath2 = "./smartsense/virtual-data-resource.json";
-
-
-
+const filePath1 = "./smartsense/trustframework.ttl";
+// const filePath2 = "./smartsense/physical-resource.json"; // Validate Physical Resource
+// const filePath2 = "./smartsense/virtual-software-resource.json"; // Validate virtual software resource
+// const filePath2 = "./smartsense/virtual-data-resource.json";// Validate virtual data Resource
+const filePath2 = "./smartsense/service-offering.json";// Validate service offering with label level
 
 async function validate() {
   const shapesDataset = await readFileAsync(filePath1);
