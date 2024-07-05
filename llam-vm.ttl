@@ -1,0 +1,1536 @@
+@prefix gx: <https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Virtual Machine Service Offering Shape
+gx:VirtualMachineServiceOfferingShape
+    a sh:NodeShape ;
+    sh:targetClass gx:VirtualMachineServiceOffering ;
+    
+    # codeArtifact
+    sh:property [
+        sh:path gx:codeArtifact ;
+        sh:node gx:VMImageShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # instantiationReq
+    sh:property [
+        sh:path gx:instantiationReq ;
+        sh:node gx:ServerFlavorShape ;
+        sh:minCount 1 ;
+    ] ;
+
+    # tenantSeparation
+    sh:property [
+        sh:path gx:tenantSeparation ;
+        sh:in ( "hw-virtualized" "sw-virtualized" "os-virtualized" "os-hw-virtualized" "hw-partitioned" "physical" ) ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # providedBy
+    sh:property [
+        sh:path gx:providedBy ;
+        sh:node gx:LegalPersonShape ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # dependsOn
+    sh:property [
+        sh:path gx:dependsOn ;
+        sh:datatype xsd:string ;
+    ] ;
+
+    # aggregationOfResources
+    sh:property [
+        sh:path gx:aggregationOfResources ;
+        sh:datatype xsd:string ;
+    ] ;
+
+    # serviceOfferingTermsAndConditions
+    sh:property [
+        sh:path gx:serviceOfferingTermsAndConditions ;
+        sh:node gx:TermsAndConditionsShape ;
+        sh:minCount 1 ;
+    ] ;
+
+    # servicePolicy
+    sh:property [
+        sh:path gx:servicePolicy ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+
+    # dataProtectionRegime
+    sh:property [
+        sh:path gx:dataProtectionRegime ;
+        sh:in ( "GDPR2016" "LGPD2019" "PDPA2012" "CCPA2018" "VCDPA2021" ) ;
+    ] ;
+
+    # dataAccountExport
+    sh:property [
+        sh:path gx:dataAccountExport ;
+        sh:node gx:DataAccountExportShape ;
+        sh:minCount 1 ;
+    ] ;
+
+    # keyword
+    sh:property [
+        sh:path gx:keyword ;
+        sh:datatype xsd:string ;
+    ] ;
+
+    # provisionType
+    sh:property [
+        sh:path gx:provisionType ;
+        sh:in ( "Private" "Public" "Hybrid" ) ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # endpoint
+    sh:property [
+        sh:path gx:endpoint ;
+        sh:node gx:EndpointShape ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # hostedOn
+    sh:property [
+        sh:path gx:hostedOn ;
+        sh:datatype xsd:string ;
+    ] ;
+
+    # name
+    sh:property [
+        sh:path gx:name ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # description
+    sh:property [
+        sh:path gx:description ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+    ] .
+
+# Legal Person Shape
+gx:LegalPersonShape
+    a sh:NodeShape ;
+    
+    # registrationNumber
+    sh:property [
+        sh:path gx:registrationNumber ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # legalAddress
+    sh:property [
+        sh:path gx:legalAddress ;
+        sh:node gx:AddressShape ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # headquartersAddress
+    sh:property [
+        sh:path gx:headquartersAddress ;
+        sh:node gx:AddressShape ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # parentOrganizationOf
+    sh:property [
+        sh:path gx:parentOrganizationOf ;
+        sh:node gx:LegalPersonShape ;
+    ] ;
+    
+    # subOrganisationOf
+    sh:property [
+        sh:path gx:subOrganisationOf ;
+        sh:node gx:LegalPersonShape ;
+    ] ;
+    
+    # name
+    sh:property [
+        sh:path gx:name ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # description
+    sh:property [
+        sh:path gx:description ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+    ] .
+
+# VM Image Shape
+gx:VMImageShape
+    a sh:NodeShape ;
+    
+    # vmImageDiskFormat
+    sh:property [
+        sh:path gx:vmImageDiskFormat ;
+        sh:node gx:VMDiskTypeShape ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # hypervisorType
+    sh:property [
+        sh:path gx:hypervisorType ;
+        sh:node gx:HypervisorTypeShape ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # firmwareType
+    sh:property [
+        sh:path gx:firmwareType ;
+        sh:node gx:FirmTypeShape ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # hwRngTypeOfImage
+    sh:property [
+        sh:path gx:hwRngTypeOfImage ;
+        sh:node gx:RNGTypesShape ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # watchDogAction
+    sh:property [
+        sh:path gx:watchDogAction ;
+        sh:node gx:WatchDogActionsShape ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # fileSize
+    sh:property [
+        sh:path gx:fileSize ;
+        sh:node gx:MemorySizeShape ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # operatingSystem
+    sh:property [
+        sh:path gx:operatingSystem ;
+        sh:node gx:OperatingSystemShape ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # cpuReq
+    sh:property [
+        sh:path gx:cpuReq ;
+        sh:node gx:CPUShape ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # gpuReq
+    sh:property [
+        sh:path gx:gpuReq ;
+        sh:node gx:GPUShape ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # ramReq
+    sh:property [
+        sh:path gx:ramReq ;
+        sh:node gx:MemoryShape ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # videoRamSize
+    sh:property [
+        sh:path gx:videoRamSize ;
+        sh:node gx:MemorySizeShape ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # rootDiskReq
+    sh:property [
+        sh:path gx:rootDiskReq ;
+        sh:node gx:DiskShape ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # encryption
+    sh:property [
+        sh:path gx:encryption ;
+        sh:node gx:EncryptionShape ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # checkSum
+    sh:property [
+        sh:path gx:checkSum ;
+        sh:node gx:CheckSumShape ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # secureBoot
+    sh:property [
+        sh:path gx:secureBoot ;
+        sh:datatype xsd:boolean ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # vPMU
+    sh:property [
+        sh:path gx:vPMU ;
+        sh:datatype xsd:boolean ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # multiQueues
+    sh:property [
+        sh:path gx:multiQueues ;
+        sh:datatype xsd:boolean ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # updateStrategy
+    sh:property [
+        sh:path gx:updateStrategy ;
+        sh:node gx:UpdateStrategyShape ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # licenseIncluded
+    sh:property [
+        sh:path gx:licenseIncluded ;
+        sh:datatype xsd:boolean ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # maintenance
+    sh:property [
+        sh:path gx:maintenance ;
+        sh:node gx:MaintenanceSubscriptionShape ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # checksum
+    sh:property [
+        sh:path gx:checksum ;
+        sh:node gx:CheckSumShape ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # signature
+    sh:property [
+        sh:path gx:signature ;
+        sh:node gx:SignatureShape ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # version
+    sh:property [
+        sh:path gx:version ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # patchLevel
+    sh:property [
+        sh:path gx:patchLevel ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # buildDate
+    sh:property [
+        sh:path gx:buildDate ;
+        sh:datatype xsd:dateTime ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # copyrightOwnedBy
+    sh:property [
+        sh:path gx:copyrightOwnedBy ;
+        sh:node gx:LegalPersonShape ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # openSourceLicenseType
+    sh:property [
+        sh:path gx:openSourceLicenseType ;
+        sh:node gx:OpenSourceLicenseShape ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # keyword
+    sh:property [
+        sh:path gx:keyword ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # licenseType
+    sh:property [
+        sh:path gx:licenseType ;
+        sh:node gx:LicenseShape ;
+        sh:maxCount 1 ;
+    ] .
+    
+# Terms and Conditions Shape
+gx:TermsAndConditionsShape
+    a sh:NodeShape ;
+    
+    # termsOfService
+    sh:property [
+        sh:path gx:termsOfService ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # privacyPolicy
+    sh:property [
+        sh:path gx:privacyPolicy ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # endUserLicenseAgreement
+    sh:property [
+        sh:path gx:endUserLicenseAgreement ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # dataProtectionAgreement
+    sh:property [
+        sh:path gx:dataProtectionAgreement ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # serviceLevelAgreement
+    sh:property [
+        sh:path gx:serviceLevelAgreement ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] .
+
+# Data Account Export Shape
+gx:DataAccountExportShape
+    a sh:NodeShape ;
+    
+    # exportFormat
+    sh:property [
+        sh:path gx:exportFormat ;
+        sh:in ( "CSV" "JSON" "XML" ) ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # dataProtectionAgreement
+    sh:property [
+        sh:path gx:dataProtectionAgreement ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # frequency
+    sh:property [
+        sh:path gx:frequency ;
+        sh:datatype xsd:duration ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # endpoint
+    sh:property [
+        sh:path gx:endpoint ;
+        sh:node gx:EndpointShape ;
+        sh:maxCount 1 ;
+    ] .
+    
+# Address Shape
+gx:AddressShape
+    a sh:NodeShape ;
+    
+    # streetAddress
+    sh:property [
+        sh:path gx:streetAddress ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # addressLocality
+    sh:property [
+        sh:path gx:addressLocality ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # addressRegion
+    sh:property [
+        sh:path gx:addressRegion ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # postalCode
+    sh:property [
+        sh:path gx:postalCode ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # addressCountry
+    sh:property [
+        sh:path gx:addressCountry ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] .
+    
+# Server Flavor Shape
+gx:ServerFlavorShape
+    a sh:NodeShape ;
+    
+    # cpu
+    sh:property [
+        sh:path gx:cpu ;
+        sh:node gx:CPUShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # ram
+    sh:property [
+        sh:path gx:ram ;
+        sh:node gx:MemoryShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # disk
+    sh:property [
+        sh:path gx:disk ;
+        sh:node gx:DiskShape ;
+        sh:minCount 1 ;
+    ] .
+
+# Endpoint Shape
+gx:EndpointShape
+    a sh:NodeShape ;
+    
+    # url
+    sh:property [
+        sh:path gx:url ;
+        sh:datatype xsd:anyURI ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # protocol
+    sh:property [
+        sh:path gx:protocol ;
+        sh:in ( "HTTP" "HTTPS" "FTP" "SFTP" ) ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # port
+    sh:property [
+        sh:path gx:port ;
+        sh:datatype xsd:integer ;
+        sh:maxCount 1 ;
+    ] .
+    
+# CPU Shape
+gx:CPUShape
+    a sh:NodeShape ;
+    
+    # cores
+    sh:property [
+        sh:path gx:cores ;
+        sh:datatype xsd:integer ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # speed
+    sh:property [
+        sh:path gx:speed ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # architecture
+    sh:property [
+        sh:path gx:architecture ;
+        sh:in ( "x86" "x64" "ARM" ) ;
+        sh:maxCount 1 ;
+    ] .
+    
+# Memory Shape
+gx:MemoryShape
+    a sh:NodeShape ;
+    
+    # size
+    sh:property [
+        sh:path gx:size ;
+        sh:datatype xsd:integer ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # unit
+    sh:property [
+        sh:path gx:unit ;
+        sh:in ( "MB" "GB" "TB" ) ;
+        sh:maxCount 1 ;
+    ] .
+    
+# Disk Shape
+gx:DiskShape
+    a sh:NodeShape ;
+    
+    # size
+    sh:property [
+        sh:path gx:size ;
+        sh:datatype xsd:integer ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # type
+    sh:property [
+        sh:path gx:type ;
+        sh:in ( "HDD" "SSD" ) ;
+        sh:maxCount 1 ;
+    ] .
+
+# Encryption Shape
+gx:EncryptionShape
+    a sh:NodeShape ;
+    
+    # algorithm
+    sh:property [
+        sh:path gx:algorithm ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # keyLength
+    sh:property [
+        sh:path gx:keyLength ;
+        sh:datatype xsd:integer ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # mode
+    sh:property [
+        sh:path gx:mode ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] .
+    
+# CheckSum Shape
+gx:CheckSumShape
+    a sh:NodeShape ;
+    
+    # algorithm
+    sh:property [
+        sh:path gx:algorithm ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # value
+    sh:property [
+        sh:path gx:value ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] .
+    
+# Signature Shape
+gx:SignatureShape
+    a sh:NodeShape ;
+    
+    # algorithm
+    sh:property [
+        sh:path gx:algorithm ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # value
+    sh:property [
+        sh:path gx:value ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] .
+    
+# Operating System Shape
+gx:OperatingSystemShape
+    a sh:NodeShape ;
+    
+    # name
+    sh:property [
+        sh:path gx:name ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # version
+    sh:property [
+        sh:path gx:version ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] .
+    
+# GPU Shape
+gx:GPUShape
+    a sh:NodeShape ;
+    
+    # cores
+    sh:property [
+        sh:path gx:cores ;
+        sh:datatype xsd:integer ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # memory
+    sh:property [
+        sh:path gx:memory ;
+        sh:node gx:MemoryShape ;
+        sh:minCount 1 ;
+    ] .
+    
+# VMDiskType Shape
+gx:VMDiskTypeShape
+    a sh:NodeShape ;
+    
+    # type
+    sh:property [
+        sh:path gx:type ;
+        sh:in ( "QCOW2" "RAW" "VMDK" "VDI" ) ;
+        sh:maxCount 1 ;
+    ] .
+    
+# HypervisorType Shape
+gx:HypervisorTypeShape
+    a sh:NodeShape ;
+    
+    # type
+    sh:property [
+        sh:path gx:type ;
+        sh:in ( "KVM" "XEN" "VMWare" "Hyper-V" ) ;
+        sh:maxCount 1 ;
+    ] .
+    
+# FirmType Shape
+gx:FirmTypeShape
+    a sh:NodeShape ;
+    
+    # type
+    sh:property [
+        sh:path gx:type ;
+        sh:in ( "UEFI" "BIOS" ) ;
+        sh:maxCount 1 ;
+    ] .
+    
+# RNGTypes Shape
+gx:RNGTypesShape
+    a sh:NodeShape ;
+    
+    # type
+    sh:property [
+        sh:path gx:type ;
+        sh:in ( "Virtio" "Hyperv" "RDRAND" ) ;
+        sh:maxCount 1 ;
+    ] .
+
+# Network Interface Shape
+gx:NetworkInterfaceShape
+    a sh:NodeShape ;
+    
+    # macAddress
+    sh:property [
+        sh:path gx:macAddress ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # speed
+    sh:property [
+        sh:path gx:speed ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # interfaceType
+    sh:property [
+        sh:path gx:interfaceType ;
+        sh:in ( "Ethernet" "WiFi" "Infiniband" "FibreChannel" ) ;
+        sh:maxCount 1 ;
+    ] .
+    
+# IP Address Shape
+gx:IPAddressShape
+    a sh:NodeShape ;
+    
+    # address
+    sh:property [
+        sh:path gx:address ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # version
+    sh:property [
+        sh:path gx:version ;
+        sh:in ( "IPv4" "IPv6" ) ;
+        sh:maxCount 1 ;
+    ] .
+    
+# Domain Name Shape
+gx:DomainNameShape
+    a sh:NodeShape ;
+    
+    # name
+    sh:property [
+        sh:path gx:name ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # registrar
+    sh:property [
+        sh:path gx:registrar ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # expirationDate
+    sh:property [
+        sh:path gx:expirationDate ;
+        sh:datatype xsd:date ;
+        sh:minCount 1 ;
+    ] .
+    
+# Certificate Shape
+gx:CertificateShape
+    a sh:NodeShape ;
+    
+    # serialNumber
+    sh:property [
+        sh:path gx:serialNumber ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # issuer
+    sh:property [
+        sh:path gx:issuer ;
+        sh:node gx:LegalPersonShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # validFrom
+    sh:property [
+        sh:path gx:validFrom ;
+        sh:datatype xsd:date ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # validTo
+    sh:property [
+        sh:path gx:validTo ;
+        sh:datatype xsd:date ;
+        sh:minCount 1 ;
+    ] .
+
+# Port Shape
+gx:PortShape
+    a sh:NodeShape ;
+    
+    # number
+    sh:property [
+        sh:path gx:number ;
+        sh:datatype xsd:integer ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # protocol
+    sh:property [
+        sh:path gx:protocol ;
+        sh:in ( "TCP" "UDP" "SCTP" ) ;
+        sh:maxCount 1 ;
+    ] .
+    
+# VLAN Shape
+gx:VLANShape
+    a sh:NodeShape ;
+    
+    # id
+    sh:property [
+        sh:path gx:id ;
+        sh:datatype xsd:integer ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # name
+    sh:property [
+        sh:path gx:name ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] .
+    
+# Virtual Machine Shape
+gx:VirtualMachineShape
+    a sh:NodeShape ;
+    
+    # name
+    sh:property [
+        sh:path gx:name ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # description
+    sh:property [
+        sh:path gx:description ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # memory
+    sh:property [
+        sh:path gx:memory ;
+        sh:node gx:MemoryShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # disk
+    sh:property [
+        sh:path gx:disk ;
+        sh:node gx:DiskShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # cpu
+    sh:property [
+        sh:path gx:cpu ;
+        sh:node gx:CPUShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # networkInterface
+    sh:property [
+        sh:path gx:networkInterface ;
+        sh:node gx:NetworkInterfaceShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # operatingSystem
+    sh:property [
+        sh:path gx:operatingSystem ;
+        sh:node gx:OperatingSystemShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # encryption
+    sh:property [
+        sh:path gx:encryption ;
+        sh:node gx:EncryptionShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # checksum
+    sh:property [
+        sh:path gx:checksum ;
+        sh:node gx:CheckSumShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # signature
+    sh:property [
+        sh:path gx:signature ;
+        sh:node gx:SignatureShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # hypervisorType
+    sh:property [
+        sh:path gx:hypervisorType ;
+        sh:node gx:HypervisorTypeShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # vmDiskType
+    sh:property [
+        sh:path gx:vmDiskType ;
+        sh:node gx:VMDiskTypeShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # vlan
+    sh:property [
+        sh:path gx:vlan ;
+        sh:node gx:VLANShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # firmType
+    sh:property [
+        sh:path gx:firmType ;
+        sh:node gx:FirmTypeShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # rngTypes
+    sh:property [
+        sh:path gx:rngTypes ;
+        sh:node gx:RNGTypesShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # gpu
+    sh:property [
+        sh:path gx:gpu ;
+        sh:node gx:GPUShape ;
+        sh:maxCount 1 ;
+    ] .
+
+# Software Component Shape
+gx:SoftwareComponentShape
+    a sh:NodeShape ;
+    
+    # name
+    sh:property [
+        sh:path gx:name ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # version
+    sh:property [
+        sh:path gx:version ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # vendor
+    sh:property [
+        sh:path gx:vendor ;
+        sh:node gx:LegalPersonShape ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # license
+    sh:property [
+        sh:path gx:license ;
+        sh:node gx:LicenseShape ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # checksum
+    sh:property [
+        sh:path gx:checksum ;
+        sh:node gx:CheckSumShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # signature
+    sh:property [
+        sh:path gx:signature ;
+        sh:node gx:SignatureShape ;
+        sh:minCount 1 ;
+    ] .
+    
+# Module Shape
+gx:ModuleShape
+    a sh:NodeShape ;
+    
+    # name
+    sh:property [
+        sh:path gx:name ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # description
+    sh:property [
+        sh:path gx:description ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # version
+    sh:property [
+        sh:path gx:version ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # vendor
+    sh:property [
+        sh:path gx:vendor ;
+        sh:node gx:LegalPersonShape ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # license
+    sh:property [
+        sh:path gx:license ;
+        sh:node gx:LicenseShape ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # checksum
+    sh:property [
+        sh:path gx:checksum ;
+        sh:node gx:CheckSumShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # signature
+    sh:property [
+        sh:path gx:signature ;
+        sh:node gx:SignatureShape ;
+        sh:minCount 1 ;
+    ] .
+    
+# Virtual Service Shape
+gx:VirtualServiceShape
+    a sh:NodeShape ;
+    
+    # name
+    sh:property [
+        sh:path gx:name ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # description
+    sh:property [
+        sh:path gx:description ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # version
+    sh:property [
+        sh:path gx:version ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # vendor
+    sh:property [
+        sh:path gx:vendor ;
+        sh:node gx:LegalPersonShape ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # license
+    sh:property [
+        sh:path gx:license ;
+        sh:node gx:LicenseShape ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # checksum
+    sh:property [
+        sh:path gx:checksum ;
+        sh:node gx:CheckSumShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # signature
+    sh:property [
+        sh:path gx:signature ;
+        sh:node gx:SignatureShape ;
+        sh:minCount 1 ;
+    ] .
+
+# Service Level Agreement Shape
+gx:ServiceLevelAgreementShape
+    a sh:NodeShape ;
+    
+    # name
+    sh:property [
+        sh:path gx:name ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # description
+    sh:property [
+        sh:path gx:description ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # version
+    sh:property [
+        sh:path gx:version ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # vendor
+    sh:property [
+        sh:path gx:vendor ;
+        sh:node gx:LegalPersonShape ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # license
+    sh:property [
+        sh:path gx:license ;
+        sh:node gx:LicenseShape ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # checksum
+    sh:property [
+        sh:path gx:checksum ;
+        sh:node gx:CheckSumShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # signature
+    sh:property [
+        sh:path gx:signature ;
+        sh:node gx:SignatureShape ;
+        sh:minCount 1 ;
+    ] .
+    
+# Virtual Service Package Shape
+gx:VirtualServicePackageShape
+    a sh:NodeShape ;
+    
+    # name
+    sh:property [
+        sh:path gx:name ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # description
+    sh:property [
+        sh:path gx:description ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # version
+    sh:property [
+        sh:path gx:version ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # vendor
+    sh:property [
+        sh:path gx:vendor ;
+        sh:node gx:LegalPersonShape ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # license
+    sh:property [
+        sh:path gx:license ;
+        sh:node gx:LicenseShape ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # checksum
+    sh:property [
+        sh:path gx:checksum ;
+        sh:node gx:CheckSumShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # signature
+    sh:property [
+        sh:path gx:signature ;
+        sh:node gx:SignatureShape ;
+        sh:minCount 1 ;
+    ] .
+
+# Virtual Deployment Unit Shape
+gx:VirtualDeploymentUnitShape
+    a sh:NodeShape ;
+    
+    # name
+    sh:property [
+        sh:path gx:name ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # description
+    sh:property [
+        sh:path gx:description ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # virtualMachine
+    sh:property [
+        sh:path gx:virtualMachine ;
+        sh:node gx:VirtualMachineShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # softwareComponent
+    sh:property [
+        sh:path gx:softwareComponent ;
+        sh:node gx:SoftwareComponentShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # module
+    sh:property [
+        sh:path gx:module ;
+        sh:node gx:ModuleShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # virtualService
+    sh:property [
+        sh:path gx:virtualService ;
+        sh:node gx:VirtualServiceShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # serviceLevelAgreement
+    sh:property [
+        sh:path gx:serviceLevelAgreement ;
+        sh:node gx:ServiceLevelAgreementShape ;
+        sh:minCount 1 ;
+    ] .
+    
+# Virtual Network Function Shape
+gx:VirtualNetworkFunctionShape
+    a sh:NodeShape ;
+    
+    # name
+    sh:property [
+        sh:path gx:name ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # description
+    sh:property [
+        sh:path gx:description ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # version
+    sh:property [
+        sh:path gx:version ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # vendor
+    sh:property [
+        sh:path gx:vendor ;
+        sh:node gx:LegalPersonShape ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # license
+    sh:property [
+        sh:path gx:license ;
+        sh:node gx:LicenseShape ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # checksum
+    sh:property [
+        sh:path gx:checksum ;
+        sh:node gx:CheckSumShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # signature
+    sh:property [
+        sh:path gx:signature ;
+        sh:node gx:SignatureShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # virtualServicePackage
+    sh:property [
+        sh:path gx:virtualServicePackage ;
+        sh:node gx:VirtualServicePackageShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # virtualDeploymentUnit
+    sh:property [
+        sh:path gx:virtualDeploymentUnit ;
+        sh:node gx:VirtualDeploymentUnitShape ;
+        sh:minCount 1 ;
+    ] .
+
+# Physical Network Function Shape
+gx:PhysicalNetworkFunctionShape
+    a sh:NodeShape ;
+    
+    # name
+    sh:property [
+        sh:path gx:name ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # description
+    sh:property [
+        sh:path gx:description ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # version
+    sh:property [
+        sh:path gx:version ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # vendor
+    sh:property [
+        sh:path gx:vendor ;
+        sh:node gx:LegalPersonShape ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # license
+    sh:property [
+        sh:path gx:license ;
+        sh:node gx:LicenseShape ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # checksum
+    sh:property [
+        sh:path gx:checksum ;
+        sh:node gx:CheckSumShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # signature
+    sh:property [
+        sh:path gx:signature ;
+        sh:node gx:SignatureShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # virtualServicePackage
+    sh:property [
+        sh:path gx:virtualServicePackage ;
+        sh:node gx:VirtualServicePackageShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # virtualDeploymentUnit
+    sh:property [
+        sh:path gx:virtualDeploymentUnit ;
+        sh:node gx:VirtualDeploymentUnitShape ;
+        sh:minCount 1 ;
+    ] .
+    
+# VIM Type Shape
+gx:VIMTypeShape
+    a sh:NodeShape ;
+    
+    # type
+    sh:property [
+        sh:path gx:type ;
+        sh:in ( "OpenStack" "VMWare" "AmazonEC2" ) ;
+        sh:maxCount 1 ;
+    ] .
+    
+# VNF Descriptor Shape
+gx:VNFDescriptorShape
+    a sh:NodeShape ;
+    
+    # id
+    sh:property [
+        sh:path gx:id ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # version
+    sh:property [
+        sh:path gx:version ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # description
+    sh:property [
+        sh:path gx:description ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # vendor
+    sh:property [
+        sh:path gx:vendor ;
+        sh:node gx:LegalPersonShape ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # license
+    sh:property [
+        sh:path gx:license ;
+        sh:node gx:LicenseShape ;
+        sh:maxCount 1 ;
+    ] ;
+    
+    # checksum
+    sh:property [
+        sh:path gx:checksum ;
+        sh:node gx:CheckSumShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # signature
+    sh:property [
+        sh:path gx:signature ;
+        sh:node gx:SignatureShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # virtualServicePackage
+    sh:property [
+        sh:path gx:virtualServicePackage ;
+        sh:node gx:VirtualServicePackageShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # virtualDeploymentUnit
+    sh:property [
+        sh:path gx:virtualDeploymentUnit ;
+        sh:node gx:VirtualDeploymentUnitShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # virtualNetworkFunction
+    sh:property [
+        sh:path gx:virtualNetworkFunction ;
+        sh:node gx:VirtualNetworkFunctionShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # physicalNetworkFunction
+    sh:property [
+        sh:path gx:physicalNetworkFunction ;
+        sh:node gx:PhysicalNetworkFunctionShape ;
+        sh:minCount 1 ;
+    ] ;
+    
+    # vimType
+    sh:property [
+        sh:path gx:vimType ;
+        sh:node gx:VIMTypeShape ;
+        sh:minCount 1 ;
+    ] .

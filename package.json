@@ -15,6 +15,8 @@
     "@rdfjs/parser-n3": "^2.0.1",
     "jsonld": "^5.2.0",
     "rdf-ext": "^2.2.0",
-    "rdf-validate-shacl": "^0.4.5"
+    "rdf-validate-shacl": "^0.4.5",
+    "sparql-engine": "^0.6.0",
+    "sparqljs": "^3.7.1"
   }
 }

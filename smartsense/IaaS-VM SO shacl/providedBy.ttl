@@ -1,0 +1,65 @@
+@prefix gx: <https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+gx:LegalPersonShape a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "A legal person, who is uniquely identified by its registration number." ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:name "Legal Person" ;
+    
+    sh:property [ sh:class gx:LegalPerson ;
+            sh:description "A list of resolvable links to Gaia-X Credentials of participants with a legal mandate on this entity, e.g., as a subsidiary." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 4 ;
+            sh:path gx:subOrganisationOf ],
+
+        [ sh:description "Country's registration number, which identifies one specific entity. Valid formats are local, EUID, EORI, vatID, leiCode." ;
+            sh:minCount 1 ;
+            sh:name "registration number" ;
+            sh:or ( [ sh:class gx:LocalRegistrationNumber ] [ sh:class gx:VatID ] [ sh:class gx:LeiCode ] [ sh:class gx:EORI ] [ sh:class gx:EUID ] [ sh:class gx:TaxID ] ) ;
+            sh:order 0 ;
+            sh:path gx:registrationNumber ],
+
+        [ sh:class gx:Address ;
+            sh:description "The full legal address of the organization." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "legal address" ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 1 ;
+            sh:path gx:legalAddress ] ,
+
+        [ sh:class gx:Address ;
+            sh:description "Full physical location of the headquarter of the organization." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 2 ;
+            sh:path gx:headquartersAddress ],
+
+        [ sh:class gx:LegalPerson ;
+            sh:description "A list of resolvable links to Gaia-X Credentials of participants that this entity is a subOrganization of, if any." ;
+            sh:nodeKind sh:IRI ;
+            sh:order 3 ;
+            sh:path gx:parentOrganizationOf ],
+
+        [ sh:datatype xsd:string ;
+            sh:description "A human readable name of the entity." ;
+            sh:maxCount 1 ;
+            sh:name "name" ;
+            sh:nodeKind sh:Literal ;
+            sh:order 5 ;
+            sh:path schema:name ],
+
+        [ sh:datatype xsd:string ;
+            sh:description "A free text description of the entity." ;
+            sh:maxCount 1 ;
+            sh:name "description" ;
+            sh:nodeKind sh:Literal ;
+            sh:order 6 ;
+            sh:path schema:description ];
+
+    sh:targetClass gx:LegalPerson .

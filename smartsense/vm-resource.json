@@ -1,0 +1,382 @@
+{
+  "codeArtifact": {
+    "vmImageDiskFormat": "RAW",
+    "hypervisorType": "quemu",
+    "firmwareType": "BIOS",
+    "hwRngTypeOfImage": "Electrical noise",
+    "watchDogAction": "disabled",
+    "fileSize": {
+      "value": 1.2,
+      "unit": "GB"
+    },
+    "operatingSystem": {
+      "osDistribution": "Alpine Linux",
+      "checksum": {
+        "checkSumCalculation": "md5",
+        "checkSumValue": "String"
+      },
+      "signature": {
+        "signatureValue": "String",
+        "hashAlgorithm": "md5",
+        "signatureAlgorithm": "DSA"
+      },
+      "version": "String",
+      "patchLevel": "String",
+      "buildDate": "xsd:dateTime",
+      "copyrightOwnedBy": "String",
+      "license": "String",
+      "resourcePolicy": "String",
+      "aggregationOfResources": "String",
+      "name": "String",
+      "description": "String"
+    },
+    "cpuReq": {
+      "cpuArchitecture": "x86-32",
+      "cpuFlag": "String",
+      "smtEnabled": true,
+      "numberOfCores": 1,
+      "numberOfThreads": 1,
+      "baseFrequency": {
+        "value": 1.2,
+        "unit": "Hz"
+      },
+      "boostFrequency": {
+        "value": 1.2,
+        "unit": "Hz"
+      },
+      "lastLevelCacheSize": {
+        "value": 1.2,
+        "unit": "GB"
+      },
+      "thermalDesignPower": {
+        "value": 1.2,
+        "unit": "KW"
+      },
+      "vendor": "String",
+      "generation": "String",
+      "defaultOversubscriptionRatio": 1,
+      "supportedOversubscriptionRatio": 1
+    },
+    "gpuReq": {
+      "gpuInterconnection": "NVLink",
+      "gpuPassthrough": false,
+      "gpuProcessingUnits": 4,
+      "gpuMemory": {
+        "value": 1.2,
+        "unit": "MB"
+      },
+      "vendor": "String",
+      "generation": "String",
+      "defaultOversubscriptionRatio": 1,
+      "supportedOversubscriptionRatio": 1
+    },
+    "ramReq": {
+      "memorySize": {
+        "value": 1.2,
+        "unit": "MB"
+      },
+      "memoryClass": "SDRAM",
+      "memoryRank": "1R RDIMM",
+      "eccEnabled": true,
+      "hardwareEncryption": false,
+      "vendor": "String",
+      "generation": "String",
+      "defaultOversubscriptionRatio": 1,
+      "supportedOversubscriptionRatio": 1
+    },
+    "videoRamSize": {
+      "value": 1.2,
+      "unit": "GB"
+    },
+    "rootDiskReq": {
+      "diskSize": {
+        "value": 1.2,
+        "unit": "MB"
+      },
+      "diskType": "local HDD",
+      "diskBusType": "SATA",
+      "vendor": "String",
+      "generation": "String",
+      "defaultOversubscriptionRatio": 1,
+      "supportedOversubscriptionRatio": 1
+    },
+    "encryption": {
+      "cipher": "RSA",
+      "keyManagement": "BYOK"
+    },
+    "checkSum": {
+      "checkSumCalculation": "md5",
+      "checkSumValue": "String"
+    },
+    "secureBoot": false,
+    "vPMU": true,
+    "multiQueues": true,
+    "updateStrategy": {
+      "replaceFrequency": "yearly",
+      "hotfixHours": 1,
+      "oldVersionsValidUntil": "String",
+      "providedUntil": "String"
+    },
+    "licenseIncluded": false,
+    "maintenance": {
+      "subscriptionIncluded": false,
+      "subscriptionRequired": false,
+      "maintainedUntil": "xsd:date"
+    },
+    "signature": {
+      "signatureValue": "String",
+      "hashAlgorithm": "md5",
+      "signatureAlgorithm": "DSA"
+    },
+    "version": "String",
+    "patchLevel": "String",
+    "buildDate": "xsd:dateTime",
+    "copyrightOwnedBy": "String",
+    "license": "String",
+    "resourcePolicy": "String",
+    "aggregationOfResources": "String",
+    "name": "String",
+    "description": "String"
+  },
+  "instantiationReq": {
+    "cpu": {
+      "cpuArchitecture": "x86-32",
+      "cpuFlag": "String",
+      "smtEnabled": true,
+      "numberOfCores": 1,
+      "numberOfThreads": 1,
+      "baseFrequency": {
+        "value": 1.2,
+        "unit": "Hz"
+      },
+      "boostFrequency": {
+        "value": 1.2,
+        "unit": "Hz"
+      },
+      "lastLevelCacheSize": {
+        "value": 1.2,
+        "unit": "GB"
+      },
+      "thermalDesignPower": {
+        "value": 1.2,
+        "unit": "KW"
+      },
+      "vendor": "String",
+      "generation": "String",
+      "defaultOversubscriptionRatio": 1,
+      "supportedOversubscriptionRatio": 1
+    },
+    "ram": {
+      "memorySize": {
+        "value": 1.2,
+        "unit": "MB"
+      },
+      "memoryClass": "SDRAM",
+      "memoryRank": "1R RDIMM",
+      "eccEnabled": true,
+      "hardwareEncryption": false,
+      "vendor": "String",
+      "generation": "String",
+      "defaultOversubscriptionRatio": 1,
+      "supportedOversubscriptionRatio": 1
+    },
+    "gpu": {
+      "gpuInterconnection": "NVLink",
+      "gpuPassthrough": false,
+      "gpuProcessingUnits": 4,
+      "gpuMemory": {
+        "value": 1.2,
+        "unit": "MB"
+      },
+      "vendor": "String",
+      "generation": "String",
+      "defaultOversubscriptionRatio": 1,
+      "supportedOversubscriptionRatio": 1
+    },
+    "network": "String",
+    "bootVolume": {
+      "diskSize": {
+        "value": 1.2,
+        "unit": "MB"
+      },
+      "diskType": "local HDD",
+      "diskBusType": "SATA",
+      "vendor": "String",
+      "generation": "String",
+      "defaultOversubscriptionRatio": 1,
+      "supportedOversubscriptionRatio": 1
+    },
+    "additionalVolume": {
+      "diskSize": {
+        "value": 1.2,
+        "unit": "MB"
+      },
+      "diskType": "local HDD",
+      "diskBusType": "SATA",
+      "vendor": "String",
+      "generation": "String",
+      "defaultOversubscriptionRatio": 1,
+      "supportedOversubscriptionRatio": 1
+    },
+    "confidentialComputing": {
+      "technology": "String",
+      "attestationServiceURI": "String"
+    },
+    "hypervisor": {
+      "hypervisorType": "quemu",
+      "checksum": {
+        "checkSumCalculation": "md5",
+        "checkSumValue": "String"
+      },
+      "signature": {
+        "signatureValue": "String",
+        "hashAlgorithm": "md5",
+        "signatureAlgorithm": "DSA"
+      },
+      "version": "String",
+      "patchLevel": "String",
+      "buildDate": "xsd:dateTime",
+      "copyrightOwnedBy": "String",
+      "license": "String",
+      "resourcePolicy": "String",
+      "aggregationOfResources": "String",
+      "name": "String",
+      "description": "String"
+    },
+    "hardwareAssistedVirtualization": false,
+    "hwRngTypeOfFlavor": "Electrical noise",
+    "name": "String",
+    "description": "String"
+  },
+  "tenantSeparation": "hw-virtualized",
+  "providedBy": {
+    "registrationNumber": "String",
+    "legalAddress": {
+      "countryCode": "String",
+      "countryName": "String",
+      "gps": {
+        "latitude": "String",
+        "longitude": "String",
+        "altitude": "String",
+        "crs": "String"
+      },
+      "streetAddress": "String",
+      "postalCode": "String",
+      "locality": "String",
+      "region": "String"
+    },
+    "headquartersAddress": {
+      "countryCode": "String",
+      "countryName": "String",
+      "gps": {
+        "latitude": "String",
+        "longitude": "String",
+        "altitude": "String",
+        "crs": "String"
+      },
+      "streetAddress": "String",
+      "postalCode": "String",
+      "locality": "String",
+      "region": "String"
+    },
+    "parentOrganizationOf": {
+      "registrationNumber": "String",
+      "legalAddress": {
+        "countryCode": "String",
+        "countryName": "String",
+        "gps": {
+          "latitude": "String",
+          "longitude": "String",
+          "altitude": "String",
+          "crs": "String"
+        },
+        "streetAddress": "String",
+        "postalCode": "String",
+        "locality": "String",
+        "region": "String"
+      },
+      "headquartersAddress": {
+        "countryCode": "String",
+        "countryName": "String",
+        "gps": {
+          "latitude": "String",
+          "longitude": "String",
+          "altitude": "String",
+          "crs": "String"
+        },
+        "streetAddress": "String",
+        "postalCode": "String",
+        "locality": "String",
+        "region": "String"
+      },
+      "parentOrganizationOf": "null/ LegalPerson",
+      "subOrganisationOf": "null/ LegalPerson",
+      "name": "String",
+      "description": "String"
+    },
+    "subOrganisationOf": {
+      "registrationNumber": "String",
+      "legalAddress": {
+        "countryCode": "String",
+        "countryName": "String",
+        "gps": {
+          "latitude": "String",
+          "longitude": "String",
+          "altitude": "String",
+          "crs": "String"
+        },
+        "streetAddress": "String",
+        "postalCode": "String",
+        "locality": "String",
+        "region": "String"
+      },
+      "headquartersAddress": {
+        "countryCode": "String",
+        "countryName": "String",
+        "gps": {
+          "latitude": "String",
+          "longitude": "String",
+          "altitude": "String",
+          "crs": "String"
+        },
+        "streetAddress": "String",
+        "postalCode": "String",
+        "locality": "String",
+        "region": "String"
+      },
+      "parentOrganizationOf": "null/ LegalPerson",
+      "subOrganisationOf": "null/ LegalPerson",
+      "name": "String",
+      "description": "String"
+    },
+    "name": "String",
+    "description": "String"
+  },
+  "dependsOn": "String",
+  "aggregationOfResources": "String",
+  "serviceOfferingTermsAndConditions": {
+    "url": "String",
+    "hash": "String"
+  },
+  "servicePolicy": "String",
+  "dataProtectionRegime": ["GDPR2016", "CCPA2018"],
+  "dataAccountExport": {
+    "requestType": "API",
+    "accessType": "digital",
+    "formatType": "calendar"
+  },
+  "keyword": "String",
+  "provisionType": "private",
+  "endpoint": {
+    "endpointURL": "xsd:anyURI",
+    "standardConformity": {
+      "title": "String",
+      "standardReference": "xsd:anyURI",
+      "publisher": "String"
+    },
+    "formalDescription": "String"
+  },
+  "hostedOn": "String",
+  "name": "String",
+  "description": "String"
+}
