@@ -1,0 +1,484 @@
+{
+  "@context": "https://www.w3.org/2018/credentials/v1",
+  "type": ["VerifiablePresentation"],
+  "holder": "did:web:holder.dev.smart-x.smartsenselabs.com",
+  "verifiableCredential": [
+    {
+      "credentialSubject": {
+        "gx:legalName": "ambuja",
+        "gx:headquarterAddress": {
+          "gx:countrySubdivisionCode": "AD-02"
+        },
+        "gx:legalAddress": {
+          "gx:countrySubdivisionCode": "AD-02"
+        },
+        "id": "https://ambuja.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/participant.json#0",
+        "type": "gx:LegalParticipant",
+        "gx:legalRegistrationNumber": {
+          "id": "https://ambuja.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/participant.json#1"
+        }
+      },
+      "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://w3id.org/security/suites/jws-2020/v1",
+        "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
+      ],
+      "type": ["VerifiableCredential"],
+      "id": "https://ambuja.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/participant.json#0",
+      "issuer": "did:web:ambuja.dev.smart-x.smartsenselabs.com",
+      "issuanceDate": "2024-06-13T03:45:49.346594202Z",
+      "proof": {
+        "type": "JsonWebSignature2020",
+        "created": "2024-06-13T03:45:50.904Z",
+        "proofPurpose": "assertionMethod",
+        "verificationMethod": "did:web:ambuja.dev.smart-x.smartsenselabs.com#JWK2020-RSA",
+        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..n8Ka2hiMc5i8OQAevuj6Zb1jiaZqkyzffBJFhsAAicFS0qnJPvrwGsqBGTJgWdGZbEZVvIv7K3u4QfDqT9KllqvvUUyzWy2NCmN3h63hVWbzmGWwmUxhR4OAb2g19NQg7ygZJ-sBFthIqAP57wkHK6wFRkfUhHq0nV1hcydXMKwFkDGyr8NxaBE_ZcyMNA_uDeTRAY0-9EbTNtK_TJuouOu3Ufxg2BlLpT3XZgyGZ5ZkqPCLUq8tDYlnnr8_s_gHuhFIIFexZ_fhBCDzPCgjCcR_RjM0wB9vmKQkQAhq0rZw5HXzReJ0-SbouFbW6AAsxeJ8Y8WFJbvwq-RAdBuy6Q"
+      }
+    },
+    {
+      "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://w3id.org/security/suites/jws-2020/v1"
+      ],
+      "type": ["VerifiableCredential"],
+      "id": "https://ambuja.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/participant.json#1",
+      "issuer": "did:web:registration.lab.gaia-x.eu:v1",
+      "issuanceDate": "2024-06-13T03:45:49.852Z",
+      "credentialSubject": {
+        "@context": "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#",
+        "type": "gx:legalRegistrationNumber",
+        "id": "https://ambuja.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/participant.json#1",
+        "gx:vatID": "FR79537407926",
+        "gx:vatID-countryCode": "FR"
+      },
+      "evidence": [
+        {
+          "gx:evidenceURL": "http://ec.europa.eu/taxation_customs/vies/services/checkVatService",
+          "gx:executionDate": "2024-06-13T03:45:49.852Z",
+          "gx:evidenceOf": "gx:vatID"
+        }
+      ],
+      "proof": {
+        "type": "JsonWebSignature2020",
+        "created": "2024-06-13T03:45:49.868Z",
+        "proofPurpose": "assertionMethod",
+        "verificationMethod": "did:web:registration.lab.gaia-x.eu:v1#X509-JWK2020",
+        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..LoBcotgEohLgx48te0lZnlyor38l1TxkO2bXcwmiG-cBozlzGPvIE0tTn3y_SFxmZbsBhBlno-lBilVL9g_5ctPmPtrDnEZTrYWwvDGh6e6GBI9Gl6s9602JVgJAif-QUAo-AvdSQVh77asiQEFUVlEL_DUfbIPBJMiS7Dxin8Y__yo44fj89wcVGOVvn881svpMEUIuEKBHFMBNetjfPoGyTaTeB43zfnu6O_f1V-KpkGtpZsJwXs8Mi5GkmrgflTAjX-cjUuGxK3AueTOsUtHaGMHDOOC2kEPrCWraa6NSFQVqQHzxskOCZV14WVnge63b_N5gvroXqzEkRZjiWw"
+      }
+    },
+    {
+      "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://w3id.org/security/suites/jws-2020/v1",
+        "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
+      ],
+      "credentialSubject": {
+        "gx:termsAndConditions": "The PARTICIPANT signing the Self-Description agrees as follows:\n- to update its descriptions about any changes, be it technical, organizational, or legal - especially but not limited to contractual in regards to the indicated attributes present in the descriptions.\n\nThe keypair used to sign Verifiable Credentials will be revoked where Gaia-X Association becomes aware of any inaccurate statements in regards to the claims which result in a non-compliance with the Trust Framework and policy rules defined in the Policy Rules and Labelling Document (PRLD).",
+        "id": "https://ambuja.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/participant.json#2",
+        "type": "gx:GaiaXTermsAndConditions",
+        "@context": [
+          "https://www.w3.org/2018/credentials/v1",
+          "https://w3id.org/security/suites/jws-2020/v1",
+          "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
+        ]
+      },
+      "id": "https://ambuja.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/participant.json#2",
+      "issuanceDate": "2024-06-13T03:45:49.346594202Z",
+      "issuer": "did:web:ambuja.dev.smart-x.smartsenselabs.com",
+      "type": ["VerifiableCredential"],
+      "proof": {
+        "type": "JsonWebSignature2020",
+        "created": "2024-06-13T03:45:51.316Z",
+        "proofPurpose": "assertionMethod",
+        "verificationMethod": "did:web:ambuja.dev.smart-x.smartsenselabs.com#JWK2020-RSA",
+        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..UEpi0JJAPClFOWH_3NaEs5gN1vo4wce54OcNkU3RA1h7X-mNACsuqD4m15zAt2Q2XmU5RgP2OOeTzpB5hVk9kZOrE_u4kRxbq4c9g1cgBXPMYg_PKYAMdF0T80eVM_PXmy1rSIY7pOrOHWIASOEmj2GWE2CFiSubY8vZNRkaCNbeDEU8BSN8H_kaGOLto_pr5H-e3HlazN7BAfM7o6EyW-p8Hh5re5jf5EMOXqd_bqcjudYruapG1YU9kVK7MFhR6hxreFdTHd-riJwrLIH61AZyRMeB0C2NF8YdFRTiNu5oJ9clGoE_qO9dn1jHrLkoQXEYTE9yxbHvq7uKFIrg7g"
+      }
+    },
+    {
+      "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://w3id.org/security/suites/jws-2020/v1",
+        {
+          "dy": "https://dev-registry.learn.smartsenselabs.com/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#",
+          "gx": "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
+        }
+      ],
+      "id": "https://ambuja.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/service_iaas.json",
+      "type": "VerifiableCredential",
+      "issuer": "did:web:ambuja.dev.smart-x.smartsenselabs.com",
+      "issuanceDate": "2024-07-06T00:00:00Z",
+      "credentialSubject": {
+        "id": "https://ambuja.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/service_iaas.json",
+        "type": "dy:VirtualMachineServiceOffering",
+        "dy:codeArtifact": {
+          "type": "dy:VMImage",
+          "dy:vmImageDiskFormat": "RAW",
+          "dy:hypervisorType": "quemu",
+          "dy:firmwareType": "UEFI",
+          "dy:hwRngTypeOfImage": "Electrical noise",
+          "dy:watchDogAction": "reset",
+          "dy:fileSize": {
+            "type": "dy:MemorySize",
+            "dy:value": 4.0,
+            "dy:unit": "GB"
+          },
+          "dy:operatingSystem": {
+            "id": "https://ambuja.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/participant.json#2",
+            "type": "dy:OperatingSystem"
+          },
+          "dy:cpuReq": {
+            "type": "dy:CPU",
+            "dy:cpuArchitecture": "x86-64",
+            "dy:cpuFlag": ["ADX"],
+            "dy:smtEnabled": true,
+            "dy:numberOfCores": 4,
+            "dy:numberOfThreads": 4,
+            "dy:baseFrequency": {
+              "type": "http://qudt.org/vocab/quantitykind/FrequencyDefinition",
+              "dy:value": 4.0,
+              "dy:unit": "HZ"
+            },
+            "dy:boostFrequency": {
+              "type": "http://qudt.org/vocab/quantitykind/FrequencyDefinition",
+              "dy:value": 1.0,
+              "dy:unit": "MegaHZ"
+            },
+            "dy:lastLevelCacheSize": {
+              "type": "dy:MemorySize",
+              "dy:value": 40.0,
+              "dy:unit": "MegaBYTE"
+            },
+            "dy:thermalDesignPower": {
+              "dy:type": "http://qudt.org/vocab/quantitykind/Power",
+              "dy:value": 40.0,
+              "dy:unit": "MegaW"
+            },
+            "dy:vendor": "AWS",
+            "dy:generation": "t2.micro",
+            "dy:defaultOversubscriptionRatio": 1,
+            "dy:supportedOversubscriptionRatio": 1
+          },
+          "dy:gpuReq": {
+            "type": "dy:GPU",
+            "dy:gpuMemory": {
+              "type": "dy:MemorySize",
+              "dy:value": 40.0,
+              "dy:unit": "TeraBYTE"
+            },
+            "dy:gpuInterconnection": "NVLink",
+            "dy:gpuProcessingUnits": 16,
+            "dy:gpuPassthrough": true,
+            "dy:vendor": "AWS",
+            "dy:generation": "t2.micro",
+            "dy:defaultOversubscriptionRatio": 1,
+            "dy:supportedOversubscriptionRatio": 1
+          },
+          "dy:ramReq": {
+            "type": "dy:Memory",
+            "dy:memorySize": {
+              "type": "dy:MemorySize",
+              "dy:value": 4.0,
+              "dy:unit": "GB"
+            },
+            "dy:memoryClass": "SDRAM",
+            "dy:memoryRank": "4R LRDIMM",
+            "dy:eccEnabled": true,
+            "dy:hardwareEncryption": true,
+            "dy:vendor": "Sandisk",
+            "dy:generation": "latest",
+            "dy:defaultOversubscriptionRatio": 1,
+            "dy:supportedOversubscriptionRatio": 1
+          },
+          "dy:videoRamSize": {
+            "type": "dy:MemorySize",
+            "dy:value": 4.0,
+            "dy:unit": "GB"
+          },
+          "dy:rootDiskReq": {
+            "type": "dy:Disk",
+            "dy:diskSize": {
+              "type": "dy:MemorySize",
+              "dy:value": 4.0,
+              "dy:unit": "GB"
+            },
+            "dy:diskType": "local SSD",
+            "dy:diskBusType": "SATA",
+            "dy:vendor": "Sandisk",
+            "dy:generation": "latest",
+            "dy:defaultOversubscriptionRatio": 1,
+            "dy:supportedOversubscriptionRatio": 1
+          },
+          "dy:encryption": {
+            "type": "dy:Encryption",
+            "dy:cipher": "RSA",
+            "dy:keyManagement": "BYOK"
+          },
+          "dy:checkSum": {
+            "type": "dy:CheckSum",
+            "dy:checkSumCalculation": "blake2",
+            "dy:checkSumValue": "120EA8A25E5D487BF68B5F7096440019"
+          },
+          "dy:secureBoot": true,
+          "dy:vPMU": true,
+          "dy:multiQueues": true,
+          "dy:updateStrategy": {
+            "type": "dy:UpdateStrategy",
+            "dy:replaceFrequency": "yearly",
+            "dy:hotfixHours": 5,
+            "dy:oldVersionsValidUntil": "forever",
+            "dy:providedUntil": "none"
+          },
+          "dy:licenseIncluded": true,
+          "dy:maintenance": {
+            "type": "dy:MaintenanceSubscription",
+            "dy:subscriptionIncluded": true,
+            "dy:subscriptionRequired": true,
+            "dy:maintainedUntil": "2025-07-01"
+          },
+          "dy:checksum": {
+            "type": "dy:CheckSum",
+            "dy:checkSumCalculation": "md5",
+            "dy:checkSumValue": "120EA8A25E5D487BF68B5F7096440019"
+          },
+          "dy:signature": {
+            "type": "dy:Signature",
+            "dy:signatureValue": "120EA8A25E5D487BF68B5F7096440019",
+            "dy:hashAlgorithm": "sha-1",
+            "dy:signatureAlgorithm": "KCDSA"
+          },
+          "dy:version": "Ubuntu 20.04 LTS",
+          "dy:patchLevel": "1",
+          "dy:buildDate": "2022-09-27T18:00:00.000",
+          "dy:copyrightOwnedBy": ["Example Corp. 2"],
+          "dy:license": ["Glide"],
+          "dy:resourcePolicy": "allow intent",
+          "dy:aggregationOfResources": [
+            {
+              "id": "https://wizard-api.dev.smart-x.smartsenselabs.com/6723b472-65b0-4a4f-94ce-9d7a4ed9e4af/resource_b1af42bc-2ca7-4143-88f7-aacb8ab00b66.json"
+            }
+          ],
+          "dy:name": "Virtual Machine Service Offering",
+          "dy:description": "Offering virtual machine services with high-performance options"
+        },
+        "dy:tenantSeparation": "hw-virtualized",
+        "dy:providedBy": {
+          "id": "https://ambuja.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/participant.json#0"
+        },
+        "dy:dependsOn": [
+          {
+            "id": "https://ambuja.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/service_vtug.json"
+          }
+        ],
+        "dy:instantiationReq": {
+          "type": "dy:ServerFlavor",
+          "dy:cpu": {
+            "type": "dy:CPU",
+            "dy:cpuArchitecture": "x86-64",
+            "dy:cpuFlag": ["ADX"],
+            "dy:smtEnabled": true,
+            "dy:numberOfCores": 4,
+            "dy:numberOfThreads": 4,
+            "dy:baseFrequency": {
+              "type": "http://qudt.org/vocab/quantitykind/FrequencyDefinition",
+              "dy:value": 4.0,
+              "dy:unit": "HZ"
+            },
+            "dy:boostFrequency": {
+              "type": "http://qudt.org/vocab/quantitykind/FrequencyDefinition",
+              "dy:value": 1.0,
+              "dy:unit": "MegaHZ"
+            },
+            "dy:lastLevelCacheSize": {
+              "type": "dy:MemorySize",
+              "dy:value": 40.0,
+              "dy:unit": "MegaBYTE"
+            },
+            "dy:thermalDesignPower": {
+              "dy:type": "http://qudt.org/vocab/quantitykind/Power",
+              "dy:value": 40.0,
+              "dy:unit": "MegaW"
+            },
+            "dy:vendor": "AWS",
+            "dy:generation": "t2.micro",
+            "dy:defaultOversubscriptionRatio": 1,
+            "dy:supportedOversubscriptionRatio": 1
+          },
+          "dy:ram": {
+            "type": "dy:Memory",
+            "dy:memorySize": {
+              "type": "dy:MemorySize",
+              "dy:value": 4.0,
+              "dy:unit": "GB"
+            },
+            "dy:memoryClass": "SDRAM",
+            "dy:memoryRank": "4R LRDIMM",
+            "dy:eccEnabled": true,
+            "dy:hardwareEncryption": true,
+            "dy:vendor": "Sandisk",
+            "dy:generation": "latest",
+            "dy:defaultOversubscriptionRatio": 1,
+            "dy:supportedOversubscriptionRatio": 1
+          },
+          "dy:gpu": {
+            "type": "dy:GPU",
+            "dy:gpuMemory": {
+              "type": "dy:MemorySize",
+              "dy:value": 40.0,
+              "dy:unit": "TeraBYTE"
+            },
+            "dy:gpuInterconnection": "NVLink",
+            "dy:gpuProcessingUnits": 16,
+            "dy:gpuPassthrough": true,
+            "dy:vendor": "AWS",
+            "dy:generation": "t2.micro",
+            "dy:defaultOversubscriptionRatio": 1,
+            "dy:supportedOversubscriptionRatio": 1
+          },
+          "dy:network": "10 Gbps",
+          "dy:bootVolume": {
+            "type": "dy:Disk",
+            "dy:diskSize": {
+              "type": "dy:MemorySize",
+              "dy:value": 4.0,
+              "dy:unit": "GB"
+            },
+            "dy:diskType": "local SSD",
+            "dy:diskBusType": "SATA",
+            "dy:vendor": "Sandisk",
+            "dy:generation": "latest",
+            "dy:defaultOversubscriptionRatio": 1,
+            "dy:supportedOversubscriptionRatio": 1
+          },
+          "dy:additionalVolume": [
+            {
+              "type": "dy:Disk",
+              "dy:diskSize": {
+                "type": "dy:MemorySize",
+                "dy:value": 1.0,
+                "dy:unit": "TB"
+              },
+              "dy:diskType": "local SSD",
+              "dy:diskBusType": "SATA",
+              "dy:vendor": "Sandisk",
+              "dy:generation": "latest",
+              "dy:defaultOversubscriptionRatio": 1,
+              "dy:supportedOversubscriptionRatio": 1
+            }
+          ],
+          "dy:confidentialComputing": {
+            "type": "dy:ConfidentialComputing",
+            "dy:technology": "GoLang",
+            "dy:attestationServiceURI": "https://github.com/topics/confidential-computing"
+          },
+          "dy:hypervisor": {
+            "type": "dy:Hypervisor",
+            "id": "https://wizard-api.dev.smart-x.smartsenselabs.com/6723b472-65b0-4a4f-94ce-9d7a4ed9e4af/resource_b1af42bc-2ca7-4143-88f7-aacb8ab00b66.json"
+          },
+          "dy:hardwareAssistedVirtualization": true,
+          "dy:hwRngTypeOfFlavor": "Quantum",
+          "dy:name": "High Performance Server",
+          "dy:description": "High-performance server flavor for demanding applications"
+        },
+        "dy:aggregationOfResources": [
+          {
+            "id": "https://wizard-api.dev.smart-x.smartsenselabs.com/6723b472-65b0-4a4f-94ce-9d7a4ed9e4af/resource_b1af42bc-2ca7-4143-88f7-aacb8ab00b66.json"
+          }
+        ],
+        "dy:serviceOfferingTermsAndConditions": {
+          "type": "dy:TermsAndConditions",
+          "dy:url": "http://www.stackoverflow.com",
+          "dy:hash": "d8402a23de560f5ab34b22d1a142feb9e13b3143"
+        },
+        "dy:servicePolicy": [
+          "https://wizard-api.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/service_8sQS_policy.json"
+        ],
+        "dy:dataProtectionRegime": [
+          "LGPD2019",
+          "PDPA2012",
+          "CCPA2018",
+          "GDPR2016",
+          "VCDPA2021"
+        ],
+        "dy:dataAccountExport": {
+          "type": "dy:DataAccountExport",
+          "dy:requestType": "email",
+          "dy:accessType": "digital",
+          "dy:formatType": ["1d-interleaved-parityfec"]
+        },
+        "dy:keyword": "Virtual Machine",
+        "dy:provisionType": "Private",
+        "dy:endpoint": {
+          "type": "dy:Endpoint",
+          "dy:endpointURL": "https://pdfobject.com/pdf/sample/",
+          "dy:standardConformity": {
+            "type": "dy:StandardConformity",
+            "dy:title": "OpenAPI 3.0",
+            "dy:standardReference": "https://www.openapi.com/",
+            "dy:publisher": "OpenAPI"
+          },
+          "dy:formalDescription": "API for managing virtual machine services"
+        },
+        "dy:hostedOn": [
+          {
+            "type": "dy:VirtualResource",
+            "id": "https://wizard-api.dev.smart-x.smartsenselabs.com/6723b472-65b0-4a4f-94ce-9d7a4ed9e4af/resource_b1af42bc-2ca7-4143-88f7-aacb8ab00b66.json"
+          }
+        ],
+        "dy:name": "Virtual Machine Service Offering",
+        "dy:description": "Offering virtual machine services with high-performance options"
+      },
+      "proof": {
+        "type": "JsonWebSignature2020",
+        "created": "2024-07-30T07:44:03.403Z",
+        "proofPurpose": "assertionMethod",
+        "verificationMethod": "did:web:ambuja.dev.smart-x.smartsenselabs.com#JWK2020-RSA",
+        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..zPHTm4VPadXdMci2omven5m0mFCfXk0fdDFpmiHXxrOu3ypVHUutEat8amE08PnOaJMfbifZZQj2hql58IcRs1HB6dQ9iaXMwCTo4FFD-45bI13UeEjfVGoxeCZCWIK-utidJqsFKxTFvmJQPMWPB6jEkCU9zF3U2DHX-h-3yXxE_GZZX74oFq1RFlTclpDsQU3TQbcc4txrxSlzCCqQBWDwCRDet8S_f4T1BfvqK22XZuiZgnzB3L5HSutWxpk5CcmOmC-nYH4B2EHbCFbb2jDuKUZGWUahscslRADl-biGUMybErJaeIaLA7MxMrZcyrxCLpKtxZqc3K0gBdGv0Q"
+      }
+    },
+    {
+      "type": "VerifiableCredential",
+      "id": "https://ambuja.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/service_vtug.json",
+      "issuer": "did:web:ambuja.dev.smart-x.smartsenselabs.com",
+      "issuanceDate": "2024-07-16T09:40:50.193633627Z",
+      "credentialSubject": {
+        "gx:termsAndConditions": {
+          "gx:URL": "https://www.smartsensesolutions.com/privacy-policy",
+          "gx:hash": "3140cac465e4a564d58274f19eb73c917ec4c8e85d2209d5a7f765332f083875"
+        },
+        "gx:policy": [
+          "https://wizard-api.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/service_vtug_policy.json"
+        ],
+        "gx:dataAccountExport": {
+          "gx:requestType": "API",
+          "gx:accessType": "physical",
+          "gx:formatType": ["application/3gppHal+json"]
+        },
+        "gx:aggregationOfExists": [
+          {
+            "id": "https://wizard-api.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/resource_e6d2f7bf-5530-48aa-b5a9-a60e757b2bf6.json"
+          }
+        ],
+        "gx:dataProtectionRegime": ["GDPR2016", "LGPD2019", "PDPA2012"],
+        "type": "gx:ServiceOffering",
+        "gx:labelLevel": "https://wizard-api.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/labelLevel_8c9b8931-59e6-41fe-ab26-a190a75b47de.json",
+        "gx:providedBy": {
+          "id": "https://ambuja.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/participant.json#0"
+        },
+        "id": "https://ambuja.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/service_vtug.json",
+        "gx:name": "Reliance"
+      },
+      "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://w3id.org/security/suites/jws-2020/v1",
+        "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
+      ],
+      "proof": {
+        "type": "JsonWebSignature2020",
+        "created": "2024-07-16T09:40:50.838Z",
+        "proofPurpose": "assertionMethod",
+        "verificationMethod": "did:web:ambuja.dev.smart-x.smartsenselabs.com",
+        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..t1BSwo9IN_cv4UhpxWSEAlAe86baNyQN8SLSRoXGEok4bWlVB1qT6QIpcvZ3dJOJuMQGCyppdkwpE5SXBmJdfXHWWVWJfKHdSs9RJ0GdZS7XV5AqGeTz90Yus_2xXZg1VkQeCkmyF7rULf3X9QyJregGpFbSKIg6o6n4Ly0FaYHDqK1nBv8s5Fui-PP_kqyrVu02qq1A7fGTvl1a2l5kD2a926qjvBBTxSc3tN9sI-fvqmreiOT0XVCFHwn6fHoN7aZduEzGoeHQ3fPdR177rjplBaYLtsOM0W52qqjgDwM7lIKQ6Ffj6VkRttVMqTlie2POn1doanOQGH5PHDkHkQ"
+      }
+    }
+  ]
+}

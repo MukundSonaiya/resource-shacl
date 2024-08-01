@@ -169,7 +169,8 @@
         "gx:locationAddress": [
           {
             "gx:countryCode": "FR-DE"
-          }, {
+          },
+          {
             "gx:countryCode": "AA-DE"
           }
         ],

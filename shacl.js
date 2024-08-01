@@ -1,10 +1,68 @@
 import SHACLValidator from "rdf-validate-shacl";
-import rdf from "rdf-ext";
+import rdf from "@zazuko/env-node";
 import { Readable } from "stream";
 import Parser from "@rdfjs/parser-n3";
 import jsonld from "jsonld";
 import fs1 from "fs";
 const fs = fs1.promises;
+
+// Validate Physical Resource
+
+const ENTITY = "mpc-laas"; //laas, mpc, lp, sample
+
+async function validate() {
+  const shaclFilePath = "./shacl/" + ENTITY + "/shacl.ttl";
+  const jsonFilePath = "./shacl/" + ENTITY + "/mpc.json";
+
+  const shapesDataset = await readFileAsync(shaclFilePath);
+  const selfDescriptionDataset = await readFileAsync(jsonFilePath);
+  const shapes = await loadFromTurtle(shapesDataset);
+
+  const parsedSD = JSON.parse(selfDescriptionDataset);
+
+  const data = await loadFromJSONLDWithQuads(parsedSD);
+
+  const validator = new SHACLValidator(shapes, { factory: rdf });
+
+  const report = await validator.validate(data);
+
+  const { conforms, results: reportResults } = report;
+
+  const results = [];
+
+  for (const result of reportResults) {
+    const {
+      message,
+      path: { value },
+    } = result;
+    // console.log(
+    //   "<------------------------------------------------------------------------------------------------>"
+    // );
+
+    // console.log(JSON.stringify(result.message));
+    // console.log(JSON.stringify(result.path));
+    // console.log(JSON.stringify(result.focusNode));
+    // console.log(JSON.stringify(result.severity));
+    // console.log(JSON.stringify(result.sourceConstraintComponent));
+    // console.log(JSON.stringify(result.sourceShape));
+    // console.log(
+    //   "<------------------------------------------------------------------------------------------------>"
+    // );
+    const msg = JSON.stringify(message);
+    results.push({ msg, path: value });
+  }
+
+  return {
+    conforms,
+    results,
+  };
+}
+
+validate()
+  .then((res) => {
+    console.log(res);
+  })
+  .catch(console);
 
 async function readFileAsync(filePath) {
   try {
@@ -17,6 +75,7 @@ async function readFileAsync(filePath) {
 
 async function loadFromJSONLDWithQuads(data) {
   const quads = await jsonld.canonize(data, { format: "application/n-quads" });
+
   const parser = new Parser({ factory: rdf });
   if (!quads || quads.length === 0) {
     throw new ConflictException(
@@ -44,62 +103,6 @@ async function transformToStream(raw, parser) {
   const stream = new Readable();
   stream.push(raw);
   stream.push(null);
-
-  return await rdf.dataset().import(parser.import(stream));
+  const result = await rdf.dataset().import(parser.import(stream));
+  return result;
 }
-
-// Validate Participant
-// const filePath1 = "./gaia-x/trustframework.ttl";
-// const filePath2 = "./gaia-x/legal-participant.json";
-
-// Validate Physical Resource
-const filePath1 = "./smartsense/resource.ttl";
-// const filePath2 = "./smartsense/physical-resource.json";
-
-// Validate virtual software resource
-// const filePath2 = "./smartsense/virtual-software-resource.json";
-
-// Validate virtual data Resource
-const filePath2 = "./smartsense/virtual-data-resource.json";
-
-
-
-
-async function validate() {
-  const shapesDataset = await readFileAsync(filePath1);
-  const selfDescriptionDataset = await readFileAsync(filePath2);
-  const shapes = await loadFromTurtle(shapesDataset);
-  
-  const data = await loadFromJSONLDWithQuads(JSON.parse(selfDescriptionDataset));
-  
-  const validator = new SHACLValidator(shapes, { factory: rdf });
-  const report = await validator.validate(data);
-  const { conforms, results: reportResults } = report;
-
-  const results = [];
-  for (const result of reportResults) {
-    let errorMessage = `ERROR: ${result.path}: ${
-      result.message || "does not conform with the given shape"
-    }`;
-
-    if (result.detail && result.detail.length > 0) {
-      errorMessage = `${errorMessage}; DETAILS:`;
-      for (const detail of result.detail) {
-        errorMessage = `${errorMessage} ${detail.path}: ${
-          detail.message || "does not conform with the given shape"
-        };`;
-      }
-    }
-    results.push(errorMessage);
-  }
-
-  return {
-    conforms,
-    results,
-  };
-}
-validate()
-  .then((res) => {
-    console.log(res);
-  })
-  .catch(console);

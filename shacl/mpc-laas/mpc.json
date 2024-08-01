@@ -1,0 +1,103 @@
+{
+  "@context": "https://www.w3.org/2018/credentials/v1",
+  "type": ["VerifiablePresentation"],
+  "verifiableCredential": [
+    {
+      "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://w3id.org/security/suites/jws-2020/v1",
+        {
+          "dy": "https://dev-registry.learn.smartsenselabs.com/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
+        }
+      ],
+      "id": "https://ambuja.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/mpc.json",
+      "type": ["VerifiableCredential"],
+      "issuer": "did:web:ambuja.dev.smart-x.smartsenselabs.com",
+      "issuanceDate": "2024-06-13T03:45:49.346594202Z",
+      "credentialSubject": {
+        "id": "https://ambuja.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/mpc.json",
+        "type": "dy:MembershipPartyCredential",
+        "dy:legalParticipantCompliance": {
+          "id": "https://compliance.lab.gaia-x.eu/v1-staging/credential-offers/2eb5fd4f-be0b-44b5-b79d-7fd69679d9e1"
+        },
+        "dy:datacenterLocation": [
+          {
+            "dy:countryCode": "AD-02"
+          }
+        ],
+        "dy:serviceLocation": [
+          {
+            "dy:countryCode": "AD-02"
+          }
+        ],
+        "dy:GDPR": true,
+        "dy:certificateOfIncorporation": true,
+        "dy:immuneFromNonEUJurisdiction": true,
+        "dy:ultimateParentCompany": {
+          "dy:countryCode": "AD-02"
+        },
+        "dy:headquarterStreetAddress": "Headquarter Street, Address",
+        "dy:legalStreetAddress": "Legal Street, Address",
+        "dy:certifications": [
+          {
+            "dy:certificationID": "ISO 27001",
+            "dy:expiryDate": "2025-07-18T23:59:59.00Z",
+            "dy:certifyingBody": "SIS Certifications"
+          }
+        ]
+      },
+      "proof": {
+        "type": "JsonWebSignature2020",
+        "created": "2024-07-26T13:21:18.410Z",
+        "proofPurpose": "assertionMethod",
+        "verificationMethod": "did:web:ambuja.dev.smart-x.smartsenselabs.com#JWK2020-RSA",
+        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..DJ3xnvPusaS__HrPeGnruQwJYETUnk1gzZZacizZF6aVu6sQViIKFpYtUEucSgwc3mgJCtkWvvJUFSUFUwcvhBV5gmKOfAi7pcCcfJsV1AT6JnfgLtAHp93-knoWSTnyJhBoekYeleux60HBEmFNHKHImet6jIr_-kFHVTjhr7OJXPKl_m2lXM3eCTgAcTUa3G9VefnH56hq0YT9H8_nymuAi1KgkFJU9PaFsnGpwAmgX2UX4ONDYUK38g4ZbJb6ZSgqVwfp-wMdbnNLbM_cB0-BfvH5iq7hUZh6a6D04cHrfisTADhdwIAvRaRNqEOxqAjpcgQdYJ2CusL1jcHmkA"
+      }
+    },
+    {
+      "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://w3id.org/security/suites/jws-2020/v1",
+        "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
+      ],
+      "type": ["VerifiableCredential"],
+      "id": "https://compliance.lab.gaia-x.eu/v1-staging/credential-offers/2eb5fd4f-be0b-44b5-b79d-7fd69679d9e1",
+      "issuer": "did:web:compliance.lab.gaia-x.eu:v1-staging",
+      "issuanceDate": "2024-06-13T03:45:56.168Z",
+      "expirationDate": "2024-09-11T03:45:56.169Z",
+      "credentialSubject": [
+        {
+          "type": "gx:compliance",
+          "id": "https://ambuja.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/participant.json#0",
+          "gx:integrity": "sha256-5cfe3d52beacc0445df6ef23f10fa7a1e9f81218e94f032cd6f9c849926e7240",
+          "gx:integrityNormalization": "RFC8785:JCS",
+          "gx:version": "22.10",
+          "gx:type": "gx:LegalParticipant"
+        },
+        {
+          "type": "gx:compliance",
+          "id": "https://ambuja.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/participant.json#1",
+          "gx:integrity": "sha256-72bfce03c8a76640469a5db5544f8c9add2402833e3f0358c1e99c818e23a3bd",
+          "gx:integrityNormalization": "RFC8785:JCS",
+          "gx:version": "22.10",
+          "gx:type": "gx:legalRegistrationNumber"
+        },
+        {
+          "type": "gx:compliance",
+          "id": "https://ambuja.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/participant.json#2",
+          "gx:integrity": "sha256-973173ed91971e7acf8155df5d0082d042154be2c2281211dde1d4a9f42dff5e",
+          "gx:integrityNormalization": "RFC8785:JCS",
+          "gx:version": "22.10",
+          "gx:type": "gx:GaiaXTermsAndConditions"
+        }
+      ],
+      "proof": {
+        "type": "JsonWebSignature2020",
+        "created": "2024-06-13T03:45:56.662Z",
+        "proofPurpose": "assertionMethod",
+        "verificationMethod": "did:web:compliance.lab.gaia-x.eu:v1-staging#X509-JWK2020",
+        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..S9g7YnAYJoZ2AQRgd18ID4N8t2KQlwC2WaalxdAiIA7-B8JmrHvHlHBBKBdm6C4ztJSQVZJpKky9Ou6UCs-zMk36s5IhRx6y4hQGM9dPvS76Msc_BEvM3sT6S22BU2crthbQDDWloY0GFDlPEzpPuZQjaYp8fm-ZYur5cDYb17u6HMuVeEaRp1Akg-34PELuRvMLnD_P_wk9TqHJs37z5d5u0kphcXp1173tEvm9a1IdvDk4SopVVy1-g7KXW7WNgVdG0yZxjtulXhFa2uZDYM0AxRMkLmJNtwduYPQtI6sdClPbd2QEfKy1PWRzBS0DCwuQmwHLBZEXlgt1gWTdlg"
+      }
+    }
+  ]
+}
