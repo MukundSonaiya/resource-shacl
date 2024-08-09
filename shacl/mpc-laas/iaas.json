@@ -98,8 +98,7 @@
         "https://www.w3.org/2018/credentials/v1",
         "https://w3id.org/security/suites/jws-2020/v1",
         {
-          "dy": "https://dev-registry.learn.smartsenselabs.com/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#",
-          "gx": "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
+          "gx": "https://dev-registry.learn.smartsenselabs.com/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
         }
       ],
       "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/service_iaas.json",
@@ -108,316 +107,316 @@
       "issuanceDate": "2024-07-06T00:00:00Z",
       "credentialSubject": {
         "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/service_iaas.json",
-        "type": "dy:VirtualMachineServiceOffering",
-        "dy:codeArtifact": [
+        "type": "gx:VirtualMachineServiceOffering",
+        "gx:codeArtifact": [
           {
-            "type": "dy:VMImage",
-            "dy:vmImageDiskFormat": "RAW",
-            "dy:hypervisorType": "quemu",
-            "dy:firmwareType": "UEFI",
-            "dy:hwRngTypeOfImage": "Electrical noise",
-            "dy:watchDogAction": "reset",
-            "dy:fileSize": {
-              "type": "dy:MemorySize",
-              "dy:value": 4,
-              "dy:unit": "GB"
+            "type": "gx:VMImage",
+            "gx:vmImageDiskFormat": "RAW",
+            "gx:hypervisorType": "quemu",
+            "gx:firmwareType": "UEFI",
+            "gx:hwRngTypeOfImage": "Electrical noise",
+            "gx:watchDogAction": "reset",
+            "gx:fileSize": {
+              "type": "gx:MemorySize",
+              "gx:value": 4,
+              "gx:unit": "GB"
             },
-            "dy:operatingSystem": {
+            "gx:operatingSystem": {
               "id": "https://ambuja.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/participant.json#2",
-              "type": "dy:OperatingSystem"
+              "type": "gx:OperatingSystem"
             },
-            "dy:cpuReq": {
-              "type": "dy:CPU",
-              "dy:cpuArchitecture": "x86-64",
-              "dy:cpuFlag": ["ADX"],
-              "dy:smtEnabled": true,
-              "dy:numberOfCores": 4,
-              "dy:numberOfThreads": 4,
-              "dy:baseFrequency": {
-                "dy:value": 4,
-                "dy:unit": "HZ"
+            "gx:cpuReq": {
+              "type": "gx:CPU",
+              "gx:cpuArchitecture": "x86-64",
+              "gx:cpuFlag": ["ADX"],
+              "gx:smtEnabled": true,
+              "gx:numberOfCores": 4,
+              "gx:numberOfThreads": 4,
+              "gx:baseFrequency": {
+                "gx:value": 4,
+                "gx:unit": "HZ"
               },
-              "dy:boostFrequency": {
-                "dy:value": 1,
-                "dy:unit": "MegaHZ"
+              "gx:boostFrequency": {
+                "gx:value": 1,
+                "gx:unit": "MegaHZ"
               },
-              "dy:lastLevelCacheSize": {
-                "type": "dy:MemorySize",
-                "dy:value": 40,
-                "dy:unit": "MegaBYTE"
+              "gx:lastLevelCacheSize": {
+                "type": "gx:MemorySize",
+                "gx:value": 40,
+                "gx:unit": "MegaBYTE"
               },
-              "dy:thermalDesignPower": {
-                "dy:value": 40,
-                "dy:unit": "MegaW"
+              "gx:thermalDesignPower": {
+                "gx:value": 40,
+                "gx:unit": "MegaW"
               },
-              "dy:vendor": "AWS",
-              "dy:generation": "t2.micro",
-              "dy:defaultOversubscriptionRatio": 1,
-              "dy:supportedOversubscriptionRatio": 1
+              "gx:vendor": "AWS",
+              "gx:generation": "t2.micro",
+              "gx:defaultOversubscriptionRatio": 1,
+              "gx:supportedOversubscriptionRatio": 1
             },
-            "dy:gpuReq": {
-              "type": "dy:GPU",
-              "dy:gpuMemory": {
-                "type": "dy:MemorySize",
-                "dy:value": 40,
-                "dy:unit": "TeraBYTE"
+            "gx:gpuReq": {
+              "type": "gx:GPU",
+              "gx:gpuMemory": {
+                "type": "gx:MemorySize",
+                "gx:value": 40,
+                "gx:unit": "TeraBYTE"
               },
-              "dy:gpuInterconnection": "NVLink",
-              "dy:gpuProcessingUnits": 16,
-              "dy:gpuPassthrough": true,
-              "dy:vendor": "AWS",
-              "dy:generation": "t2.micro",
-              "dy:defaultOversubscriptionRatio": 1,
-              "dy:supportedOversubscriptionRatio": 1
+              "gx:gpuInterconnection": "NVLink",
+              "gx:gpuProcessingUnits": 16,
+              "gx:gpuPassthrough": true,
+              "gx:vendor": "AWS",
+              "gx:generation": "t2.micro",
+              "gx:defaultOversubscriptionRatio": 1,
+              "gx:supportedOversubscriptionRatio": 1
             },
-            "dy:ramReq": {
-              "type": "dy:Memory",
-              "dy:memorySize": {
-                "type": "dy:MemorySize",
-                "dy:value": 4,
-                "dy:unit": "GB"
+            "gx:ramReq": {
+              "type": "gx:Memory",
+              "gx:memorySize": {
+                "type": "gx:MemorySize",
+                "gx:value": 4,
+                "gx:unit": "GB"
               },
-              "dy:memoryClass": "SDRAM",
-              "dy:memoryRank": "4R LRDIMM",
-              "dy:eccEnabled": true,
-              "dy:hardwareEncryption": true,
-              "dy:vendor": "Sandisk",
-              "dy:generation": "latest",
-              "dy:defaultOversubscriptionRatio": 1,
-              "dy:supportedOversubscriptionRatio": 1
+              "gx:memoryClass": "SDRAM",
+              "gx:memoryRank": "4R LRDIMM",
+              "gx:eccEnabled": true,
+              "gx:hardwareEncryption": true,
+              "gx:vendor": "Sandisk",
+              "gx:generation": "latest",
+              "gx:defaultOversubscriptionRatio": 1,
+              "gx:supportedOversubscriptionRatio": 1
             },
-            "dy:videoRamSize": {
-              "type": "dy:MemorySize",
-              "dy:value": 4,
-              "dy:unit": "GB"
+            "gx:videoRamSize": {
+              "type": "gx:MemorySize",
+              "gx:value": 4,
+              "gx:unit": "GB"
             },
-            "dy:rootDiskReq": {
-              "type": "dy:Disk",
-              "dy:diskSize": {
-                "type": "dy:MemorySize",
-                "dy:value": 4,
-                "dy:unit": "GB"
+            "gx:rootDiskReq": {
+              "type": "gx:Disk",
+              "gx:diskSize": {
+                "type": "gx:MemorySize",
+                "gx:value": 4,
+                "gx:unit": "GB"
               },
-              "dy:diskType": "local SSD",
-              "dy:diskBusType": "SATA",
-              "dy:vendor": "Sandisk",
-              "dy:generation": "latest",
-              "dy:defaultOversubscriptionRatio": 1,
-              "dy:supportedOversubscriptionRatio": 1
+              "gx:diskType": "local SSD",
+              "gx:diskBusType": "SATA",
+              "gx:vendor": "Sandisk",
+              "gx:generation": "latest",
+              "gx:defaultOversubscriptionRatio": 1,
+              "gx:supportedOversubscriptionRatio": 1
             },
-            "dy:encryption": {
-              "type": "dy:Encryption",
-              "dy:cipher": "RSA",
-              "dy:keyManagement": "BYOK"
+            "gx:encryption": {
+              "type": "gx:Encryption",
+              "gx:cipher": "RSA",
+              "gx:keyManagement": "BYOK"
             },
-            "dy:checkSum": {
-              "type": "dy:CheckSum",
-              "dy:checkSumCalculation": "blake2",
-              "dy:checkSumValue": "120EA8A25E5D487BF68B5F7096440019"
+            "gx:checkSum": {
+              "type": "gx:CheckSum",
+              "gx:checkSumCalculation": "blake2",
+              "gx:checkSumValue": "120EA8A25E5D487BF68B5F7096440019"
             },
-            "dy:secureBoot": true,
-            "dy:vPMU": true,
-            "dy:multiQueues": true,
-            "dy:updateStrategy": {
-              "type": "dy:UpdateStrategy",
-              "dy:replaceFrequency": "yearly",
-              "dy:hotfixHours": 5,
-              "dy:oldVersionsValidUntil": "forever",
-              "dy:providedUntil": "none"
+            "gx:secureBoot": true,
+            "gx:vPMU": true,
+            "gx:multiQueues": true,
+            "gx:updateStrategy": {
+              "type": "gx:UpdateStrategy",
+              "gx:replaceFrequency": "yearly",
+              "gx:hotfixHours": 5,
+              "gx:oldVersionsValidUntil": "forever",
+              "gx:providedUntil": "none"
             },
-            "dy:licenseIncluded": true,
-            "dy:maintenance": {
-              "type": "dy:MaintenanceSubscription",
-              "dy:subscriptionIncluded": true,
-              "dy:subscriptionRequired": true,
-              "dy:maintainedUntil": "2025-07-01"
+            "gx:licenseIncluded": true,
+            "gx:maintenance": {
+              "type": "gx:MaintenanceSubscription",
+              "gx:subscriptionIncluded": true,
+              "gx:subscriptionRequired": true,
+              "gx:maintainedUntil": "2025-07-01"
             },
-            "dy:checksum": {
-              "type": "dy:CheckSum",
-              "dy:checkSumCalculation": "md5",
-              "dy:checkSumValue": "120EA8A25E5D487BF68B5F7096440019"
+            "gx:checksum": {
+              "type": "gx:CheckSum",
+              "gx:checkSumCalculation": "md5",
+              "gx:checkSumValue": "120EA8A25E5D487BF68B5F7096440019"
             },
-            "dy:signature": {
-              "type": "dy:Signature",
-              "dy:signatureValue": "120EA8A25E5D487BF68B5F7096440019",
-              "dy:hashAlgorithm": "sha-1",
-              "dy:signatureAlgorithm": "KCDSA"
+            "gx:signature": {
+              "type": "gx:Signature",
+              "gx:signatureValue": "120EA8A25E5D487BF68B5F7096440019",
+              "gx:hashAlgorithm": "sha-1",
+              "gx:signatureAlgorithm": "KCDSA"
             },
-            "dy:version": "Ubuntu 20.04 LTS",
-            "dy:patchLevel": "1",
-            "dy:buildDate": "2022-09-27T18:00:00.000",
-            "dy:copyrightOwnedBy": ["Example Corp. 2"],
-            "dy:license": ["Glide"],
-            "dy:resourcePolicy": ["allow intent"],
-            "dy:aggregationOfResources": [
+            "gx:version": "Ubuntu 20.04 LTS",
+            "gx:patchLevel": "1",
+            "gx:buildDate": "2022-09-27T18:00:00.000",
+            "gx:copyrightOwnedBy": ["Example Corp. 2"],
+            "gx:license": ["Glide"],
+            "gx:resourcePolicy": ["allow intent"],
+            "gx:aggregationOfResources": [
               {
                 "id": "https://wizard-api.dev.smart-x.smartsenselabs.com/6723b472-65b0-4a4f-94ce-9d7a4ed9e4af/resource_b1af42bc-2ca7-4143-88f7-aacb8ab00b66.json"
               }
             ],
-            "dy:name": "Virtual Machine Service Offering",
-            "dy:description": "Offering virtual machine services with high-performance options"
+            "gx:name": "Virtual Machine Service Offering",
+            "gx:description": "Offering virtual machine services with high-performance options"
           }
         ],
-        "dy:tenantSeparation": "hw-virtualized",
-        "dy:providedBy": {
+        "gx:tenantSeparation": "hw-virtualized",
+        "gx:providedBy": {
           "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/participant.json#0"
         },
-        "dy:instantiationReq": [
+        "gx:instantiationReq": [
           {
-            "type": "dy:ServerFlavor",
-            "dy:cpu": {
-              "type": "dy:CPU",
-              "dy:cpuArchitecture": "x86-64",
-              "dy:cpuFlag": ["ADX"],
-              "dy:smtEnabled": true,
-              "dy:numberOfCores": 4,
-              "dy:numberOfThreads": 4,
-              "dy:baseFrequency": {
-                "dy:value": 4,
-                "dy:unit": "HZ"
+            "type": "gx:ServerFlavor",
+            "gx:cpu": {
+              "type": "gx:CPU",
+              "gx:cpuArchitecture": "x86-64",
+              "gx:cpuFlag": ["ADX"],
+              "gx:smtEnabled": true,
+              "gx:numberOfCores": 4,
+              "gx:numberOfThreads": 4,
+              "gx:baseFrequency": {
+                "gx:value": 4,
+                "gx:unit": "HZ"
               },
-              "dy:boostFrequency": {
-                "dy:value": 1,
-                "dy:unit": "MegaHZ"
+              "gx:boostFrequency": {
+                "gx:value": 1,
+                "gx:unit": "MegaHZ"
               },
-              "dy:lastLevelCacheSize": {
-                "type": "dy:MemorySize",
-                "dy:value": 40,
-                "dy:unit": "MegaBYTE"
+              "gx:lastLevelCacheSize": {
+                "type": "gx:MemorySize",
+                "gx:value": 40,
+                "gx:unit": "MegaBYTE"
               },
-              "dy:thermalDesignPower": {
-                "dy:value": 40,
-                "dy:unit": "MegaW"
+              "gx:thermalDesignPower": {
+                "gx:value": 40,
+                "gx:unit": "MegaW"
               },
-              "dy:vendor": "AWS",
-              "dy:generation": "t2.micro",
-              "dy:defaultOversubscriptionRatio": 1,
-              "dy:supportedOversubscriptionRatio": 1
+              "gx:vendor": "AWS",
+              "gx:generation": "t2.micro",
+              "gx:defaultOversubscriptionRatio": 1,
+              "gx:supportedOversubscriptionRatio": 1
             },
-            "dy:ram": {
-              "type": "dy:Memory",
-              "dy:memorySize": {
-                "type": "dy:MemorySize",
-                "dy:value": 4,
-                "dy:unit": "GB"
+            "gx:ram": {
+              "type": "gx:Memory",
+              "gx:memorySize": {
+                "type": "gx:MemorySize",
+                "gx:value": 4,
+                "gx:unit": "GB"
               },
-              "dy:memoryClass": "SDRAM",
-              "dy:memoryRank": "4R LRDIMM",
-              "dy:eccEnabled": true,
-              "dy:hardwareEncryption": true,
-              "dy:vendor": "Sandisk",
-              "dy:generation": "latest",
-              "dy:defaultOversubscriptionRatio": 1,
-              "dy:supportedOversubscriptionRatio": 1
+              "gx:memoryClass": "SDRAM",
+              "gx:memoryRank": "4R LRDIMM",
+              "gx:eccEnabled": true,
+              "gx:hardwareEncryption": true,
+              "gx:vendor": "Sandisk",
+              "gx:generation": "latest",
+              "gx:defaultOversubscriptionRatio": 1,
+              "gx:supportedOversubscriptionRatio": 1
             },
-            "dy:gpu": {
-              "type": "dy:GPU",
-              "dy:gpuMemory": {
-                "type": "dy:MemorySize",
-                "dy:value": 40,
-                "dy:unit": "TeraBYTE"
+            "gx:gpu": {
+              "type": "gx:GPU",
+              "gx:gpuMemory": {
+                "type": "gx:MemorySize",
+                "gx:value": 40,
+                "gx:unit": "TeraBYTE"
               },
-              "dy:gpuInterconnection": "NVLink",
-              "dy:gpuProcessingUnits": 16,
-              "dy:gpuPassthrough": true,
-              "dy:vendor": "AWS",
-              "dy:generation": "t2.micro",
-              "dy:defaultOversubscriptionRatio": 1,
-              "dy:supportedOversubscriptionRatio": 1
+              "gx:gpuInterconnection": "NVLink",
+              "gx:gpuProcessingUnits": 16,
+              "gx:gpuPassthrough": true,
+              "gx:vendor": "AWS",
+              "gx:generation": "t2.micro",
+              "gx:defaultOversubscriptionRatio": 1,
+              "gx:supportedOversubscriptionRatio": 1
             },
-            "dy:network": "10 Gbps",
-            "dy:bootVolume": {
-              "type": "dy:Disk",
-              "dy:diskSize": {
-                "type": "dy:MemorySize",
-                "dy:value": 4,
-                "dy:unit": "GB"
+            "gx:network": "10 Gbps",
+            "gx:bootVolume": {
+              "type": "gx:Disk",
+              "gx:diskSize": {
+                "type": "gx:MemorySize",
+                "gx:value": 4,
+                "gx:unit": "GB"
               },
-              "dy:diskType": "local SSD",
-              "dy:diskBusType": "SATA",
-              "dy:vendor": "Sandisk",
-              "dy:generation": "latest",
-              "dy:defaultOversubscriptionRatio": 1,
-              "dy:supportedOversubscriptionRatio": 1
+              "gx:diskType": "local SSD",
+              "gx:diskBusType": "SATA",
+              "gx:vendor": "Sandisk",
+              "gx:generation": "latest",
+              "gx:defaultOversubscriptionRatio": 1,
+              "gx:supportedOversubscriptionRatio": 1
             },
-            "dy:additionalVolume": [
+            "gx:additionalVolume": [
               {
-                "type": "dy:Disk",
-                "dy:diskSize": {
-                  "type": "dy:MemorySize",
-                  "dy:value": 1,
-                  "dy:unit": "TB"
+                "type": "gx:Disk",
+                "gx:diskSize": {
+                  "type": "gx:MemorySize",
+                  "gx:value": 1,
+                  "gx:unit": "TB"
                 },
-                "dy:diskType": "local SSD",
-                "dy:diskBusType": "SATA",
-                "dy:vendor": "Sandisk",
-                "dy:generation": "latest",
-                "dy:defaultOversubscriptionRatio": 1,
-                "dy:supportedOversubscriptionRatio": 1
+                "gx:diskType": "local SSD",
+                "gx:diskBusType": "SATA",
+                "gx:vendor": "Sandisk",
+                "gx:generation": "latest",
+                "gx:defaultOversubscriptionRatio": 1,
+                "gx:supportedOversubscriptionRatio": 1
               }
             ],
-            "dy:confidentialComputing": {
-              "type": "dy:ConfidentialComputing",
-              "dy:technology": "GoLang",
-              "dy:attestationServiceURI": "https://github.com/topics/confidential-computing"
+            "gx:confidentialComputing": {
+              "type": "gx:ConfidentialComputing",
+              "gx:technology": "GoLang",
+              "gx:attestationServiceURI": "https://github.com/topics/confidential-computing"
             },
-            "dy:hypervisor": {
-              "type": "dy:Hypervisor",
+            "gx:hypervisor": {
+              "type": "gx:Hypervisor",
               "id": "https://wizard-api.dev.smart-x.smartsenselabs.com/6723b472-65b0-4a4f-94ce-9d7a4ed9e4af/resource_b1af42bc-2ca7-4143-88f7-aacb8ab00b66.json"
             },
-            "dy:hardwareAssistedVirtualization": true,
-            "dy:hwRngTypeOfFlavor": "Quantum",
-            "dy:name": "High Performance Server",
-            "dy:description": "High-performance server flavor for demanding applications"
+            "gx:hardwareAssistedVirtualization": true,
+            "gx:hwRngTypeOfFlavor": "Quantum",
+            "gx:name": "High Performance Server",
+            "gx:description": "High-performance server flavor for demanding applications"
           }
         ],
-        "dy:aggregationOfResources": [
+        "gx:aggregationOfResources": [
           {
             "id": "https://wizard-api.dev.smart-x.smartsenselabs.com/6723b472-65b0-4a4f-94ce-9d7a4ed9e4af/resource_b1af42bc-2ca7-4143-88f7-aacb8ab00b66.json"
           }
         ],
-        "dy:serviceOfferingTermsAndConditions": {
-          "type": "dy:TermsAndConditions",
-          "dy:url": "http://www.stackoverflow.com",
-          "dy:hash": "d8402a23de560f5ab34b22d1a142feb9e13b3143"
+        "gx:serviceOfferingTermsAndConditions": {
+          "type": "gx:TermsAndConditions",
+          "gx:url": "http://www.stackoverflow.com",
+          "gx:hash": "d8402a23de560f5ab34b22d1a142feb9e13b3143"
         },
-        "dy:servicePolicy": [
+        "gx:servicePolicy": [
           "https://wizard-api.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/service_8sQS_policy.json"
         ],
-        "dy:dataProtectionRegime": [
+        "gx:dataProtectionRegime": [
           "LGPD2019",
           "PDPA2012",
           "CCPA2018",
           "GDPR2016",
           "VCDPA2021"
         ],
-        "dy:dataAccountExport": {
-          "type": "dy:DataAccountExport",
-          "dy:requestType": "email",
-          "dy:accessType": "digital",
-          "dy:formatType": ["1d-interleaved-parityfec"]
+        "gx:dataAccountExport": {
+          "type": "gx:DataAccountExport",
+          "gx:requestType": "email",
+          "gx:accessType": "digital",
+          "gx:formatType": ["1d-interleaved-parityfec"]
         },
-        "dy:keyword": "Virtual Machine",
-        "dy:provisionType": "Private",
-        "dy:endpoint": {
-          "type": "dy:Endpoint",
-          "dy:endpointURL": "https://pdfobject.com/pdf/sample/",
-          "dy:standardConformity": {
-            "type": "dy:StandardConformity",
-            "dy:title": "OpenAPI 3.0",
-            "dy:standardReference": "https://www.openapi.com/",
-            "dy:publisher": "OpenAPI"
+        "gx:keyword": "Virtual Machine",
+        "gx:provisionType": "Private",
+        "gx:endpoint": {
+          "type": "gx:Endpoint",
+          "gx:endpointURL": "https://pdfobject.com/pdf/sample/",
+          "gx:standardConformity": {
+            "type": "gx:StandardConformity",
+            "gx:title": "OpenAPI 3.0",
+            "gx:standardReference": "https://www.openapi.com/",
+            "gx:publisher": "OpenAPI"
           },
-          "dy:formalDescription": "API for managing virtual machine services"
+          "gx:formalDescription": "API for managing virtual machine services"
         },
-        "dy:hostedOn": [
+        "gx:hostedOn": [
           {
-            "type": "dy:VirtualResource",
+            "type": "gx:VirtualResource",
             "id": "https://wizard-api.dev.smart-x.smartsenselabs.com/6723b472-65b0-4a4f-94ce-9d7a4ed9e4af/resource_b1af42bc-2ca7-4143-88f7-aacb8ab00b66.json"
           }
         ],
-        "dy:name": "Virtual Machine Service Offering",
-        "dy:description": "Offering virtual machine services with high-performance options"
+        "gx:name": "Virtual Machine Service Offering",
+        "gx:description": "Offering virtual machine services with high-performance options"
       },
       "proof": {
         "type": "JsonWebSignature2020",

@@ -7,7 +7,7 @@
         "https://www.w3.org/2018/credentials/v1",
         "https://w3id.org/security/suites/jws-2020/v1",
         {
-          "dy": "https://dev-registry.learn.smartsenselabs.com/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
+          "gx": "https://dev-registry.learn.smartsenselabs.com/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
         }
       ],
       "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/mpc.json",
@@ -16,36 +16,36 @@
       "issuanceDate": "2024-06-13T03:45:49.346594202Z",
       "credentialSubject": {
         "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/mpc.json",
-        "type": "dy:MembershipPartyCredential",
-        "dy:legalParticipantCompliance": {
+        "type": "gx:MembershipPartyCredential",
+        "gx:legalParticipantCompliance": {
           "id": "https://compliance.lab.gaia-x.eu/v1-staging/credential-offers/0fd3c3b4-e93a-4e12-a3b5-8c1a8b76c63e"
         },
-        "dy:legalParticipant": {
+        "gx:legalParticipant": {
           "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/participant.json#0"
         },
-        "dy:datacenterLocation": [
+        "gx:datacenterLocation": [
           {
-            "dy:countryCode": "AD-02"
+            "gx:countryCode": "AD-02"
           }
         ],
-        "dy:serviceLocation": [
+        "gx:serviceLocation": [
           {
-            "dy:countryCode": "AD-02"
+            "gx:countryCode": "AD-02"
           }
         ],
-        "dy:GDPR": true,
-        "dy:certificateOfIncorporation": true,
-        "dy:immuneFromNonEUJurisdiction": true,
-        "dy:ultimateParentCompany": {
-          "dy:countryCode": "AD-02"
+        "gx:GDPR": true,
+        "gx:certificateOfIncorporation": true,
+        "gx:immuneFromNonEUJurisdiction": true,
+        "gx:ultimateParentCompany": {
+          "gx:countryCode": "AD-02"
         },
-        "dy:headquarterStreetAddress": "Headquarter Street, Address",
-        "dy:legalStreetAddress": "Legal Street, Address",
-        "dy:certifications": [
+        "gx:headquarterStreetAddress": "Headquarter Street, Address",
+        "gx:legalStreetAddress": "Legal Street, Address",
+        "gx:certifications": [
           {
-            "dy:certificationID": "ISO 27001",
-            "dy:expiryDate": "2025-07-18T23:59:59.00Z",
-            "dy:certifyingBody": "SIS Certifications"
+            "gx:certificationID": "ISO 27001",
+            "gx:expiryDate": "2025-07-18T23:59:59.00Z",
+            "gx:certifyingBody": "SIS Certifications"
           }
         ]
       },
