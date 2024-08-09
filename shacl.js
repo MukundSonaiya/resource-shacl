@@ -8,11 +8,11 @@ const fs = fs1.promises;
 
 // Validate Physical Resource
 
-const ENTITY = "mpc-laas"; //laas, mpc, lp, sample
+const ENTITY = "mpc-laas"; //iaas, mpc, lp, sample
 
 async function validate() {
   const shaclFilePath = "./shacl/" + ENTITY + "/shacl.ttl";
-  const jsonFilePath = "./shacl/" + ENTITY + "/mpc.json";
+  const jsonFilePath = "./shacl/" + ENTITY + "/iaas.json";
 
   const shapesDataset = await readFileAsync(shaclFilePath);
   const selfDescriptionDataset = await readFileAsync(jsonFilePath);
