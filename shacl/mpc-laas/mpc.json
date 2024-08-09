@@ -7,7 +7,7 @@
         "https://www.w3.org/2018/credentials/v1",
         "https://w3id.org/security/suites/jws-2020/v1",
         {
-          "dy": "https://dev-registry.learn.smartsenselabs.com/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
+          "gx": "https://dev-registry.learn.smartsenselabs.com/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
         }
       ],
       "id": "https://ambuja.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/mpc.json",
@@ -16,33 +16,36 @@
       "issuanceDate": "2024-06-13T03:45:49.346594202Z",
       "credentialSubject": {
         "id": "https://ambuja.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/mpc.json",
-        "type": "dy:MembershipPartyCredential",
-        "dy:legalParticipantCompliance": {
+        "type": "gx:MembershipPartyCredential",
+        "gx:legalParticipantCompliance": {
           "id": "https://compliance.lab.gaia-x.eu/v1-staging/credential-offers/2eb5fd4f-be0b-44b5-b79d-7fd69679d9e1"
         },
-        "dy:datacenterLocation": [
-          {
-            "dy:countryCode": "AD-02"
-          }
-        ],
-        "dy:serviceLocation": [
-          {
-            "dy:countryCode": "AD-02"
-          }
-        ],
-        "dy:GDPR": true,
-        "dy:certificateOfIncorporation": true,
-        "dy:immuneFromNonEUJurisdiction": true,
-        "dy:ultimateParentCompany": {
-          "dy:countryCode": "AD-02"
+        "gx:legalParticipant": {
+          "id": "https://ambuja.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/participant.json#0"
         },
-        "dy:headquarterStreetAddress": "Headquarter Street, Address",
-        "dy:legalStreetAddress": "Legal Street, Address",
-        "dy:certifications": [
+        "gx:datacenterLocation": [
           {
-            "dy:certificationID": "ISO 27001",
-            "dy:expiryDate": "2025-07-18T23:59:59.00Z",
-            "dy:certifyingBody": "SIS Certifications"
+            "gx:countryCode": "AD-02"
+          }
+        ],
+        "gx:serviceLocation": [
+          {
+            "gx:countryCode": "AD-02"
+          }
+        ],
+        "gx:GDPR": true,
+        "gx:certificateOfIncorporation": true,
+        "gx:immuneFromNonEUJurisdiction": true,
+        "gx:ultimateParentCompany": {
+          "gx:countryCode": "AD-02"
+        },
+        "gx:headquarterStreetAddress": "Headquarter Street, Address",
+        "gx:legalStreetAddress": "Legal Street, Address",
+        "gx:certifications": [
+          {
+            "gx:certificationID": "ISO 27001",
+            "gx:expiryDate": "2025-07-18T23:59:59.00Z",
+            "gx:certifyingBody": "SIS Certifications"
           }
         ]
       },
