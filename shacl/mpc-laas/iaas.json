@@ -259,6 +259,9 @@
           }
         ],
         "dy:tenantSeparation": "hw-virtualized",
+        "dy:providedBy": {
+          "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/participant.json#0"
+        },
         "dy:instantiationReq": [
           {
             "type": "dy:ServerFlavor",
@@ -396,14 +399,6 @@
         },
         "dy:keyword": "Virtual Machine",
         "dy:provisionType": "Private",
-        "dy:providedBy": {
-          "id": "https://ambuja.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/participant.json#0"
-        },
-        "dy:dependsOn": [
-          {
-            "id": "https://ambuja.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/service_vtug.json"
-          }
-        ],
         "dy:endpoint": {
           "type": "dy:Endpoint",
           "dy:endpointURL": "https://pdfobject.com/pdf/sample/",

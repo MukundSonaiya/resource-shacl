@@ -7,54 +7,145 @@
         "https://www.w3.org/2018/credentials/v1",
         "https://w3id.org/security/suites/jws-2020/v1",
         {
-          "gx": "https://dev-registry.learn.smartsenselabs.com/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
+          "dy": "https://dev-registry.learn.smartsenselabs.com/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
         }
       ],
-      "id": "https://ambuja.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/mpc.json",
+      "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/mpc.json",
       "type": ["VerifiableCredential"],
-      "issuer": "did:web:ambuja.dev.smart-x.smartsenselabs.com",
+      "issuer": "did:web:lakhani2024.dev.smart-x.smartsenselabs.com",
       "issuanceDate": "2024-06-13T03:45:49.346594202Z",
       "credentialSubject": {
-        "id": "https://ambuja.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/mpc.json",
-        "type": "gx:MembershipPartyCredential",
-        "gx:legalParticipantCompliance": {
-          "id": "https://compliance.lab.gaia-x.eu/v1-staging/credential-offers/2eb5fd4f-be0b-44b5-b79d-7fd69679d9e1"
+        "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/mpc.json",
+        "type": "dy:MembershipPartyCredential",
+        "dy:legalParticipantCompliance": {
+          "id": "https://compliance.lab.gaia-x.eu/v1-staging/credential-offers/0fd3c3b4-e93a-4e12-a3b5-8c1a8b76c63e"
         },
-        "gx:legalParticipant": {
-          "id": "https://ambuja.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/participant.json#0"
+        "dy:legalParticipant": {
+          "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/participant.json#0"
         },
-        "gx:datacenterLocation": [
+        "dy:datacenterLocation": [
           {
-            "gx:countryCode": "AD-02"
+            "dy:countryCode": "AD-02"
           }
         ],
-        "gx:serviceLocation": [
+        "dy:serviceLocation": [
           {
-            "gx:countryCode": "AD-02"
+            "dy:countryCode": "AD-02"
           }
         ],
-        "gx:GDPR": true,
-        "gx:certificateOfIncorporation": true,
-        "gx:immuneFromNonEUJurisdiction": true,
-        "gx:ultimateParentCompany": {
-          "gx:countryCode": "AD-02"
+        "dy:GDPR": true,
+        "dy:certificateOfIncorporation": true,
+        "dy:immuneFromNonEUJurisdiction": true,
+        "dy:ultimateParentCompany": {
+          "dy:countryCode": "AD-02"
         },
-        "gx:headquarterStreetAddress": "Headquarter Street, Address",
-        "gx:legalStreetAddress": "Legal Street, Address",
-        "gx:certifications": [
+        "dy:headquarterStreetAddress": "Headquarter Street, Address",
+        "dy:legalStreetAddress": "Legal Street, Address",
+        "dy:certifications": [
           {
-            "gx:certificationID": "ISO 27001",
-            "gx:expiryDate": "2025-07-18T23:59:59.00Z",
-            "gx:certifyingBody": "SIS Certifications"
+            "dy:certificationID": "ISO 27001",
+            "dy:expiryDate": "2025-07-18T23:59:59.00Z",
+            "dy:certifyingBody": "SIS Certifications"
           }
         ]
       },
       "proof": {
         "type": "JsonWebSignature2020",
-        "created": "2024-07-26T13:21:18.410Z",
+        "created": "2024-08-09T12:16:12.345Z",
         "proofPurpose": "assertionMethod",
-        "verificationMethod": "did:web:ambuja.dev.smart-x.smartsenselabs.com#JWK2020-RSA",
-        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..DJ3xnvPusaS__HrPeGnruQwJYETUnk1gzZZacizZF6aVu6sQViIKFpYtUEucSgwc3mgJCtkWvvJUFSUFUwcvhBV5gmKOfAi7pcCcfJsV1AT6JnfgLtAHp93-knoWSTnyJhBoekYeleux60HBEmFNHKHImet6jIr_-kFHVTjhr7OJXPKl_m2lXM3eCTgAcTUa3G9VefnH56hq0YT9H8_nymuAi1KgkFJU9PaFsnGpwAmgX2UX4ONDYUK38g4ZbJb6ZSgqVwfp-wMdbnNLbM_cB0-BfvH5iq7hUZh6a6D04cHrfisTADhdwIAvRaRNqEOxqAjpcgQdYJ2CusL1jcHmkA"
+        "verificationMethod": "did:web:lakhani2024.dev.smart-x.smartsenselabs.com#JWK2020-RSA",
+        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..gD_exnbBWhDhE7mrt0mGFo5CYsX6mp01oeMcT0EEYIbKXjRsWn0433Km0HnmotzxeI2C2NEKbafe7oPC-i6SdPG5u7rgGkumV7sCBFXCUwBqB6G6CYIbRZo65glgGDZjSlqTQKf5hYzEirqmjhuBtrgrdcPRFfglDxSlwy5YGl7arU3zy0lk8tCOEiFzbh-Ei9HJTOXYk4Sjx6Wux00K04YiShF70j7PU1mzF98_au1tq8wdAMPDKc8yLEn5HQsyHPdSymoYikjsT40Gwtt1LKMFd92uTc-tLeuL2S6UDrTj3Q0wMubQBtkr6omwFfXMYtqhTOpyyPKaP5RMr7kIww"
+      }
+    },
+    {
+      "credentialSubject": {
+        "gx:legalName": "Pinank2024",
+        "gx:headquarterAddress": {
+          "gx:countrySubdivisionCode": "AF-BDS"
+        },
+        "gx:legalAddress": {
+          "gx:countrySubdivisionCode": "AF-BDS"
+        },
+        "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/participant.json#0",
+        "type": "gx:LegalParticipant",
+        "gx:legalRegistrationNumber": {
+          "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/participant.json#1"
+        }
+      },
+      "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://w3id.org/security/suites/jws-2020/v1",
+        "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
+      ],
+      "type": ["VerifiableCredential"],
+      "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/participant.json#0",
+      "issuer": "did:web:lakhani2024.dev.smart-x.smartsenselabs.com",
+      "issuanceDate": "2024-08-07T12:39:41.320625325Z",
+      "proof": {
+        "type": "JsonWebSignature2020",
+        "created": "2024-08-07T12:39:43.123Z",
+        "proofPurpose": "assertionMethod",
+        "verificationMethod": "did:web:lakhani2024.dev.smart-x.smartsenselabs.com#JWK2020-RSA",
+        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..lmS16OIAAMA4f7CXSr0W0ImOz9tyFCf2hRF_4kHggtbMUEM0AvCfRN9y5Vz6C87jhW_TgmLbxyJMfTg5USvhkH5ORQAbctqsXP1Jw5r0sr21bR_OSNANWCbXSx_mX-3C2PQ2X-xE-aApKHUlBhB46yNvROcrg4t1gJvDJ62BH59wTEvIUiw-NtHiFfqap5enAJV9XCTn-u3yGFtJ8OU9W6s6pKRpzWrl9VfffD-6EPWSGEAt4ASNaQo7TzyJtdZ0fVnZNEjHeHY096wN8013oVnwl3sIm39K4nvOZXtdMUcgBwQaW8jzcMNbSK9DeGLSKaXOgIz2QDUaCDyArAX36g"
+      }
+    },
+    {
+      "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://w3id.org/security/suites/jws-2020/v1"
+      ],
+      "type": ["VerifiableCredential"],
+      "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/participant.json#1",
+      "issuer": "did:web:registration.lab.gaia-x.eu:v1",
+      "issuanceDate": "2024-08-07T12:39:41.898Z",
+      "credentialSubject": {
+        "@context": "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#",
+        "type": "gx:legalRegistrationNumber",
+        "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/participant.json#1",
+        "gx:vatID": "FR79537407926",
+        "gx:vatID-countryCode": "FR"
+      },
+      "evidence": [
+        {
+          "gx:evidenceURL": "http://ec.europa.eu/taxation_customs/vies/services/checkVatService",
+          "gx:executionDate": "2024-08-07T12:39:41.898Z",
+          "gx:evidenceOf": "gx:vatID"
+        }
+      ],
+      "proof": {
+        "type": "JsonWebSignature2020",
+        "created": "2024-08-07T12:39:42.053Z",
+        "proofPurpose": "assertionMethod",
+        "verificationMethod": "did:web:registration.lab.gaia-x.eu:v1#X509-JWK2020",
+        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..UorxvpR1Sig6F9eep4vVeSd8Ha1PpaX9Rmj2mwL3WkbYYayiB7DTPhsdXVhQHPdzDhCDp8FnaHYase06OJEYb2jeZIfMw7007xpxTK2CJDxFcJPJnlGk_lLCDoW-76qmlJ_7Q1vxHm5rtZ06WDrXIwk73bNhplMYkcw8_8Ke19ytHX45fKXoPrCLFf8fKb9jHr5Ze1DUQkWKxuIsJFKtGNuWF-eT34U6N15AMhAd7RE545dvF_71b3BoOJlLJKN3z25kNK_7m6Js00TZgpl9LPlE8aqqryOGqpvRHi8GH2O9AzKw3RjT8D_nOEIK93hwxlog8Ney_v62098axiwL5g"
+      }
+    },
+    {
+      "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://w3id.org/security/suites/jws-2020/v1",
+        "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
+      ],
+      "credentialSubject": {
+        "gx:termsAndConditions": "The PARTICIPANT signing the Self-Description agrees as follows:\n- to update its descriptions about any changes, be it technical, organizational, or legal - especially but not limited to contractual in regards to the indicated attributes present in the descriptions.\n\nThe keypair used to sign Verifiable Credentials will be revoked where Gaia-X Association becomes aware of any inaccurate statements in regards to the claims which result in a non-compliance with the Trust Framework and policy rules defined in the Policy Rules and Labelling Document (PRLD).",
+        "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/participant.json#2",
+        "type": "gx:GaiaXTermsAndConditions",
+        "@context": [
+          "https://www.w3.org/2018/credentials/v1",
+          "https://w3id.org/security/suites/jws-2020/v1",
+          "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
+        ]
+      },
+      "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/participant.json#2",
+      "issuanceDate": "2024-08-07T12:39:41.320625325Z",
+      "issuer": "did:web:lakhani2024.dev.smart-x.smartsenselabs.com",
+      "type": ["VerifiableCredential"],
+      "proof": {
+        "type": "JsonWebSignature2020",
+        "created": "2024-08-07T12:39:43.644Z",
+        "proofPurpose": "assertionMethod",
+        "verificationMethod": "did:web:lakhani2024.dev.smart-x.smartsenselabs.com#JWK2020-RSA",
+        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..XcqpWQXqCXwCiwqdDfajkIP9MXxh98hSrZzJR8yzeUUdhP3iy-cA-xzULNxqxdGFJxzD5rJWw1FT3xYfPLyF2tRRD0ex1eUx5HG0bq51N0SUTBNvWy6U7CqMtAA0-B9yA0ZmU-HorhTkGVnI13jdHjvF6B7qDIxPkrUeFBDyan_mz4bBEzNJVbCQB5DMGXdnubfhzzlH2soIIxRjbY0KzzKWJOS3Q1HuAVgKWbT6tu03CGmVWJnagsd90kEDsthGCtVwsnlO2CL3hlaA_6xaEtFu1OZ1V7AzNxkIIZaMPqM21BGJErIvG8N19g7uTXZl5aEvkoSwKjRCM_yloIw2Lg"
       }
     },
     {
@@ -64,31 +155,31 @@
         "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
       ],
       "type": ["VerifiableCredential"],
-      "id": "https://compliance.lab.gaia-x.eu/v1-staging/credential-offers/2eb5fd4f-be0b-44b5-b79d-7fd69679d9e1",
+      "id": "https://compliance.lab.gaia-x.eu/v1-staging/credential-offers/0fd3c3b4-e93a-4e12-a3b5-8c1a8b76c63e",
       "issuer": "did:web:compliance.lab.gaia-x.eu:v1-staging",
-      "issuanceDate": "2024-06-13T03:45:56.168Z",
-      "expirationDate": "2024-09-11T03:45:56.169Z",
+      "issuanceDate": "2024-08-07T12:39:48.095Z",
+      "expirationDate": "2024-11-05T12:39:48.095Z",
       "credentialSubject": [
         {
           "type": "gx:compliance",
-          "id": "https://ambuja.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/participant.json#0",
-          "gx:integrity": "sha256-5cfe3d52beacc0445df6ef23f10fa7a1e9f81218e94f032cd6f9c849926e7240",
+          "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/participant.json#0",
+          "gx:integrity": "sha256-13c715f774cb8a80f2848380d580cdae583f5ec2aba604a1dc94912fa7cd0f4b",
           "gx:integrityNormalization": "RFC8785:JCS",
           "gx:version": "22.10",
           "gx:type": "gx:LegalParticipant"
         },
         {
           "type": "gx:compliance",
-          "id": "https://ambuja.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/participant.json#1",
-          "gx:integrity": "sha256-72bfce03c8a76640469a5db5544f8c9add2402833e3f0358c1e99c818e23a3bd",
+          "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/participant.json#1",
+          "gx:integrity": "sha256-e5500065d6f8e3262f0fa3b2172dc0a3943157356327757eb542bfe228e479a7",
           "gx:integrityNormalization": "RFC8785:JCS",
           "gx:version": "22.10",
           "gx:type": "gx:legalRegistrationNumber"
         },
         {
           "type": "gx:compliance",
-          "id": "https://ambuja.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/participant.json#2",
-          "gx:integrity": "sha256-973173ed91971e7acf8155df5d0082d042154be2c2281211dde1d4a9f42dff5e",
+          "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/participant.json#2",
+          "gx:integrity": "sha256-5ea6f69c408086055ee3ea4b8149edb8ed05df34e5a6fdcab345352d24ab84e9",
           "gx:integrityNormalization": "RFC8785:JCS",
           "gx:version": "22.10",
           "gx:type": "gx:GaiaXTermsAndConditions"
@@ -96,10 +187,10 @@
       ],
       "proof": {
         "type": "JsonWebSignature2020",
-        "created": "2024-06-13T03:45:56.662Z",
+        "created": "2024-08-07T12:39:48.477Z",
         "proofPurpose": "assertionMethod",
         "verificationMethod": "did:web:compliance.lab.gaia-x.eu:v1-staging#X509-JWK2020",
-        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..S9g7YnAYJoZ2AQRgd18ID4N8t2KQlwC2WaalxdAiIA7-B8JmrHvHlHBBKBdm6C4ztJSQVZJpKky9Ou6UCs-zMk36s5IhRx6y4hQGM9dPvS76Msc_BEvM3sT6S22BU2crthbQDDWloY0GFDlPEzpPuZQjaYp8fm-ZYur5cDYb17u6HMuVeEaRp1Akg-34PELuRvMLnD_P_wk9TqHJs37z5d5u0kphcXp1173tEvm9a1IdvDk4SopVVy1-g7KXW7WNgVdG0yZxjtulXhFa2uZDYM0AxRMkLmJNtwduYPQtI6sdClPbd2QEfKy1PWRzBS0DCwuQmwHLBZEXlgt1gWTdlg"
+        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..Dq7pikH17Z90X-lZpGwH84PyyMCoXhVDoiwiczTBCBWd4Y_L0aKgjkeddFICHhQLO4KT85MK0xIqUsFiR4Bb2jT6D0cd-uoZrBGSFRi0cXm9-qBB2yT7GU6x3Gg70QEWJIkT3f5TtzOjg-vqHx8pClon1oeHOEXNOOfyjvY5jla5OEWPEsf7ejMuyAMUliOrFif4bEf5lJ7KSqQ7L9wD4yNtdlo-bqVqeCYPrp4MIXzTMVN2Oarf0p85ESL6BeiuFC-WlcBUSvTvCLSAkX_9GNFKkT9OlHSoJ0WipCX6jiQ_3vT4ogtbdcC3IMY-5OXfvPk3jjWzN3uUfSwjiLmImg"
       }
     }
   ]
