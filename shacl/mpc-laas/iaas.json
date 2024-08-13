@@ -387,13 +387,36 @@
           "gx:accessType": "digital",
           "gx:formatType": ["1d-interleaved-parityfec"]
         },
+        "gx:dataProtectionRegime": [
+          "LGPD2019",
+          "PDPA2012",
+          "CCPA2018",
+          "GDPR2016",
+          "VCDPA2021"
+        ],
         "gx:serviceOfferingTermsAndConditions": {
           "type": "gx:TermsAndConditions",
           "gx:url": "http://www.stackoverflow.com",
           "gx:hash": "d8402a23de560f5ab34b22d1a142feb9e13b3143"
         },
+        "gx:keyword": "Virtual Machine",
+        "gx:provisionType": "Private",
         "gx:name": "Virtual Machine Service Offering",
-        "gx:description": "Offering virtual machine services with high-performance options"
+        "gx:description": "Offering virtual machine services with high-performance options",
+        "gx:endpoint": {
+          "type": "gx:Endpoint",
+          "gx:endpointURL": "https://pdfobject.com/pdf/sample/",
+          "gx:standardConformity": {
+            "type": "gx:StandardConformity",
+            "gx:title": "OpenAPI 3.0",
+            "gx:standardReference": {
+              "@value": "https://github.com/topics/confidential-computing",
+              "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+            },
+            "gx:publisher": "OpenAPI"
+          },
+          "gx:formalDescription": "API for managing virtual machine services"
+        }
       },
       "proof": {
         "type": "JsonWebSignature2020",
