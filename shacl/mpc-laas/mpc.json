@@ -44,7 +44,10 @@
         "gx:certifications": [
           {
             "gx:certificationID": "ISO 27001",
-            "gx:expiryDate": "2025-07-18T23:59:59.00Z",
+            "gx:expiryDate": {
+              "@value": "2025-07-18T23:59:59.00Z",
+              "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            },
             "gx:certifyingBody": "SIS Certifications"
           }
         ]
