@@ -1,4 +1,4 @@
-@prefix gx: <http://localhost:3000/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#> .
+@prefix gx: <https://dev-registry.learn.smartsenselabs.com/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#> .
 @prefix gx1: <https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -174,7 +174,7 @@ gx:CertificationsShape a sh:NodeShape ;
     sh:property
         [
             sh:path gx:expiryDate ;
-            sh:datatype xsd:dateTime ;
+            sh:datatype xsd:string ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:description "Certification Expiry Date" ;
@@ -241,7 +241,7 @@ gx:VirtualMachineServiceOfferingShape a sh:NodeShape ;
 
         [ sh:description "A list of resolvable links to Gaia-X Credentials of resources related to the service and that can exist independently of it." ;
             sh:name "aggregation of" ;
-            sh:or ( [ sh:class gx:VirtualResource ] [ sh:class gx:OperatingSystem ] ) ;
+            sh:or ( [ sh:class gx:PhysicalResource ] [ sh:class gx:VirtualResource ] [ sh:class gx:SoftwareResource ] [ sh:class gx:OperatingSystem ] ) ;
             sh:order 5 ;
             sh:path gx:aggregationOfResources ] ,
 
@@ -298,7 +298,7 @@ gx:VirtualMachineServiceOfferingShape a sh:NodeShape ;
 
         [ sh:description "List of Resource references where service is hosted and can be instantiated. Can refer to availabilty zones, data centers, regions, etc." ;
             sh:name "hosted on" ;
-            sh:or ( [ sh:class gx:VirtualResource ] ) ;
+            sh:or ( [ sh:class gx:VirtualResource ] [ sh:class gx:PhysicalResource ] ) ;
             sh:order 13 ;
             sh:path gx:hostedOn ] ,
 
@@ -529,7 +529,7 @@ gx:VMImageShape a sh:NodeShape ;
             sh:path gx:patchLevel ; 
         ] ,
         [ 
-            sh:datatype xsd:dateTime ;
+            sh:datatype xsd:string ;
             sh:description "Date and time the software was build, formated according to ISO 8601 (UTC - 24 hours)." ;
             sh:maxCount 1 ;
             sh:name "Build Date" ;
@@ -565,7 +565,7 @@ gx:VMImageShape a sh:NodeShape ;
         [
             sh:description "A resolvable link of resources related to the resource and that can exist independently of it." ;
             sh:name "aggregation of" ;
-            sh:or ( [ sh:class gx:VirtualResource ] ) ;
+            sh:or ( [ sh:class gx:VirtualResource ] [ sh:class gx:PhysicalResource ] ) ;
             sh:order 28 ;
             sh:path gx:aggregationOfResources ; 
         ] ,
@@ -830,7 +830,7 @@ gx:ResourceShape a sh:NodeShape ;
         [ 
             sh:description "A resolvable link of resources related to the resource and that can exist independently of it." ;
             sh:name "aggregation of" ;
-            sh:or ( [ sh:class gx:VirtualResource ] ) ;
+            sh:or ( [ sh:class gx:VirtualResource ] [ sh:class gx:PhysicalResource ] ) ;
             sh:order 0 ;
             sh:path gx:aggregationOfResources 
         ],
@@ -855,6 +855,58 @@ gx:ResourceShape a sh:NodeShape ;
 
     sh:targetClass gx:Resource .
 
+gx:PhysicalResourceShape a sh:NodeShape ;
+    rdfs:subClassOf gx:Resource ;
+    sh:closed true ;
+    sh:description "A Physical resource is, but not limited to, a datacenter, a bare-metal service, a warehouse, a plant. Those are entities that have a weight and position in physical space." ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:name "Physical Resource" ;
+    sh:property [ sh:description "A resolvable link of resources related to the resource and that can exist independently of it." ;
+            sh:name "aggregation of" ;
+            sh:or ( [ sh:class gx:VirtualResource ] [ sh:class gx:PhysicalResource ] ) ;
+            sh:order 4 ;
+            sh:path gx:aggregationOfResources ],
+        [ sh:class gx:Address ;
+            sh:description "A list of physical locations." ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 3 ;
+            sh:path gx:location ],
+        [ sh:class gx1:LegalParticipant ;
+            sh:description "A list of resolvable links to Gaia-X Credentials of participant manufacturing the resource." ;
+            sh:name "manufactured by" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 2 ;
+            sh:path gx:manufacturedBy ],
+        [ sh:datatype xsd:string ;
+            sh:description "A human readable name of the entity." ;
+            sh:maxCount 1 ;
+            sh:name "name" ;
+            sh:nodeKind sh:Literal ;
+            sh:order 5 ;
+            sh:path schema:name ],
+        [ sh:class gx1:LegalParticipant ;
+            sh:description "A list of resolvable links to Gaia-X Credentials of participant owning the resource." ;
+            sh:name "owned by" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 1 ;
+            sh:path gx:ownedBy ],
+        [ sh:datatype xsd:string ;
+            sh:description "A free text description of the entity." ;
+            sh:maxCount 1 ;
+            sh:name "description" ;
+            sh:nodeKind sh:Literal ;
+            sh:order 6 ;
+            sh:path schema:description ],
+        [ sh:class gx1:LegalParticipant ;
+            sh:description "A list of resolvable links to Gaia-X Credentials of participants maintaining the resource in operational condition and thus having physical access to it." ;
+            sh:minCount 1 ;
+            sh:name "maintained by" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 0 ;
+            sh:path gx:maintainedBy ] ;
+    sh:targetClass gx:PhysicalResource .
+
 gx:VirtualResourceShape a sh:NodeShape ;
     rdfs:subClassOf gx:Resource ;
     sh:closed false ;
@@ -870,7 +922,7 @@ gx:VirtualResourceShape a sh:NodeShape ;
             sh:path schema:description ],
         [ sh:description "A resolvable link of resources related to the resource and that can exist independently of it." ;
             sh:name "aggregation of" ;
-            sh:or ( [ sh:class gx:VirtualResource ] ) ;
+            sh:or ( [ sh:class gx:VirtualResource ] [ sh:class gx:PhysicalResource ] ) ;
             sh:order 3 ;
             sh:path gx:aggregationOfResources ],
         [ sh:datatype xsd:string ;
@@ -932,7 +984,7 @@ gx:SoftwareResourceShape a sh:NodeShape ;
 
         [ sh:description "A resolvable link of resources related to the resource and that can exist independently of it." ;
             sh:name "aggregation of" ;
-            sh:or ( [ sh:class gx:VirtualResource ] ) ;
+            sh:or ( [ sh:class gx:VirtualResource ] [ sh:class gx:PhysicalResource ] ) ;
             sh:order 8 ;
             sh:path gx:aggregationOfResources ],
 
@@ -992,6 +1044,7 @@ gx:SoftwareResourceShape a sh:NodeShape ;
 
 gx:OperatingSystemShape a sh:NodeShape ;
     rdfs:subClassOf gx:SoftwareResource ;
+    sh:closed true ;
     sh:description "A special Gaia-X Software Resource describing an operating system." ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:name "Operation System" ;
@@ -1060,7 +1113,7 @@ gx:OperatingSystemShape a sh:NodeShape ;
 
         [ sh:description "A resolvable link of resources related to the resource and that can exist independently of it." ;
             sh:name "aggregation of" ;
-            sh:or ( [ sh:class gx:VirtualResource ] ) ;
+            sh:or ( [ sh:class gx:VirtualResource ] [ sh:class gx:PhysicalResource ] ) ;
             sh:order 9 ;
             sh:path gx:aggregationOfResources ],
 
@@ -1140,7 +1193,7 @@ gx:CPUShape a sh:NodeShape ;
             sh:order 4 ;
             sh:path gx:numberOfThreads ],
 
-        [ sh:class gx:FrequencyDefinition ;
+        [ sh:class <http://qudt.org/vocab/quantitykind/FrequencyDefinition> ;
             sh:description "Base frequency of the CPU." ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
@@ -1149,7 +1202,7 @@ gx:CPUShape a sh:NodeShape ;
             sh:order 5 ;
             sh:path gx:baseFrequency ],
 
-        [ sh:class gx:FrequencyDefinition ;
+        [ sh:class <http://qudt.org/vocab/quantitykind/FrequencyDefinition> ;
             sh:description "Boost frequency of the CPU." ;
             sh:maxCount 1 ;
             sh:name "boost CPU frequency" ;
@@ -1165,7 +1218,7 @@ gx:CPUShape a sh:NodeShape ;
             sh:order 7 ;
             sh:path gx:lastLevelCacheSize ],
 
-        [ sh:class gx:Power ;
+        [ sh:class <http://qudt.org/vocab/quantitykind/Power> ;
             sh:description "CPU Thermal Design Power." ;
             sh:maxCount 1 ;
             sh:name "thermal design power" ;
@@ -1367,7 +1420,7 @@ gx:HypervisorShape a sh:NodeShape ;
             sh:path gx:resourcePolicy ],
         [ sh:description "A resolvable link of resources related to the resource and that can exist independently of it." ;
             sh:name "aggregation of" ;
-            sh:or ( [ sh:class gx:VirtualResource ] ) ;
+            sh:or ( [ sh:class gx:VirtualResource ] [ sh:class gx:PhysicalResource ] ) ;
             sh:order 9 ;
             sh:path gx:aggregationOfResources ],
         [ sh:datatype xsd:string ;
@@ -1575,31 +1628,28 @@ gx:DiskShape a sh:NodeShape ;
     sh:targetClass gx:Disk .
 
 gx:MemorySizeShape a sh:NodeShape ;
-    rdfs:subClassOf gx:Quantity ;
+    rdfs:subClassOf <http://qudt.org/vocab/Quantity> ;
     sh:closed true ;
     sh:description "The number of bytes, that can be stored on a digital storage." ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:name "Memory size" ;
-    sh:property 
-        [ 
-            sh:datatype xsd:string ;
-            sh:description "Unit of physical quantity" ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:description "Unit of physical quantity. See https://qudt.org/schema/qudt/Unit" ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 1 ;
-            sh:path gx:unit;
-        ],
-        [ 
-            sh:datatype xsd:float ;
+            sh:path <http://qudt.org/vocab/unit> ],
+
+        [ sh:datatype xsd:float ;
             sh:description "Value of physical quantity. See https://qudt.org/schema/qudt/value" ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:minInclusive 0 ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
-            sh:path gx:value;
-        ];
+            sh:path <http://qudt.org/vocab/value> ] ;
+
     sh:targetClass gx:MemorySize .
 
 gx:StandardConformityShape a sh:NodeShape ;
@@ -1607,35 +1657,32 @@ gx:StandardConformityShape a sh:NodeShape ;
     sh:description "Details about standard applied to Gaia-X entities." ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property 
-        [ 
-            sh:datatype xsd:string ;
+        [ sh:datatype xsd:string ;
             sh:description "Name of the standard." ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:name "title" ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
-            sh:path gx:title
-        ],
-        [ 
-            sh:datatype xsd:anyURI ;
+            sh:path gx:title ],
+
+        [ sh:datatype xsd:anyURI ;
             sh:description "Provides a link to schemas or details about applied standards." ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:name "standard reference" ;
             sh:nodeKind sh:Literal ;
             sh:order 1 ;
-            sh:path gx:standardReference;
-        ],
-        [ 
-            sh:datatype xsd:string ;
+            sh:path gx:standardReference ],
+
+        [ sh:datatype xsd:string ;
             sh:description "Publisher of the standard." ;
             sh:maxCount 1 ;
             sh:name "publisher" ;
             sh:nodeKind sh:Literal ;
             sh:order 2 ;
-            sh:path gx:publisher
-        ] ;
+            sh:path gx:publisher ] ;
+
     sh:targetClass gx:StandardConformity .
 
 gx:CheckSumShape a sh:NodeShape ;
@@ -1895,7 +1942,7 @@ gx:GPSUnitShape a sh:NodeShape ;
             sh:nodeKind sh:Literal ;
             sh:order 1 ;
             sh:path gx:minutes ],
-        [ sh:datatype xsd:integer ;
+        [ sh:datatype xsd:float ;
             sh:maxCount 1 ;
             sh:maxInclusive 1e+00 ;
             sh:minInclusive 0e+00 ;
@@ -1913,82 +1960,67 @@ gx:GPSUnitShape a sh:NodeShape ;
             sh:path gx:seconds ] ;
     sh:targetClass gx:GPSUnit .
 
-gx:QuantityShape a sh:NodeShape ;
+<http://qudt.org/vocab/QuantityShape> a sh:NodeShape ;
     sh:closed false ;
     sh:description "Abstract parent class for all physical quantities, such as frequency, power or length." ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property 
-        [ 
-            sh:datatype xsd:string ;
-            sh:description "Unit of physical quantity" ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:description "Unit of physical quantity. See https://qudt.org/schema/qudt/Unit" ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 1 ;
-            sh:path gx:unit;
-        ],
-        [ 
-            sh:datatype xsd:integer ;
+            sh:path <http://qudt.org/vocab/unit> ],
+        [ sh:datatype xsd:float ;
             sh:description "Value of physical quantity. See https://qudt.org/schema/qudt/value" ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:minInclusive 0 ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
-            sh:path gx:value;
-        ];
-    sh:targetClass gx:Quantity .
+            sh:path <http://qudt.org/vocab/value> ] ;
+    sh:targetClass <http://qudt.org/vocab/Quantity> .
 
-gx:FrequencyDefinitionShape a sh:NodeShape ;
-    rdfs:subClassOf gx:Quantity ;
+<http://qudt.org/vocab/quantitykind/FrequencyDefinitionShape> a sh:NodeShape ;
+    rdfs:subClassOf <http://qudt.org/vocab/Quantity> ;
     sh:closed true ;
     sh:description "Definition of 'Frequency', according to http://qudt.org/quantitykind/FrequencyDefinition." ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property 
-        [ 
-            sh:datatype xsd:float ;
+    sh:property [ sh:datatype xsd:float ;
             sh:description "Value of physical quantity. See https://qudt.org/schema/qudt/value" ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:minInclusive 0 ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
-            sh:path gx:value;
-        ],
-        [ 
-            sh:datatype xsd:string ;
-            sh:description "Unit of physical quantity" ;
+            sh:path <http://qudt.org/vocab/value> ],
+        [ sh:datatype xsd:string ;
+            sh:description "Unit of physical quantity. See https://qudt.org/schema/qudt/Unit" ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 1 ;
-            sh:path gx:unit;
-        ] ;
-    sh:targetClass gx:FrequencyDefinition .
+            sh:path <http://qudt.org/vocab/unit> ] ;
+    sh:targetClass <http://qudt.org/vocab/quantitykind/FrequencyDefinition> .
 
-gx:PowerShape a sh:NodeShape ;
-    rdfs:subClassOf gx:Quantity ;
+<http://qudt.org/vocab/quantitykind/PowerShape> a sh:NodeShape ;
+    rdfs:subClassOf <http://qudt.org/vocab/Quantity> ;
     sh:closed true ;
     sh:description "Definition of 'Power', according to http://qudt.org/quantitykind/Power." ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property 
-        [ 
-            sh:datatype xsd:string ;
-            sh:description "Unit of physical quantity" ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:description "Unit of physical quantity. See https://qudt.org/schema/qudt/Unit" ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 1 ;
-            sh:path gx:unit;
-        ],
-        [ 
-            sh:datatype xsd:float ;
+            sh:path <http://qudt.org/vocab/unit> ],
+        [ sh:datatype xsd:float ;
             sh:description "Value of physical quantity. See https://qudt.org/schema/qudt/value" ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:minInclusive 0 ;
             sh:nodeKind sh:Literal ;
             sh:order 0 ;
-            sh:path gx:value;
-        ];
-    sh:targetClass gx:Power .
+            sh:path <http://qudt.org/vocab/value> ] ;
+    sh:targetClass <http://qudt.org/vocab/quantitykind/Power> .
