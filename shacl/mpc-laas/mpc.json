@@ -7,7 +7,8 @@
         "https://www.w3.org/2018/credentials/v1",
         "https://w3id.org/security/suites/jws-2020/v1",
         {
-          "gx": "https://dev-registry.learn.smartsenselabs.com/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
+          "gx": "https://dev-registry.learn.smartsenselabs.com/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#",
+          "xsd": "http://www.w3.org/2001/XMLSchema#"
         }
       ],
       "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/mpc.json",
@@ -46,7 +47,7 @@
             "gx:certificationID": "ISO 27001",
             "gx:expiryDate": {
               "@value": "2025-07-18T23:59:59.00Z",
-              "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+              "@type": "xsd:dateTime"
             },
             "gx:certifyingBody": "SIS Certifications"
           }

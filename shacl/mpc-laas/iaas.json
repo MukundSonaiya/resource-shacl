@@ -7,7 +7,8 @@
         "https://www.w3.org/2018/credentials/v1",
         "https://w3id.org/security/suites/jws-2020/v1",
         {
-          "gx": "https://dev-registry.learn.smartsenselabs.com/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
+          "gx": "https://dev-registry.learn.smartsenselabs.com/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#",
+          "xsd": "http://www.w3.org/2001/XMLSchema#"
         }
       ],
       "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/service_iaas.json",
@@ -28,7 +29,7 @@
             "type": "gx:MemorySize",
             "gx:value": {
               "@value": 4.0,
-              "@type": "http://www.w3.org/2001/XMLSchema#float"
+              "@type": "xsd:float"
             },
             "gx:unit": "GB"
           },
@@ -50,7 +51,7 @@
             "gx:patchLevel": "1",
             "gx:buildDate": {
               "@value": "2022-09-27T18:00:00.000",
-              "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+              "@type": "xsd:dateTime"
             },
             "gx:copyrightOwnedBy": ["Example Corp. 1", "Example Corp. 2"],
             "gx:license": ["Glide", "Abstyles", "AFL-1.1", "AFL-1.2"],
@@ -69,7 +70,7 @@
               "type": "gx:FrequencyDefinition",
               "gx:value": {
                 "@value": 4.0,
-                "@type": "http://www.w3.org/2001/XMLSchema#float"
+                "@type": "xsd:float"
               },
               "gx:unit": "HZ"
             },
@@ -77,7 +78,7 @@
               "type": "gx:FrequencyDefinition",
               "gx:value": {
                 "@value": 4.0,
-                "@type": "http://www.w3.org/2001/XMLSchema#float"
+                "@type": "xsd:float"
               },
               "gx:unit": "MegaHZ"
             },
@@ -85,7 +86,7 @@
               "type": "gx:MemorySize",
               "gx:value": {
                 "@value": 12.5,
-                "@type": "http://www.w3.org/2001/XMLSchema#float"
+                "@type": "xsd:float"
               },
               "gx:unit": "MegaBYTE"
             },
@@ -93,7 +94,7 @@
               "type": "gx:Power",
               "gx:value": {
                 "@value": 12.5,
-                "@type": "http://www.w3.org/2001/XMLSchema#float"
+                "@type": "xsd:float"
               },
               "gx:unit": "MegaW"
             },
@@ -108,7 +109,7 @@
               "type": "gx:MemorySize",
               "gx:value": {
                 "@value": 12.0,
-                "@type": "http://www.w3.org/2001/XMLSchema#float"
+                "@type": "xsd:float"
               },
               "gx:unit": "TeraBYTE"
             },
@@ -126,7 +127,7 @@
               "type": "gx:MemorySize",
               "gx:value": {
                 "@value": 4.0,
-                "@type": "http://www.w3.org/2001/XMLSchema#float"
+                "@type": "xsd:float"
               },
               "gx:unit": "GB"
             },
@@ -143,7 +144,7 @@
             "type": "gx:MemorySize",
             "gx:value": {
               "@value": 4.0,
-              "@type": "http://www.w3.org/2001/XMLSchema#float"
+              "@type": "xsd:float"
             },
             "gx:unit": "GB"
           },
@@ -153,7 +154,7 @@
               "type": "gx:MemorySize",
               "gx:value": {
                 "@value": 4.0,
-                "@type": "http://www.w3.org/2001/XMLSchema#float"
+                "@type": "xsd:float"
               },
               "gx:unit": "GB"
             },
@@ -191,7 +192,7 @@
             "gx:subscriptionRequired": true,
             "gx:maintainedUntil": {
               "@value": "2025-12-31",
-              "@type": "http://www.w3.org/2001/XMLSchema#date"
+              "@type": "xsd:date"
             }
           },
           "gx:checksum": {
@@ -209,7 +210,7 @@
           "gx:patchLevel": "1",
           "gx:buildDate": {
             "@value": "2022-09-27T18:00:00.000",
-            "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+            "@type": "xsd:dateTime"
           },
           "gx:copyrightOwnedBy": ["Example Corp. 1", "Example Corp. 2"],
           "gx:license": ["Glide", "Abstyles", "AFL-1.1", "AFL-1.2"],
@@ -230,7 +231,7 @@
               "type": "gx:FrequencyDefinition",
               "gx:value": {
                 "@value": 4.0,
-                "@type": "http://www.w3.org/2001/XMLSchema#float"
+                "@type": "xsd:float"
               },
               "gx:unit": "HZ"
             },
@@ -238,7 +239,7 @@
               "type": "gx:FrequencyDefinition",
               "gx:value": {
                 "@value": 4.0,
-                "@type": "http://www.w3.org/2001/XMLSchema#float"
+                "@type": "xsd:float"
               },
               "gx:unit": "MegaHZ"
             },
@@ -246,7 +247,7 @@
               "type": "gx:MemorySize",
               "gx:value": {
                 "@value": 128.0,
-                "@type": "http://www.w3.org/2001/XMLSchema#float"
+                "@type": "xsd:float"
               },
               "gx:unit": "MegaBYTE"
             },
@@ -254,7 +255,7 @@
               "type": "gx:Power",
               "gx:value": {
                 "@value": 40.5,
-                "@type": "http://www.w3.org/2001/XMLSchema#float"
+                "@type": "xsd:float"
               },
               "gx:unit": "MegaW"
             },
@@ -269,7 +270,7 @@
               "type": "gx:MemorySize",
               "gx:value": {
                 "@value": 4.0,
-                "@type": "http://www.w3.org/2001/XMLSchema#float"
+                "@type": "xsd:float"
               },
               "gx:unit": "GB"
             },
@@ -288,7 +289,7 @@
               "type": "gx:MemorySize",
               "gx:value": {
                 "@value": 2.0,
-                "@type": "http://www.w3.org/2001/XMLSchema#float"
+                "@type": "xsd:float"
               },
               "gx:unit": "TeraBYTE"
             },
@@ -307,7 +308,7 @@
               "type": "gx:MemorySize",
               "gx:value": {
                 "@value": 2.0,
-                "@type": "http://www.w3.org/2001/XMLSchema#float"
+                "@type": "xsd:float"
               },
               "gx:unit": "GB"
             },
@@ -325,7 +326,7 @@
                 "type": "gx:MemorySize",
                 "gx:value": {
                   "@value": 1.0,
-                  "@type": "http://www.w3.org/2001/XMLSchema#float"
+                  "@type": "xsd:float"
                 },
                 "gx:unit": "TB"
               },
@@ -342,7 +343,7 @@
             "gx:technology": "GoLang",
             "gx:attestationServiceURI": {
               "@value": "https://github.com/topics/confidential-computing",
-              "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+              "@type": "xsd:anyURI"
             }
           },
           "gx:hypervisor": {
@@ -363,7 +364,7 @@
             "gx:patchLevel": "1",
             "gx:buildDate": {
               "@value": "2022-09-27T18:00:00.000",
-              "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+              "@type": "xsd:dateTime"
             },
             "gx:copyrightOwnedBy": ["Example Corp. 1", "Example Corp. 2"],
             "gx:license": ["Glide", "Abstyles", "AFL-1.1", "AFL-1.2"],
@@ -411,7 +412,7 @@
             "gx:title": "OpenAPI 3.0",
             "gx:standardReference": {
               "@value": "https://github.com/topics/confidential-computing",
-              "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+              "@type": "xsd:anyURI"
             },
             "gx:publisher": "OpenAPI"
           },
