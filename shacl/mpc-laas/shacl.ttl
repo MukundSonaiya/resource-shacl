@@ -15,6 +15,7 @@ gx:MembershipPartyCredentialShape a sh:NodeShape ;
             sh:node gx:PostalCodeShape ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:description "Physical location of the datacenters in" ;
+            sh:minCount 1 ;            
             sh:order 0 ;
             sh:path gx:datacenterLocation ;
         ],
@@ -38,6 +39,7 @@ gx:MembershipPartyCredentialShape a sh:NodeShape ;
             sh:node gx:PostalCodeShape ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:description "From where the service is erogated" ;
+            sh:minCount 1 ;            
             sh:order 2 ;
             sh:path gx:serviceLocation ;
         ],
@@ -164,12 +166,21 @@ gx:CertificationsShape a sh:NodeShape ;
     sh:name "Certifications" ;
     sh:property
         [
+            sh:path gx:name ;
+            sh:datatype xsd:string ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:description "Certification name" ;
+            sh:order 0 ;
+        ];    
+    sh:property
+        [
             sh:path gx:certificationID ;
             sh:datatype xsd:string ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:description "Certification ID (ISO 27001, ISO 27002, ISO 20000-1, ISO 22301)" ;
-            sh:order 0 ;
+            sh:order 1 ;
         ];
     sh:property
         [
@@ -178,7 +189,7 @@ gx:CertificationsShape a sh:NodeShape ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:description "Certification Expiry Date" ;
-            sh:order 1 ;
+            sh:order 2 ;
         ];
     sh:property
         [
@@ -187,7 +198,7 @@ gx:CertificationsShape a sh:NodeShape ;
             sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:description "Certification body who issues certifications to organisations" ;
-            sh:order 2 ;
+            sh:order 3 ;
         ];
 
     sh:targetClass gx:CertificationsShape .
@@ -235,13 +246,13 @@ gx:VirtualMachineServiceOfferingShape a sh:NodeShape ;
 
         [ sh:description "A list of resolvable links to Gaia-X Credentials of service offerings related to the service and that can exist independently of it." ;
             sh:name "depends on" ;
-            sh:or ( [ sh:class gx:VirtualMachineServiceOffering ] ) ;
+            sh:or ( [ sh:class gx1:ServiceOffering ] [ sh:class gx:VirtualMachineServiceOffering ] ) ;
             sh:order 4 ;
             sh:path gx:dependsOn ] ,
 
         [ sh:description "A list of resolvable links to Gaia-X Credentials of resources related to the service and that can exist independently of it." ;
             sh:name "aggregation of" ;
-            sh:or ( [ sh:class gx:VirtualResource ] [ sh:class gx:OperatingSystem ] ) ;
+            sh:or ( [ sh:class gx:PhysicalResource ] [ sh:class gx:VirtualResource ] [ sh:class gx:SoftwareResource ] [ sh:class gx:OperatingSystem ] ) ; ;
             sh:order 5 ;
             sh:path gx:aggregationOfResources ] ,
 
@@ -298,7 +309,7 @@ gx:VirtualMachineServiceOfferingShape a sh:NodeShape ;
 
         [ sh:description "List of Resource references where service is hosted and can be instantiated. Can refer to availabilty zones, data centers, regions, etc." ;
             sh:name "hosted on" ;
-            sh:or ( [ sh:class gx:VirtualResource ] ) ;
+            sh:or ( [ sh:class gx:VirtualResource ] [ sh:class gx:PhysicalResource ] ) ;
             sh:order 13 ;
             sh:path gx:hostedOn ] ,
 
@@ -313,6 +324,7 @@ gx:VirtualMachineServiceOfferingShape a sh:NodeShape ;
 
         [ sh:datatype xsd:string ;
             sh:description "A free text description of the entity." ;
+            sh:minCount 1 ;
             sh:maxCount 1 ;
             sh:name "description" ;
             sh:nodeKind sh:Literal ;

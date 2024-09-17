@@ -1,36 +1,96 @@
 {
   "@context": "https://www.w3.org/2018/credentials/v1",
-  "type": "VerifiablePresentation",
+  "type": ["VerifiablePresentation"],
   "verifiableCredential": [
+    {
+      "id": "https://wizard-api.dev.smart-x.smartsenselabs.com/9871a17d-1a71-4a8b-b7ec-c12283cac007/resource_3f8e1a1f-509e-41ea-b19d-ac7189db4a40.json",
+      "type": ["VerifiableCredential"],
+      "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "http://www.w3.org/2006/vcard/ns#",
+        "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
+      ],
+      "issuer": "did:web:lakhani30.dev.smart-x.smartsenselabs.com",
+      "issuanceDate": "2024-09-09T05:19:21.260397214Z",
+      "credentialSubject": {
+        "type": "gx:PhysicalResource",
+        "gx:name": "Physical Resource",
+        "gx:description": "Physical Resource",
+        "gx:maintainedBy": [
+          {
+            "id": "https://lakhani30.dev.smart-x.smartsenselabs.com/9871a17d-1a71-4a8b-b7ec-c12283cac007/participant.json#0"
+          }
+        ],
+        "gx:locationAddress": [
+          {
+            "@type": "vcard:Address",
+            "gx:countryCode": "AD-07"
+          }
+        ],
+        "id": "https://wizard-api.dev.smart-x.smartsenselabs.com/9871a17d-1a71-4a8b-b7ec-c12283cac007/resource_3f8e1a1f-509e-41ea-b19d-ac7189db4a40.json"
+      }
+    },
+    {
+      "credentialSubject": {
+        "gx:legalName": "Pinank30",
+        "gx:headquarterAddress": {
+          "gx:countrySubdivisionCode": "AD-03"
+        },
+        "gx:legalAddress": {
+          "gx:countrySubdivisionCode": "AF-FRA"
+        },
+        "id": "https://lakhani30.dev.smart-x.smartsenselabs.com/9871a17d-1a71-4a8b-b7ec-c12283cac007/participant.json#0",
+        "type": "gx:LegalParticipant",
+        "gx:legalRegistrationNumber": {
+          "id": "https://lakhani30.dev.smart-x.smartsenselabs.com/9871a17d-1a71-4a8b-b7ec-c12283cac007/participant.json#1"
+        }
+      },
+      "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://w3id.org/security/suites/jws-2020/v1",
+        "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
+      ],
+      "type": ["VerifiableCredential"],
+      "id": "https://lakhani30.dev.smart-x.smartsenselabs.com/9871a17d-1a71-4a8b-b7ec-c12283cac007/participant.json#0",
+      "issuer": "did:web:lakhani30.dev.smart-x.smartsenselabs.com",
+      "issuanceDate": "2024-09-06T10:13:24.326835944Z",
+      "proof": {
+        "type": "JsonWebSignature2020",
+        "created": "2024-09-06T10:13:25.836Z",
+        "proofPurpose": "assertionMethod",
+        "verificationMethod": "did:web:lakhani30.dev.smart-x.smartsenselabs.com#JWK2020-RSA",
+        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..G8serFGZBLpLzsYDBAfxPibcmKdgumDtrNd2FoLK6ty_CUws8T4z5GDAIFcDVgwxYsp23h_ABl1DxBj1wkjhgR2L__8wUv8DRZA8kmNJgG1KF8kXgmTIzynzTcdl1MJtDPZGA7ao4Uggj8ighkGFUZafR6nmNhTDZdLodikQl9PkaEnehUxPAKOddb81giy2rUXNTVyWIxIGAUA443077Fh4gypFmiJk_GRk_PMr016suKZTb_-BIi_yKzRWgfGFy5fAIVblnjJVIv34N3nJJ-YUWOtzp-al3rMzXh4fS8vwY9hyXvNeO0vQiAGWrq1zDjOQ4I2vJQ4YZ9A67AVAJw"
+      }
+    },
     {
       "@context": [
         "https://www.w3.org/2018/credentials/v1",
         "https://w3id.org/security/suites/jws-2020/v1"
       ],
-      "type": "VerifiableCredential",
-      "id": "https://gaia-x.eu/legalRegistrationNumberVC.json",
-      "issuer": "did:web:registration.lab.gaia-x.eu::development",
-      "issuanceDate": "2023-07-12T09:05:00.819Z",
+      "type": ["VerifiableCredential"],
+      "id": "https://lakhani30.dev.smart-x.smartsenselabs.com/9871a17d-1a71-4a8b-b7ec-c12283cac007/participant.json#1",
+      "issuer": "did:web:registration.lab.gaia-x.eu:v1",
+      "issuanceDate": "2024-09-06T10:13:25.035Z",
       "credentialSubject": {
         "@context": "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#",
         "type": "gx:legalRegistrationNumber",
-        "id": "https://gaia-x.eu/legalRegistrationNumberVC.json",
-        "gx:vatID": "BE0762747721",
-        "gx:vatID-countryCode": "BE"
+        "id": "https://lakhani30.dev.smart-x.smartsenselabs.com/9871a17d-1a71-4a8b-b7ec-c12283cac007/participant.json#1",
+        "gx:vatID": "FR79537407926",
+        "gx:vatID-countryCode": "FR"
       },
       "evidence": [
         {
           "gx:evidenceURL": "http://ec.europa.eu/taxation_customs/vies/services/checkVatService",
-          "gx:executionDate": "2023-07-12T09:05:00.819Z",
+          "gx:executionDate": "2024-09-06T10:13:25.035Z",
           "gx:evidenceOf": "gx:vatID"
         }
       ],
       "proof": {
         "type": "JsonWebSignature2020",
-        "created": "2023-07-12T09:05:01.979Z",
+        "created": "2024-09-06T10:13:25.046Z",
         "proofPurpose": "assertionMethod",
-        "verificationMethod": "did:web:registration.lab.gaia-x.eu::development#X509-JWK2020",
-        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..TK5hwS9L3ghpU9dFACj2niqELO-V4NU4ro_zCc2-eNWmsdnEDicSptwtTIHCadDVM13CJD-dDfBu__L3bFEOpj9yWAwmlrlEOhn2flIKmlHn02f51ZyUaJ85OFnt_t1LdEszSURcicyYoeI7XS31kIxjkhIuXgiPQD7q7TTI8BdZPZks7KnJ_8SztiKrpeWTENvE8BGenVudIfLjQhSWn9G_Ydq2VhTxRFlCY5zKzFtQ0vxhU_Nfs0dp58XrMs0tx4yA2t9nhEF2yxZrnJeHI_FZ49FRG9azxbheSH6imrwJolO_rnIB0D5UnaashSoNz18GfsNxW4kmXNlAOYSB1g"
+        "verificationMethod": "did:web:registration.lab.gaia-x.eu:v1#X509-JWK2020",
+        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..pK5NhpZv0PBaZeZfyOIzDDwzrscytHDuRjGI5yqNhHSZNjc0ukp8sC4RWtyicVGDvDjFGVK5-rkHDtnOcPr59XUjtJkUDZ73SrYghqEPe8d5YNWVo22euEvrbnW_nAr5CerFtRD-_MfCbLTx1_QYvsJML1gacGPO9nmiLsV3VVHdBlDevomVj7Z96B-Uxa3bcnP-RAKue_WyxZtQorGbr_YnnqpG-E5Hbidklu3r0AizbZdqlJD_7c4xJAtLebvn2IlZgVEQuMQ7amdOHad628-QgxI2PyoZjIOVeDUxoRHiI1uTpv39dvdE4vSOPkq-vKxRi8vg4a8qrcnYfpc-yg"
       }
     },
     {
@@ -39,149 +99,26 @@
         "https://w3id.org/security/suites/jws-2020/v1",
         "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
       ],
-      "type": ["VerifiableCredential"],
-      "id": "https://wizard.lab.gaia-x.eu/api/credentials/2d37wbGvQzbAQ84yRouh2m2vBKkN8s5AfH9Q75HZRCUQmJW7yAVSNKzjJj6gcjE2mDNDUHCichXWdMH3S2c8AaDLm3kXmf5R8DFPWTYo5iRYkn8kvgU3AjMXc2qTbhuMHCpucKGgT1ZMkcHUygZkt11iD3T8VJNKYwsdk4MGoZwdqoFUuTKVcsXVTBA4ofD1Dtqzjavyng5WUpvJf4gRyfGkMvYYuHCgay8TK8Dayt6Rhcs3r2d1gRCg2UV419S9CpWZGwKQNEXdYbaB2eTiNbQ83KMd4mj1oSJgF7LLDZLJtKJbhwLzR3x35QUqEGevRxnRDKoPdHrEZN7r9TVAmvr9rt7Xq8eB4zGMTza59hisEAUaHsmWQNaVDorqFyZgN5bXswMK1irVQ5SVR9osCCRrKUKkntxfakjmSqapPfveMP39vkgTXfEhsfLUZXGwFcpgLpWxWRn1QLnJY11BVymS7DyaSvbSKotNFQxyV6vghfM2Jetw1mLxU5qsQqDYnDYJjPZQSmkwxjX3yenPVCz6N2ox83tj9AuuQrzg5p2iukNdunDd2QCsHaMEtTq9JVLzXtWs2eZbPkxCBEQwoKTGGVhKu5yxZjCtQGc?vcid=brown-horse",
-      "issuer": "did:web:wizard.lab.gaia-x.eu:api:credentials:2d37wbGvQzbAQ84yRouh2m2vBKkN8s5AfH9Q75HZRCUQmJW7yAVSNKzjJj6gcjE2mDNDUHCichXWdMH3S2c8AaDLm3kXmf5R8DFPWTYo5iRYkn8kvgU3AjMXc2qTbhuMHCpucKGgT1ZMkcHUygZkt11iD3T8VJNKYwsdk4MGoZwdqoFUuTKVcsXVTBA4ofD1Dtqzjavyng5WUpvJf4gRyfGkMvYYuHCgay8TK8Dayt6Rhcs3r2d1gRCg2UV419S9CpWZGwKQNEXdYbaB2eTiNbQ83KMd4mj1oSJgF7LLDZLJtKJbhwLzR3x35QUqEGevRxnRDKoPdHrEZN7r9TVAmvr9rt7Xq8eB4zGMTza59hisEAUaHsmWQNaVDorqFyZgN5bXswMK1irVQ5SVR9osCCRrKUKkntxfakjmSqapPfveMP39vkgTXfEhsfLUZXGwFcpgLpWxWRn1QLnJY11BVymS7DyaSvbSKotNFQxyV6vghfM2Jetw1mLxU5qsQqDYnDYJjPZQSmkwxjX3yenPVCz6N2ox83tj9AuuQrzg5p2iukNdunDd2QCsHaMEtTq9JVLzXtWs2eZbPkxCBEQwoKTGGVhKu5yxZjCtQGc",
-      "issuanceDate": "2023-07-12T08:58:07.859Z",
       "credentialSubject": {
-        "type": "gx:LegalParticipant",
-        "gx:legalName": "Gaia-X European Association for Data and Cloud AISBL",
-        "gx:legalRegistrationNumber": {
-          "id": "https://gaia-x.eu/legalRegistrationNumberVC.json"
-        },
-        "gx:headquarterAddress": {
-          "gx:countrySubdivisionCode": "BE-BRU"
-        },
-        "gx:legalAddress": {
-          "gx:countrySubdivisionCode": "BE-BRU"
-        },
-        "id": "https://wizard.lab.gaia-x.eu/api/credentials/2d37wbGvQzbAQ84yRouh2m2vBKkN8s5AfH9Q75HZRCUQmJW7yAVSNKzjJj6gcjE2mDNDUHCichXWdMH3S2c8AaDLm3kXmf5R8DFPWTYo5iRYkn8kvgU3AjMXc2qTbhuMHCpucKGgT1ZMkcHUygZkt11iD3T8VJNKYwsdk4MGoZwdqoFUuTKVcsXVTBA4ofD1Dtqzjavyng5WUpvJf4gRyfGkMvYYuHCgay8TK8Dayt6Rhcs3r2d1gRCg2UV419S9CpWZGwKQNEXdYbaB2eTiNbQ83KMd4mj1oSJgF7LLDZLJtKJbhwLzR3x35QUqEGevRxnRDKoPdHrEZN7r9TVAmvr9rt7Xq8eB4zGMTza59hisEAUaHsmWQNaVDorqFyZgN5bXswMK1irVQ5SVR9osCCRrKUKkntxfakjmSqapPfveMP39vkgTXfEhsfLUZXGwFcpgLpWxWRn1QLnJY11BVymS7DyaSvbSKotNFQxyV6vghfM2Jetw1mLxU5qsQqDYnDYJjPZQSmkwxjX3yenPVCz6N2ox83tj9AuuQrzg5p2iukNdunDd2QCsHaMEtTq9JVLzXtWs2eZbPkxCBEQwoKTGGVhKu5yxZjCtQGc#9894e9b0a38aa105b50bb9f4e7d0975641273416e70f166f4bd9fd1b00dfe81d"
-      },
-      "proof": {
-        "type": "JsonWebSignature2020",
-        "created": "2023-07-12T08:58:08.438Z",
-        "proofPurpose": "assertionMethod",
-        "verificationMethod": "did:web:wizard.lab.gaia-x.eu:api:credentials:2d37wbGvQzbAQ84yRouh2m2vBKkN8s5AfH9Q75HZRCUQmJW7yAVSNKzjJj6gcjE2mDNDUHCichXWdMH3S2c8AaDLm3kXmf5R8DFPWTYo5iRYkn8kvgU3AjMXc2qTbhuMHCpucKGgT1ZMkcHUygZkt11iD3T8VJNKYwsdk4MGoZwdqoFUuTKVcsXVTBA4ofD1Dtqzjavyng5WUpvJf4gRyfGkMvYYuHCgay8TK8Dayt6Rhcs3r2d1gRCg2UV419S9CpWZGwKQNEXdYbaB2eTiNbQ83KMd4mj1oSJgF7LLDZLJtKJbhwLzR3x35QUqEGevRxnRDKoPdHrEZN7r9TVAmvr9rt7Xq8eB4zGMTza59hisEAUaHsmWQNaVDorqFyZgN5bXswMK1irVQ5SVR9osCCRrKUKkntxfakjmSqapPfveMP39vkgTXfEhsfLUZXGwFcpgLpWxWRn1QLnJY11BVymS7DyaSvbSKotNFQxyV6vghfM2Jetw1mLxU5qsQqDYnDYJjPZQSmkwxjX3yenPVCz6N2ox83tj9AuuQrzg5p2iukNdunDd2QCsHaMEtTq9JVLzXtWs2eZbPkxCBEQwoKTGGVhKu5yxZjCtQGc#JWK2020",
-        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..hu3kvfqGFeQGMJ1GvdaS1Nmkb2hIk79my6SCW0uiS-Og43UiWr9iHh96e7acYChLVopEF_Al2a0KAjT9BnkbfGlXCGgAAKYS5X22bV1EUX5B-NHJhmGRC5ScgCjfivU4yEzEdpoSrFiE4M0v-NbMB7Q4qvWPPT4og0IRVyU4N5pBXWxn4pfc-__Rl_1k6us8Dhkl0yLgVFTQ562P1E7EorSHLZh73C2chV50YwYpH7DTmiLAaDlj5SC5X7ayWHa8LuPz3dRHl7Arj-sdFyIjEockGeq9Mmzcc2N6QjTi2hYaA493lOSdoglhp3Aqz3A1fHbKkdRH662NAlERFFHDeg"
-      }
-    },
-    {
-      "@context": [
-        "https://www.w3.org/2018/credentials/v1",
-        "https://w3id.org/security/suites/jws-2020/v1",
-        "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
-      ],
-      "type": ["VerifiableCredential"],
-      "id": "https://wizard.lab.gaia-x.eu/api/credentials/2d37wbGvQzbAQ84yRouh2m2vBKkN8s5AfH9Q75HZRCUQmJW7yAVSNKzjJj6gcjE2mDNDUHCichXWdMH3S2c8AaDLm3kXmf5R8DFPWTYo5iRYkn8kvgU3AjMXc2qTbhuMHCpucKGgT1ZMkcHUygZkt11iD3T8VJNKYwsdk4MGoZwdqoFUuTKVcsXVTBA4ofD1Dtqzjavyng5WUpvJf4gRyfGkMvYYuHCgay8TK8Dayt6Rhcs3r2d1gRCg2UV419S9CpWZGwKQNEXdYbaB2eTiNbQ83KMd4mj1oSJgF7LLDZLJtKJbhwLzR3x35QUqEGevRxnRDKoPdHrEZN7r9TVAmvr9rt7Xq8eB4zGMTza59hisEAUaHsmWQNaVDorqFyZgN5bXswMK1irVQ5SVR9osCCRrKUKkntxfakjmSqapPfveMP39vkgTXfEhsfLUZXGwFcpgLpWxWRn1QLnJY11BVymS7DyaSvbSKotNFQxyV6vghfM2Jetw1mLxU5qsQqDYnDYJjPZQSmkwxjX3yenPVCz6N2ox83tj9AuuQrzg5p2iukNdunDd2QCsHaMEtTq9JVLzXtWs2eZbPkxCBEQwoKTGGVhKu5yxZjCtQGc?vcid=tsandcsVC",
-      "issuer": "did:web:wizard.lab.gaia-x.eu:api:credentials:2d37wbGvQzbAQ84yRouh2m2vBKkN8s5AfH9Q75HZRCUQmJW7yAVSNKzjJj6gcjE2mDNDUHCichXWdMH3S2c8AaDLm3kXmf5R8DFPWTYo5iRYkn8kvgU3AjMXc2qTbhuMHCpucKGgT1ZMkcHUygZkt11iD3T8VJNKYwsdk4MGoZwdqoFUuTKVcsXVTBA4ofD1Dtqzjavyng5WUpvJf4gRyfGkMvYYuHCgay8TK8Dayt6Rhcs3r2d1gRCg2UV419S9CpWZGwKQNEXdYbaB2eTiNbQ83KMd4mj1oSJgF7LLDZLJtKJbhwLzR3x35QUqEGevRxnRDKoPdHrEZN7r9TVAmvr9rt7Xq8eB4zGMTza59hisEAUaHsmWQNaVDorqFyZgN5bXswMK1irVQ5SVR9osCCRrKUKkntxfakjmSqapPfveMP39vkgTXfEhsfLUZXGwFcpgLpWxWRn1QLnJY11BVymS7DyaSvbSKotNFQxyV6vghfM2Jetw1mLxU5qsQqDYnDYJjPZQSmkwxjX3yenPVCz6N2ox83tj9AuuQrzg5p2iukNdunDd2QCsHaMEtTq9JVLzXtWs2eZbPkxCBEQwoKTGGVhKu5yxZjCtQGc",
-      "issuanceDate": "2023-07-12T09:11:30.604Z",
-      "credentialSubject": {
-        "@context": "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#",
+        "gx:termsAndConditions": "The PARTICIPANT signing the Self-Description agrees as follows:\n- to update its descriptions about any changes, be it technical, organizational, or legal - especially but not limited to contractual in regards to the indicated attributes present in the descriptions.\n\nThe keypair used to sign Verifiable Credentials will be revoked where Gaia-X Association becomes aware of any inaccurate statements in regards to the claims which result in a non-compliance with the Trust Framework and policy rules defined in the Policy Rules and Labelling Document (PRLD).",
+        "id": "https://lakhani30.dev.smart-x.smartsenselabs.com/9871a17d-1a71-4a8b-b7ec-c12283cac007/participant.json#2",
         "type": "gx:GaiaXTermsAndConditions",
-        "id": "https://bakeup.io/tandcs.json",
-        "gx:termsAndConditions": "The PARTICIPANT signing the Self-Description agrees as follows:\n- to update its descriptions about any changes, be it technical, organizational, or legal - especially but not limited to contractual in regards to the indicated attributes present in the descriptions.\n\nThe keypair used to sign Verifiable Credentials will be revoked where Gaia-X Association becomes aware of any inaccurate statements in regards to the claims which result in a non-compliance with the Trust Framework and policy rules defined in the Policy Rules and Labelling Document (PRLD)."
+        "@context": [
+          "https://www.w3.org/2018/credentials/v1",
+          "https://w3id.org/security/suites/jws-2020/v1",
+          "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
+        ]
       },
+      "id": "https://lakhani30.dev.smart-x.smartsenselabs.com/9871a17d-1a71-4a8b-b7ec-c12283cac007/participant.json#2",
+      "issuanceDate": "2024-09-06T10:13:24.326835944Z",
+      "issuer": "did:web:lakhani30.dev.smart-x.smartsenselabs.com",
+      "type": ["VerifiableCredential"],
       "proof": {
         "type": "JsonWebSignature2020",
-        "created": "2023-07-12T09:11:31.658Z",
+        "created": "2024-09-06T10:13:26.307Z",
         "proofPurpose": "assertionMethod",
-        "verificationMethod": "did:web:wizard.lab.gaia-x.eu:api:credentials:2d37wbGvQzbAQ84yRouh2m2vBKkN8s5AfH9Q75HZRCUQmJW7yAVSNKzjJj6gcjE2mDNDUHCichXWdMH3S2c8AaDLm3kXmf5R8DFPWTYo5iRYkn8kvgU3AjMXc2qTbhuMHCpucKGgT1ZMkcHUygZkt11iD3T8VJNKYwsdk4MGoZwdqoFUuTKVcsXVTBA4ofD1Dtqzjavyng5WUpvJf4gRyfGkMvYYuHCgay8TK8Dayt6Rhcs3r2d1gRCg2UV419S9CpWZGwKQNEXdYbaB2eTiNbQ83KMd4mj1oSJgF7LLDZLJtKJbhwLzR3x35QUqEGevRxnRDKoPdHrEZN7r9TVAmvr9rt7Xq8eB4zGMTza59hisEAUaHsmWQNaVDorqFyZgN5bXswMK1irVQ5SVR9osCCRrKUKkntxfakjmSqapPfveMP39vkgTXfEhsfLUZXGwFcpgLpWxWRn1QLnJY11BVymS7DyaSvbSKotNFQxyV6vghfM2Jetw1mLxU5qsQqDYnDYJjPZQSmkwxjX3yenPVCz6N2ox83tj9AuuQrzg5p2iukNdunDd2QCsHaMEtTq9JVLzXtWs2eZbPkxCBEQwoKTGGVhKu5yxZjCtQGc#JWK2020",
-        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..YWg3BOkPmHGAzWCZXBnVfQjLs891nQoag-7VixrQuCfS7P8u9mzOMBfG1OV0ANQ7l7Z075lguXLSkqNCMylPsmSVingFdVIqT7iZl4dysVzd-Qnu7HgX8D8-5MmWtIPbCntiqMZ69jEp0mXozYn4XekHCeVJVIOMwXT-3_vseF06qAyz0cS0E-hUQjdJvwVKv29_1XMNJcADkYZarFBxhuLPWu7It5EZQ66nT2kHR9t3WHvDIMdMFsssy1D1Z0q9SnGzCd5lDSfXTtIexO5RbPhBk5KLliA9fInt-0Xby9Nru522PI8T7qxWBjQV4trZ_gCAfeT3Ap1EbwQ0YTp8jw"
-      }
-    },
-    {
-      "@context": [
-        "https://www.w3.org/2018/credentials/v1",
-        "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
-      ],
-      "type": ["VerifiableCredential"],
-      "id": "http://smartproof.in/.well-known/test-resource-1.json",
-      "issuer": "did:web:dev.smartproof.in",
-      "issuanceDate": "2023-04-14T06:44:40.828Z",
-      "credentialSubject": {
-        "@context": "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#",
-        "id": "http://smartproof.in/.well-known/test-resource-1.json",
-        "type": "gx:PhysicalResource",
-        "gx:name": "Test Resource 1",
-        "gx:description": "Test Resource 1 description",
-        "gx:maintainedBy": [
-          {
-            "id": "https://wizard.lab.gaia-x.eu/api/credentials/2d37wbGvQzbAQ84yRouh2m2vBKkN8s5AfH9Q75HZRCUQmJW7yAVSNKzjJj6gcjE2mDNDUHCichXWdMH3S2c8AaDLm3kXmf5R8DFPWTYo5iRYkn8kvgU3AjMXc2qTbhuMHCpucKGgT1ZMkcHUygZkt11iD3T8VJNKYwsdk4MGoZwdqoFUuTKVcsXVTBA4ofD1Dtqzjavyng5WUpvJf4gRyfGkMvYYuHCgay8TK8Dayt6Rhcs3r2d1gRCg2UV419S9CpWZGwKQNEXdYbaB2eTiNbQ83KMd4mj1oSJgF7LLDZLJtKJbhwLzR3x35QUqEGevRxnRDKoPdHrEZN7r9TVAmvr9rt7Xq8eB4zGMTza59hisEAUaHsmWQNaVDorqFyZgN5bXswMK1irVQ5SVR9osCCRrKUKkntxfakjmSqapPfveMP39vkgTXfEhsfLUZXGwFcpgLpWxWRn1QLnJY11BVymS7DyaSvbSKotNFQxyV6vghfM2Jetw1mLxU5qsQqDYnDYJjPZQSmkwxjX3yenPVCz6N2ox83tj9AuuQrzg5p2iukNdunDd2QCsHaMEtTq9JVLzXtWs2eZbPkxCBEQwoKTGGVhKu5yxZjCtQGc#9894e9b0a38aa105b50bb9f4e7d0975641273416e70f166f4bd9fd1b00dfe81d"
-          }
-        ],
-        "gx:ownedBy": [
-          {
-            "id": "https://wizard.lab.gaia-x.eu/api/credentials/2d37wbGvQzbAQ84yRouh2m2vBKkN8s5AfH9Q75HZRCUQmJW7yAVSNKzjJj6gcjE2mDNDUHCichXWdMH3S2c8AaDLm3kXmf5R8DFPWTYo5iRYkn8kvgU3AjMXc2qTbhuMHCpucKGgT1ZMkcHUygZkt11iD3T8VJNKYwsdk4MGoZwdqoFUuTKVcsXVTBA4ofD1Dtqzjavyng5WUpvJf4gRyfGkMvYYuHCgay8TK8Dayt6Rhcs3r2d1gRCg2UV419S9CpWZGwKQNEXdYbaB2eTiNbQ83KMd4mj1oSJgF7LLDZLJtKJbhwLzR3x35QUqEGevRxnRDKoPdHrEZN7r9TVAmvr9rt7Xq8eB4zGMTza59hisEAUaHsmWQNaVDorqFyZgN5bXswMK1irVQ5SVR9osCCRrKUKkntxfakjmSqapPfveMP39vkgTXfEhsfLUZXGwFcpgLpWxWRn1QLnJY11BVymS7DyaSvbSKotNFQxyV6vghfM2Jetw1mLxU5qsQqDYnDYJjPZQSmkwxjX3yenPVCz6N2ox83tj9AuuQrzg5p2iukNdunDd2QCsHaMEtTq9JVLzXtWs2eZbPkxCBEQwoKTGGVhKu5yxZjCtQGc#9894e9b0a38aa105b50bb9f4e7d0975641273416e70f166f4bd9fd1b00dfe81d"
-          }
-        ],
-        "gx:manufacturedBy": [
-          {
-            "id": "https://wizard.lab.gaia-x.eu/api/credentials/2d37wbGvQzbAQ84yRouh2m2vBKkN8s5AfH9Q75HZRCUQmJW7yAVSNKzjJj6gcjE2mDNDUHCichXWdMH3S2c8AaDLm3kXmf5R8DFPWTYo5iRYkn8kvgU3AjMXc2qTbhuMHCpucKGgT1ZMkcHUygZkt11iD3T8VJNKYwsdk4MGoZwdqoFUuTKVcsXVTBA4ofD1Dtqzjavyng5WUpvJf4gRyfGkMvYYuHCgay8TK8Dayt6Rhcs3r2d1gRCg2UV419S9CpWZGwKQNEXdYbaB2eTiNbQ83KMd4mj1oSJgF7LLDZLJtKJbhwLzR3x35QUqEGevRxnRDKoPdHrEZN7r9TVAmvr9rt7Xq8eB4zGMTza59hisEAUaHsmWQNaVDorqFyZgN5bXswMK1irVQ5SVR9osCCRrKUKkntxfakjmSqapPfveMP39vkgTXfEhsfLUZXGwFcpgLpWxWRn1QLnJY11BVymS7DyaSvbSKotNFQxyV6vghfM2Jetw1mLxU5qsQqDYnDYJjPZQSmkwxjX3yenPVCz6N2ox83tj9AuuQrzg5p2iukNdunDd2QCsHaMEtTq9JVLzXtWs2eZbPkxCBEQwoKTGGVhKu5yxZjCtQGc#9894e9b0a38aa105b50bb9f4e7d0975641273416e70f166f4bd9fd1b00dfe81d"
-          }
-        ],
-        "gx:locationAddress": [
-          {
-            "gx:countryCode": "FR-DE"
-          }
-        ],
-        "gx:location": [
-          {
-            "gx:gps": "35.89421911 139.94637467"
-          }
-        ]
-      }
-    },
-    {
-      "@context": [
-        "https://www.w3.org/2018/credentials/v1",
-        "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
-      ],
-      "type": ["VerifiableCredential"],
-      "id": "http://smartproof.in/.well-known/test-resource-2.json",
-      "issuer": "did:web:dev.smartproof.in",
-      "issuanceDate": "2023-04-14T06:44:40.828Z",
-      "credentialSubject": {
-        "@context": "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#",
-        "@id": "http://smartproof.in/.well-known/test-resource-2.json",
-        "@type": "gx:PhysicalResource",
-        "gx:name": "Test Resource 2",
-        "gx:description": "Test Resource 2 description",
-        "gx:aggregationOf": [
-          {
-            "id": "http://smartproof.in/.well-known/test-resource-1.json"
-          }
-        ],
-        "gx:maintainedBy": [
-          {
-            "id": "https://wizard.lab.gaia-x.eu/api/credentials/2d37wbGvQzbAQ84yRouh2m2vBKkN8s5AfH9Q75HZRCUQmJW7yAVSNKzjJj6gcjE2mDNDUHCichXWdMH3S2c8AaDLm3kXmf5R8DFPWTYo5iRYkn8kvgU3AjMXc2qTbhuMHCpucKGgT1ZMkcHUygZkt11iD3T8VJNKYwsdk4MGoZwdqoFUuTKVcsXVTBA4ofD1Dtqzjavyng5WUpvJf4gRyfGkMvYYuHCgay8TK8Dayt6Rhcs3r2d1gRCg2UV419S9CpWZGwKQNEXdYbaB2eTiNbQ83KMd4mj1oSJgF7LLDZLJtKJbhwLzR3x35QUqEGevRxnRDKoPdHrEZN7r9TVAmvr9rt7Xq8eB4zGMTza59hisEAUaHsmWQNaVDorqFyZgN5bXswMK1irVQ5SVR9osCCRrKUKkntxfakjmSqapPfveMP39vkgTXfEhsfLUZXGwFcpgLpWxWRn1QLnJY11BVymS7DyaSvbSKotNFQxyV6vghfM2Jetw1mLxU5qsQqDYnDYJjPZQSmkwxjX3yenPVCz6N2ox83tj9AuuQrzg5p2iukNdunDd2QCsHaMEtTq9JVLzXtWs2eZbPkxCBEQwoKTGGVhKu5yxZjCtQGc#9894e9b0a38aa105b50bb9f4e7d0975641273416e70f166f4bd9fd1b00dfe81d"
-          }
-        ],
-        "gx:ownedBy": [
-          {
-            "id": "https://wizard.lab.gaia-x.eu/api/credentials/2d37wbGvQzbAQ84yRouh2m2vBKkN8s5AfH9Q75HZRCUQmJW7yAVSNKzjJj6gcjE2mDNDUHCichXWdMH3S2c8AaDLm3kXmf5R8DFPWTYo5iRYkn8kvgU3AjMXc2qTbhuMHCpucKGgT1ZMkcHUygZkt11iD3T8VJNKYwsdk4MGoZwdqoFUuTKVcsXVTBA4ofD1Dtqzjavyng5WUpvJf4gRyfGkMvYYuHCgay8TK8Dayt6Rhcs3r2d1gRCg2UV419S9CpWZGwKQNEXdYbaB2eTiNbQ83KMd4mj1oSJgF7LLDZLJtKJbhwLzR3x35QUqEGevRxnRDKoPdHrEZN7r9TVAmvr9rt7Xq8eB4zGMTza59hisEAUaHsmWQNaVDorqFyZgN5bXswMK1irVQ5SVR9osCCRrKUKkntxfakjmSqapPfveMP39vkgTXfEhsfLUZXGwFcpgLpWxWRn1QLnJY11BVymS7DyaSvbSKotNFQxyV6vghfM2Jetw1mLxU5qsQqDYnDYJjPZQSmkwxjX3yenPVCz6N2ox83tj9AuuQrzg5p2iukNdunDd2QCsHaMEtTq9JVLzXtWs2eZbPkxCBEQwoKTGGVhKu5yxZjCtQGc#9894e9b0a38aa105b50bb9f4e7d0975641273416e70f166f4bd9fd1b00dfe81d"
-          }
-        ],
-        "gx:manufacturedBy": [
-          {
-            "id": "https://wizard.lab.gaia-x.eu/api/credentials/2d37wbGvQzbAQ84yRouh2m2vBKkN8s5AfH9Q75HZRCUQmJW7yAVSNKzjJj6gcjE2mDNDUHCichXWdMH3S2c8AaDLm3kXmf5R8DFPWTYo5iRYkn8kvgU3AjMXc2qTbhuMHCpucKGgT1ZMkcHUygZkt11iD3T8VJNKYwsdk4MGoZwdqoFUuTKVcsXVTBA4ofD1Dtqzjavyng5WUpvJf4gRyfGkMvYYuHCgay8TK8Dayt6Rhcs3r2d1gRCg2UV419S9CpWZGwKQNEXdYbaB2eTiNbQ83KMd4mj1oSJgF7LLDZLJtKJbhwLzR3x35QUqEGevRxnRDKoPdHrEZN7r9TVAmvr9rt7Xq8eB4zGMTza59hisEAUaHsmWQNaVDorqFyZgN5bXswMK1irVQ5SVR9osCCRrKUKkntxfakjmSqapPfveMP39vkgTXfEhsfLUZXGwFcpgLpWxWRn1QLnJY11BVymS7DyaSvbSKotNFQxyV6vghfM2Jetw1mLxU5qsQqDYnDYJjPZQSmkwxjX3yenPVCz6N2ox83tj9AuuQrzg5p2iukNdunDd2QCsHaMEtTq9JVLzXtWs2eZbPkxCBEQwoKTGGVhKu5yxZjCtQGc#9894e9b0a38aa105b50bb9f4e7d0975641273416e70f166f4bd9fd1b00dfe81d"
-          }
-        ],
-        "gx:locationAddress": [
-          {
-            "gx:countryCode": "FR-DE"
-          },
-          {
-            "gx:countryCode": "AA-DE"
-          }
-        ],
-        "gx:location": [
-          {
-            "gx:gps": "35.89421911 139.94637467"
-          },
-          {
-            "gx:gps": "31.89421911 133.94637467"
-          }
-        ]
+        "verificationMethod": "did:web:lakhani30.dev.smart-x.smartsenselabs.com#JWK2020-RSA",
+        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..QIcgl0JpihzYQnN-4mZ-V0nq_6xvcbUrwCbzBJvQzEBAS2HEj80bp4wepspqWcGIHN6hTn9Sv0H55RLsH67ghR_duxquaWF4-0g4QRD5XHolxmG2Yv-YTjpKxRRsMulTiMcIPSrKGgxxFJwDPdtEEBnGbJ-wTEAfLgI9dg_BO06OfJbnXINUxg0WmFkZeaCnRC0NBYSZnC605ACqLfoyE4pUGf-LaXIszRSjUuG5ITybs10RzGhKp5xyJibe35kwNVZYsPm39J-2nAy26p9iJckSYR5vMRqJychLplJfK3VpCu0oqwNk0FbIVcolBzIDEzmle8q6f-a5dDPl7pJtIg"
       }
     }
   ]

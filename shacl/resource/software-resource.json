@@ -1,0 +1,123 @@
+{
+  "@context": "https://www.w3.org/2018/credentials/v1",
+  "type": ["VerifiablePresentation"],
+  "verifiableCredential": [
+    {
+      "issuanceDate": "2024-09-04T06:50:57.419563626Z",
+      "credentialSubject": {
+        "type": "gx:PhysicalResource",
+        "gx:name": "AWS",
+        "gx:description": "Fill the following form to publish your service to the relevant Gaia-X catalogue",
+        "gx:maintainedBy": [
+          {
+            "id": "https://lakhani02.dev.smart-x.smartsenselabs.com/0ae2975f-367a-4cf5-920f-1bef6c32f252/participant.json#0"
+          }
+        ],
+        "gx:locationAddress": [
+          {
+            "@type": "vcard:Address",
+            "vcard:postal-code": "12345",
+            "vcard:street-address": "123 Main St",
+            "gx:countryCode": "US"
+          }
+        ],
+        "id": "https://wizard-api.dev.smart-x.smartsenselabs.com/0ae2975f-367a-4cf5-920f-1bef6c32f252/resource_12d94c2e-31d9-448f-b1cc-d2afd5a09f18.json"
+      },
+      "id": "https://wizard-api.dev.smart-x.smartsenselabs.com/0ae2975f-367a-4cf5-920f-1bef6c32f252/resource_12d94c2e-31d9-448f-b1cc-d2afd5a09f18.json",
+      "type": ["VerifiableCredential"],
+      "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "http://www.w3.org/2006/vcard/ns#",
+        "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
+      ],
+      "issuer": "did:web:lakhani02.dev.smart-x.smartsenselabs.com"
+    },
+    {
+      "credentialSubject": {
+        "gx:legalName": "Pinank02",
+        "gx:headquarterAddress": { "gx:countrySubdivisionCode": "AD-08" },
+        "gx:legalAddress": { "gx:countrySubdivisionCode": "AD-08" },
+        "id": "https://lakhani02.dev.smart-x.smartsenselabs.com/0ae2975f-367a-4cf5-920f-1bef6c32f252/participant.json#0",
+        "type": "gx:LegalParticipant",
+        "gx:legalRegistrationNumber": {
+          "id": "https://lakhani02.dev.smart-x.smartsenselabs.com/0ae2975f-367a-4cf5-920f-1bef6c32f252/participant.json#1"
+        }
+      },
+      "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://w3id.org/security/suites/jws-2020/v1",
+        "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
+      ],
+      "type": ["VerifiableCredential"],
+      "id": "https://lakhani02.dev.smart-x.smartsenselabs.com/0ae2975f-367a-4cf5-920f-1bef6c32f252/participant.json#0",
+      "issuer": "did:web:lakhani02.dev.smart-x.smartsenselabs.com",
+      "issuanceDate": "2024-09-04T06:44:21.052263627Z",
+      "proof": {
+        "type": "JsonWebSignature2020",
+        "created": "2024-09-04T06:44:22.666Z",
+        "proofPurpose": "assertionMethod",
+        "verificationMethod": "did:web:lakhani02.dev.smart-x.smartsenselabs.com#JWK2020-RSA",
+        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..bweOQDsZnqyMkUHD3U8YNTovNuumKlsgaBOEpGl-_Q0NOSj14J3skuDdnXjgTNf1daLcS2721SJ6fhOefcCxiIPwM5Xp0AWfgQVmAUriqDNyDjM-in8CPHrhmzWCPZx7E03rf51rFFoH8uciD7hvjL15XWj4ZHmtcHrXNmiDg8gWM8VM7C87vysvmz5Hcity0R72_ONTELB7NXcUtFPJYauAf1YcJOsZbrsGgtOFw3EjavA22HQPB9ZfV5wAa9EcPH3Dx2RHWJLgjQlME1P_bMegqmZ6Ji_Gd8l6tw2qRpMGdaW13kccYrqdXdyltIeP7OAGvdDwMM52aPQ70uJK3g"
+      }
+    },
+    {
+      "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://w3id.org/security/suites/jws-2020/v1"
+      ],
+      "type": ["VerifiableCredential"],
+      "id": "https://lakhani02.dev.smart-x.smartsenselabs.com/0ae2975f-367a-4cf5-920f-1bef6c32f252/participant.json#1",
+      "issuer": "did:web:registration.lab.gaia-x.eu:v1",
+      "issuanceDate": "2024-09-04T06:44:21.830Z",
+      "credentialSubject": {
+        "@context": "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#",
+        "type": "gx:legalRegistrationNumber",
+        "id": "https://lakhani02.dev.smart-x.smartsenselabs.com/0ae2975f-367a-4cf5-920f-1bef6c32f252/participant.json#1",
+        "gx:leiCode": "9695007586GCAKPYJ703",
+        "gx:leiCode-countryCode": "FR"
+      },
+      "evidence": [
+        {
+          "gx:evidenceURL": "https://api.gleif.org/api/v1/lei-records/",
+          "gx:executionDate": "2024-09-04T06:44:21.830Z",
+          "gx:evidenceOf": "gx:leiCode"
+        }
+      ],
+      "proof": {
+        "type": "JsonWebSignature2020",
+        "created": "2024-09-04T06:44:21.840Z",
+        "proofPurpose": "assertionMethod",
+        "verificationMethod": "did:web:registration.lab.gaia-x.eu:v1#X509-JWK2020",
+        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..Y3-1BfB-1JnoANWmdPddOA_2EmiKCY1oOnZevEck1H3jTlCTCdu-1oIvXNvaZ7PS65NJ5fHKHcR5B7jmf1igKCY3Y3EInb8j6L2KH7kLMG9ml6s-fsJQL8h9wnmcbv6dlfwp7PBd8NxiJbKSMuu88B2ZT7x9TqV4evF3XTFffZ3fojM3g-A_6wcsGMW6mTzzfLB7dxebEiK5q5AMuzJdzWxPy26KkghzLo7BCwrMTU6TV95HrBT97BQ-jlegvUTJmQmUxJYUz_qq4aBe4wed-VcR4TVJq9Zkh6vKsPpZ7S7D1OOvYFJWi9Q0xBx5IzGJpHpUEeK23tJx61ha5O9eWQ"
+      }
+    },
+    {
+      "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://w3id.org/security/suites/jws-2020/v1",
+        "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
+      ],
+      "credentialSubject": {
+        "gx:termsAndConditions": "The PARTICIPANT signing the Self-Description agrees as follows:\n- to update its descriptions about any changes, be it technical, organizational, or legal - especially but not limited to contractual in regards to the indicated attributes present in the descriptions.\n\nThe keypair used to sign Verifiable Credentials will be revoked where Gaia-X Association becomes aware of any inaccurate statements in regards to the claims which result in a non-compliance with the Trust Framework and policy rules defined in the Policy Rules and Labelling Document (PRLD).",
+        "id": "https://lakhani02.dev.smart-x.smartsenselabs.com/0ae2975f-367a-4cf5-920f-1bef6c32f252/participant.json#2",
+        "type": "gx:GaiaXTermsAndConditions",
+        "@context": [
+          "https://www.w3.org/2018/credentials/v1",
+          "https://w3id.org/security/suites/jws-2020/v1",
+          "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
+        ]
+      },
+      "id": "https://lakhani02.dev.smart-x.smartsenselabs.com/0ae2975f-367a-4cf5-920f-1bef6c32f252/participant.json#2",
+      "issuanceDate": "2024-09-04T06:44:21.052263627Z",
+      "issuer": "did:web:lakhani02.dev.smart-x.smartsenselabs.com",
+      "type": ["VerifiableCredential"],
+      "proof": {
+        "type": "JsonWebSignature2020",
+        "created": "2024-09-04T06:44:23.131Z",
+        "proofPurpose": "assertionMethod",
+        "verificationMethod": "did:web:lakhani02.dev.smart-x.smartsenselabs.com#JWK2020-RSA",
+        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..PEVkg1G4sZp0uxKJBYL0wrMjU0oWAhtv4FsasJUpuHXshBcpHQQDi1g-aZiVgKJ6Ev3AUeQeylNm0IImhKt6x4SVSJUpo9eN7FlRRr_LYOj2HxrKA7A8EQkfzvrVJ7F9eM6N6AO1sv1IS3eoRiERwGlqBbtTVPQE0OW-8eIZ0sT4JqouvPf8WUQVDHp_Y9ZrdAr4gnCnCv97mJOhYgiUvT7pO0AY-Lud3Qx1UgMXAo-7v2EH8OskPT7RwP__18IlOCnV2piOsY9uwbJhkf_DleraGFZRzTDl_hGAgrC3LFqzVl-d_GqiTNJScP0KamA7-JOoQHiYTfSVvsG2pMc0sA"
+      }
+    }
+  ]
+}
