@@ -11,11 +11,8 @@ const fs = fs1.promises;
 const ENTITY = "mpc-laas"; //mpc-laas, resource, lp, sample
 
 async function validate() {
-  const shaclFilePath = "./shacl/" + ENTITY + "/shacl.ttl";
-  const jsonFilePath = "./shacl/" + ENTITY + "/iaas.json";
-  // const jsonFilePath = "./shacl/" + ENTITY + "/software-resource.json";
-  // const jsonFilePath = "./shacl/" + ENTITY + "/physical-resource.json";
-  // const jsonFilePath = "./shacl/" + ENTITY + "/data-resource.json";
+  const shaclFilePath = "./shacl/" + ENTITY + "/kaas-shacl.ttl";
+  const jsonFilePath = "./shacl/" + ENTITY + "/kaas.json";
 
   const shapesDataset = await readFileAsync(shaclFilePath);
   const selfDescriptionDataset = await readFileAsync(jsonFilePath);

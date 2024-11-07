@@ -1,0 +1,258 @@
+@prefix gx: <https://dev-registry.learn.smartsenselabs.com/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#> .
+@prefix gx1: <https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# (KaaS) Kubernetes ServiceOffering Shape
+
+gx:KubernetesServiceOfferingShape a sh:NodeShape ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property 
+        [ sh:class gx1:LegalParticipant ;
+            sh:description "A resolvable link to Gaia-X Credential of the participant providing the service." ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:name "provided by" ;
+            sh:nodeKind sh:IRI ;
+            sh:order 0 ;
+            sh:path gx:providedBy ] ,
+
+        [ sh:path gx:policy ;
+            sh:name "policy" ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:description
+                "a list of policy expressed using a DSL (e.g., Rego or ODRL) (access control, throttling, usage, retention, …)." ;
+            sh:datatype xsd:string
+        ] ,
+
+        [ sh:path gx:termsAndConditions ;
+            sh:name "terms & conditions" ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:description "a resolvable link to the service offering self-description related to the service and that can exist independently of it." ;
+            sh:node gx:SOTermsAndConditions ] ,
+
+        [ sh:path gx:dataAccountExport ;
+            sh:name "data account export" ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:order 3 ;
+            sh:description "list of methods to export data from your user’s account out of the service" ;
+            sh:node gx:DataAccountExport ] ,
+
+        [ sh:datatype xsd:string ;
+            sh:description "A human readable name of the entity." ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:name "name" ;
+            sh:nodeKind sh:Literal ;
+            sh:order 4 ;
+            sh:path gx:name ] ,
+
+        [ sh:datatype xsd:string ;
+            sh:description "A free text description of the entity." ;
+            sh:name "Description" ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 5 ;
+            sh:path gx:description ] ,
+
+        [ sh:description "Resource references where service is hosted and can be instantiated. Can refer to availabilty zones, data centers, regions, etc.";
+            sh:name "Hosted on" ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:or ( [ sh:class gx1:VirtualResource ] [ sh:class gx1:PhysicalResource ] ) ;
+            sh:order 6 ;
+            sh:path gx:hostedOn ] ,
+
+        [ sh:datatype xsd:integer ;
+            sh:description "Number of CPU" ;
+            sh:name "Number of CPU" ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:minInclusive 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 7 ;
+            sh:path gx:cpuQuantity ] ,
+        
+        [ sh:class gx:MemorySize ;
+            sh:description "Service memory" ;
+            sh:name "Service memory" ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 8 ;
+            sh:path gx:memoryQuantity ] ,
+        
+        [ sh:class gx:MemorySize ;
+            sh:description "Maximum allowed storage" ;
+            sh:name "Maximum allowed storage" ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 9 ;
+            sh:path gx:storageQuantity ] ,
+
+        [ sh:datatype xsd:integer ;
+            sh:description "Number of GPU" ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:name "Number of GPU" ;
+            sh:nodeKind sh:Literal ;
+            sh:order 10 ;
+            sh:path gx:gpuQuantity ] ,
+
+        [ sh:class gx:DataRate ;
+            sh:description "Minimum CellRate" ;
+            sh:name "Minimum CellRate" ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:order 11 ;
+            sh:path gx:minimumCellRate ] ,
+
+        [ sh:datatype xsd:string ;
+            sh:description "Regex ensures the version format aligns with Kubernetes common versioning patterns. ex. v1.22.3, v1.22.3-alpha.1, v1.23.0-beta.2, v1.24.0-rc.3 " ;
+            sh:name "Kubernetes Version" ;
+            sh:nodeKind sh:Literal ;
+            sh:order 12 ;
+            sh:pattern "^1\\.(1[6-9]|[2-9][0-9])\\.\\d+$" ; # Regex pattern for Kubernetes version validation
+	        sh:message "Invalid Kubernetes version format. Expected format: '1.x.y' with x >= 16." ;
+            sh:path gx:kubernetesVersion ] ;
+
+    sh:targetClass gx:KubernetesServiceOffering .
+
+gx:SOTermsAndConditionsShape a sh:NodeShape ;
+    sh:property
+        [ sh:path gx:URL ;
+            sh:name "URL" ;
+            sh:description "a resolvable link to document" ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:datatype xsd:string ] ,
+
+        [ sh:path gx:hash ;
+            sh:name "hash" ;
+            sh:description "sha256 hash of the above document." ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:datatype xsd:string ] ;
+    
+    sh:targetClass gx:SOTermsAndConditions .
+
+gx:DataAccountExportShape a sh:NodeShape ;
+    sh:property
+        [ sh:path gx:requestType ;
+            sh:description "The mean to request data retrieval: API, email, webform, unregisteredLetter, registeredLetter, supportCenter." ;
+            sh:datatype xsd:string ;
+            sh:name "Request type" ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:in ( "API" "email" "webform" "unregisteredLetter" "registeredLetter" "supportCenter" )
+        ] ,
+
+        [ sh:path gx:accessType ;
+            sh:datatype xsd:string ;
+            sh:name "Access type" ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:description "Type of data support: digital, physical." ;
+            sh:in ( "digital" "physical" )
+        ] ,
+
+        [ sh:path gx:formatType ;
+            sh:datatype xsd:string ;
+            sh:name "Format type" ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;
+            sh:pattern "^\\w+/[-+.\\w]+$" ;
+            sh:flags "i" ;
+            sh:message "Type of Media Types (formerly known as MIME types) as defined by the IANA." ;
+        ] ;
+    
+    sh:targetClass gx:DataAccountExport .
+    
+gx:MemorySizeShape a sh:NodeShape ;
+    rdfs:subClassOf gx:Quantity ;
+    sh:closed true ;
+    sh:description "The number of bytes, that can be stored on a digital storage." ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:name "Memory size" ;
+    sh:property 
+        [ sh:datatype xsd:string ;
+            sh:description "Unit of physical quantity" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path gx:unit;
+        ],
+
+        [ sh:datatype xsd:float ;
+            sh:description "Value of physical quantity. See https://qudt.org/schema/qudt/value" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:minInclusive 0 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path gx:value;
+        ] ;
+
+    sh:targetClass gx:MemorySize .
+
+gx:QuantityShape a sh:NodeShape ;
+    sh:closed false ;
+    sh:description "Abstract parent class for all physical quantities, such as frequency, power or length." ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property 
+        [ sh:datatype xsd:string ;
+            sh:description "Unit of physical quantity" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path gx:unit;
+        ],
+
+        [ sh:datatype xsd:integer ;
+            sh:description "Value of physical quantity. See https://qudt.org/schema/qudt/value" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:minInclusive 0 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path gx:value;
+        ];
+
+    sh:targetClass gx:Quantity .
+
+gx:DataRateShape a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "Definition of 'Data Rate', according to http://qudt.org/quantitykind/DataRate." ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property 
+		[ sh:datatype xsd:float ;
+            sh:description "Value of physical quantity. See https://qudt.org/schema/qudt/value" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:minInclusive 0 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path gx:value ],
+
+        [ sh:datatype xsd:string ;
+            sh:description "Unit of physical quantity. See https://qudt.org/schema/qudt/Unit" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path gx:unit ] ;
+
+    sh:targetClass gx:DataRate .

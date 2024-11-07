@@ -1075,7 +1075,6 @@ gx:LegitimateInterest
             sh:datatype xsd:string
         ] .
 
-
 gx:ServiceOfferingLabelShape  a sh:NodeShape ;
   sh:targetClass gx:ServiceOfferingLabelLevel1 ;
   sh:property [
