@@ -64,11 +64,11 @@ gx:KubernetesServiceOfferingShape a sh:NodeShape ;
             sh:order 5 ;
             sh:path gx:description ] ,
 
-        [ sh:description "Resource references where service is hosted and can be instantiated. Can refer to availabilty zones, data centers, regions, etc.";
-            sh:name "Hosted on" ;
-            sh:minCount 1 ;
-            sh:maxCount 1 ;
+        [ sh:description "List of Resource references where service is hosted and can be instantiated. Can refer to availabilty zones, data centers, regions, etc." ;
+            sh:name "hosted on" ;
             sh:or ( [ sh:class gx1:VirtualResource ] [ sh:class gx1:PhysicalResource ] ) ;
+            sh:minCount 1 ;
+            sh:maxCount 1 ;            
             sh:order 6 ;
             sh:path gx:hostedOn ] ,
 
