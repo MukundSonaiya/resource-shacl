@@ -68,7 +68,6 @@ gx:KubernetesServiceOfferingShape a sh:NodeShape ;
             sh:name "hosted on" ;
             sh:or ( [ sh:class gx1:VirtualResource ] [ sh:class gx1:PhysicalResource ] ) ;
             sh:minCount 1 ;
-            sh:maxCount 1 ;            
             sh:order 6 ;
             sh:path gx:hostedOn ] ,
 
