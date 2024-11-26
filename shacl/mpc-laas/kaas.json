@@ -125,9 +125,9 @@
           "gx:accessType": "digital",
           "gx:formatType": "application/1d-interleaved-parityfec"
         },
-        "gx:hostedOn": {
+        "gx:hostedOn": [{
           "id": "https://wizard-api.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/resource_dc865598-19c7-4f0c-b636-394ba275d0d3.json"
-        },
+        }],
         "gx:name": "Kubernetes Service Offering",
         "gx:description": "Offering virtual machine services with high-performance options",
         "gx:cpuQuantity": 1,
