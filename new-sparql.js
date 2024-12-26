@@ -4,6 +4,7 @@ import { Readable } from "stream";
 import Parser from "@rdfjs/parser-n3";
 import jsonld from "jsonld";
 import fs1 from "fs";
+import { Engine } from "sparql-engine";
 const fs = fs1.promises;
 
 // Validate Physical Resource
@@ -11,8 +12,8 @@ const fs = fs1.promises;
 const ENTITY = "mpc-laas"; //mpc-laas, resource, lp, sample
 
 async function validate() {
-  const shaclFilePath = "./shacl/" + ENTITY + "/shacl.ttl";
-  const jsonFilePath = "./shacl/" + ENTITY + "/kaas.json";
+  const shaclFilePath = "./shacl/" + ENTITY + "/os.ttl";
+  const jsonFilePath = "./shacl/" + ENTITY + "/os.json";
 
   const shapesDataset = await readFileAsync(shaclFilePath);
   const selfDescriptionDataset = await readFileAsync(jsonFilePath);
@@ -22,35 +23,22 @@ async function validate() {
 
   const data = await loadFromJSONLDWithQuads(parsedSD);
 
-  const validator = new SHACLValidator(shapes, { factory: rdf });
+  // Step 2: SPARQL Constraint Validation
+  const sparqlEngine = new Engine();
 
-  const report = await validator.validate(data);
-
-  const { conforms, results: reportResults } = report;
+  const resultStream = await sparqlEngine.query(shapes, {
+    sources: [data],
+  });
 
   const results = [];
-
-  for (const result of reportResults) {
-    const {
-      message,
-      path: { value },
-    } = result;
-    // console.log(
-    //   "<------------------------------------------------------------------------------------------------>"
-    // );
-
-    // console.log(JSON.stringify(result.message));
-    // console.log(JSON.stringify(result.path));
-    // console.log(JSON.stringify(result.focusNode));
-    // console.log(JSON.stringify(result.severity));
-    // console.log(JSON.stringify(result.sourceConstraintComponent));
-    // console.log(JSON.stringify(result.sourceShape));
-    // console.log(
-    //   "<------------------------------------------------------------------------------------------------>"
-    // );
-    const msg = JSON.stringify(message);
-    results.push({ msg, path: value });
-  }
+  resultStream.on("data", (row) => results.push(row));
+  resultStream.on("end", () => {
+    if (results.length === 0) {
+      console.log("SPARQL constraints passed!");
+    } else {
+      console.error("SPARQL constraints failed! Invalid entries:", results);
+    }
+  });
 
   return {
     conforms,

@@ -3,35 +3,35 @@
   "type": ["VerifiablePresentation"],
   "verifiableCredential": [
     {
+      "issuanceDate": "2024-10-23T10:32:23.595080814Z",
       "credentialSubject": {
-        "gx:legalName": "Pinank2024",
         "gx:headquarterAddress": {
           "gx:countrySubdivisionCode": "AF-BDS"
+        },
+        "gx:legalRegistrationNumber": {
+          "id": "https://unique89-fr79537407926.dev-wizard.dynamo-demo.com/1e6fde96-c312-4ff0-a251-5a27a91b7067/participant.json#1"
         },
         "gx:legalAddress": {
           "gx:countrySubdivisionCode": "AF-BDS"
         },
-        "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/participant.json#0",
+        "id": "https://unique89-fr79537407926.dev-wizard.dynamo-demo.com/1e6fde96-c312-4ff0-a251-5a27a91b7067/participant.json#0",
         "type": "gx:LegalParticipant",
-        "gx:legalRegistrationNumber": {
-          "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/participant.json#1"
-        }
+        "gx:legalName": "Unique89 Legal Participant Name"
       },
+      "id": "https://unique89-fr79537407926.dev-wizard.dynamo-demo.com/1e6fde96-c312-4ff0-a251-5a27a91b7067/participant.json#0",
+      "type": ["VerifiableCredential"],
       "@context": [
         "https://www.w3.org/2018/credentials/v1",
         "https://w3id.org/security/suites/jws-2020/v1",
         "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
       ],
-      "type": ["VerifiableCredential"],
-      "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/participant.json#0",
-      "issuer": "did:web:lakhani2024.dev.smart-x.smartsenselabs.com",
-      "issuanceDate": "2024-08-07T12:39:41.320625325Z",
+      "issuer": "did:web:unique89-fr79537407926.dev-wizard.dynamo-demo.com",
       "proof": {
         "type": "JsonWebSignature2020",
-        "created": "2024-08-07T12:39:43.123Z",
+        "created": "2024-10-23T10:32:24.224Z",
         "proofPurpose": "assertionMethod",
-        "verificationMethod": "did:web:lakhani2024.dev.smart-x.smartsenselabs.com#JWK2020-RSA",
-        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..lmS16OIAAMA4f7CXSr0W0ImOz9tyFCf2hRF_4kHggtbMUEM0AvCfRN9y5Vz6C87jhW_TgmLbxyJMfTg5USvhkH5ORQAbctqsXP1Jw5r0sr21bR_OSNANWCbXSx_mX-3C2PQ2X-xE-aApKHUlBhB46yNvROcrg4t1gJvDJ62BH59wTEvIUiw-NtHiFfqap5enAJV9XCTn-u3yGFtJ8OU9W6s6pKRpzWrl9VfffD-6EPWSGEAt4ASNaQo7TzyJtdZ0fVnZNEjHeHY096wN8013oVnwl3sIm39K4nvOZXtdMUcgBwQaW8jzcMNbSK9DeGLSKaXOgIz2QDUaCDyArAX36g"
+        "verificationMethod": "did:web:unique89-fr79537407926.dev-wizard.dynamo-demo.com#JWK2020-RSA",
+        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..WO5UPRWAZnM8qyTI9KXnYR3SNLSnMdp0zu5hlwb9LDOZQQ4boC9fw5wLjITFVgkkeDN36H2FrLDnwi1tDj9zB24iSp5x-DBhhWyfWnO8XB1AF6jpppswvJjLMEj8iG0ekuwveNPtU08ndZM3fn0JOQuKifWEKLuL3SpgYsPJvMt9zDfJ19tLiCslODlnPRw9yL4ZHqYZt20KZjuVIfeCFIBJeF0UX_p_cSMWfAZLCbSTkMdB3YXy4PkedfLNaGEQ9KEZLzDofUntasRNeBIKekMGtybI4e3a_sAfZw3P5EjTPZUYjxfdXtBeo1oH5gHY3dJrVJH9k5nGoMkTffJvkw"
       }
     },
     {
@@ -40,40 +40,36 @@
         "https://w3id.org/security/suites/jws-2020/v1"
       ],
       "type": ["VerifiableCredential"],
-      "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/participant.json#1",
-      "issuer": "did:web:registration.lab.gaia-x.eu:v1",
-      "issuanceDate": "2024-08-07T12:39:41.898Z",
+      "id": "https://unique89-fr79537407926.dev-wizard.dynamo-demo.com/1e6fde96-c312-4ff0-a251-5a27a91b7067/participant.json#1",
+      "issuer": "did:web:gx-notary.aruba.it:v1",
+      "issuanceDate": "2024-10-23T10:32:23.916Z",
       "credentialSubject": {
         "@context": "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#",
         "type": "gx:legalRegistrationNumber",
-        "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/participant.json#1",
+        "id": "https://unique89-fr79537407926.dev-wizard.dynamo-demo.com/1e6fde96-c312-4ff0-a251-5a27a91b7067/participant.json#1",
         "gx:vatID": "FR79537407926",
         "gx:vatID-countryCode": "FR"
       },
       "evidence": [
         {
           "gx:evidenceURL": "http://ec.europa.eu/taxation_customs/vies/services/checkVatService",
-          "gx:executionDate": "2024-08-07T12:39:41.898Z",
+          "gx:executionDate": "2024-10-23T10:32:23.916Z",
           "gx:evidenceOf": "gx:vatID"
         }
       ],
       "proof": {
         "type": "JsonWebSignature2020",
-        "created": "2024-08-07T12:39:42.053Z",
+        "created": "2024-10-23T10:32:23.923Z",
         "proofPurpose": "assertionMethod",
-        "verificationMethod": "did:web:registration.lab.gaia-x.eu:v1#X509-JWK2020",
-        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..UorxvpR1Sig6F9eep4vVeSd8Ha1PpaX9Rmj2mwL3WkbYYayiB7DTPhsdXVhQHPdzDhCDp8FnaHYase06OJEYb2jeZIfMw7007xpxTK2CJDxFcJPJnlGk_lLCDoW-76qmlJ_7Q1vxHm5rtZ06WDrXIwk73bNhplMYkcw8_8Ke19ytHX45fKXoPrCLFf8fKb9jHr5Ze1DUQkWKxuIsJFKtGNuWF-eT34U6N15AMhAd7RE545dvF_71b3BoOJlLJKN3z25kNK_7m6Js00TZgpl9LPlE8aqqryOGqpvRHi8GH2O9AzKw3RjT8D_nOEIK93hwxlog8Ney_v62098axiwL5g"
+        "verificationMethod": "did:web:gx-notary.aruba.it:v1#X509-JWK2020",
+        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..Vi9MMqVg5L68kW6l9wjgrleeBblXclPfbpoYk56vACFMDmWxF38B1JtxyjqSnSMAgH54Rkw8TMZA-oJ262VC_dX5hZxLbrTAOghytjv4qBBJ12ecE0N06WNYTr8LDbmSajIE_wlFXVgGKtvRnaF2eSPiCUF0JYr61YpeLzFhIBQ6wIgDiLPT6OHlvg52PkXqRs6SyznSwl4DE-BDoUagmLSRa3xtnr0K-3ZcCY2apfZ91YVHVjsTGe3azWD5MJO9Ga21ujzSFDS8ekev0-U1HazQBr45QHvLk-4YjLxh0bHRvjUrY3HAJ8DvnM5x0WkhrHkEPm2YBaNn16EEk02c4w"
       }
     },
     {
-      "@context": [
-        "https://www.w3.org/2018/credentials/v1",
-        "https://w3id.org/security/suites/jws-2020/v1",
-        "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
-      ],
+      "issuanceDate": "2024-10-23T10:32:23.595080814Z",
       "credentialSubject": {
         "gx:termsAndConditions": "The PARTICIPANT signing the Self-Description agrees as follows:\n- to update its descriptions about any changes, be it technical, organizational, or legal - especially but not limited to contractual in regards to the indicated attributes present in the descriptions.\n\nThe keypair used to sign Verifiable Credentials will be revoked where Gaia-X Association becomes aware of any inaccurate statements in regards to the claims which result in a non-compliance with the Trust Framework and policy rules defined in the Policy Rules and Labelling Document (PRLD).",
-        "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/participant.json#2",
+        "id": "https://unique89-fr79537407926.dev-wizard.dynamo-demo.com/1e6fde96-c312-4ff0-a251-5a27a91b7067/participant.json#2",
         "type": "gx:GaiaXTermsAndConditions",
         "@context": [
           "https://www.w3.org/2018/credentials/v1",
@@ -81,395 +77,25 @@
           "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
         ]
       },
-      "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/participant.json#2",
-      "issuanceDate": "2024-08-07T12:39:41.320625325Z",
-      "issuer": "did:web:lakhani2024.dev.smart-x.smartsenselabs.com",
+      "id": "https://unique89-fr79537407926.dev-wizard.dynamo-demo.com/1e6fde96-c312-4ff0-a251-5a27a91b7067/participant.json#2",
       "type": ["VerifiableCredential"],
-      "proof": {
-        "type": "JsonWebSignature2020",
-        "created": "2024-08-07T12:39:43.644Z",
-        "proofPurpose": "assertionMethod",
-        "verificationMethod": "did:web:lakhani2024.dev.smart-x.smartsenselabs.com#JWK2020-RSA",
-        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..XcqpWQXqCXwCiwqdDfajkIP9MXxh98hSrZzJR8yzeUUdhP3iy-cA-xzULNxqxdGFJxzD5rJWw1FT3xYfPLyF2tRRD0ex1eUx5HG0bq51N0SUTBNvWy6U7CqMtAA0-B9yA0ZmU-HorhTkGVnI13jdHjvF6B7qDIxPkrUeFBDyan_mz4bBEzNJVbCQB5DMGXdnubfhzzlH2soIIxRjbY0KzzKWJOS3Q1HuAVgKWbT6tu03CGmVWJnagsd90kEDsthGCtVwsnlO2CL3hlaA_6xaEtFu1OZ1V7AzNxkIIZaMPqM21BGJErIvG8N19g7uTXZl5aEvkoSwKjRCM_yloIw2Lg"
-      }
-    },
-    {
       "@context": [
         "https://www.w3.org/2018/credentials/v1",
         "https://w3id.org/security/suites/jws-2020/v1",
-        {
-          "gx": "https://dev-registry.learn.smartsenselabs.com/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#",
-          "xsd": "http://www.w3.org/2001/XMLSchema#"
-        }
+        "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
       ],
-      "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/service_iaas.json",
-      "type": "VerifiableCredential",
-      "issuer": "did:web:lakhani2024.dev.smart-x.smartsenselabs.com",
-      "issuanceDate": "2024-07-06T00:00:00Z",
+      "issuer": "did:web:unique89-fr79537407926.dev-wizard.dynamo-demo.com",
+      "proof": {
+        "type": "JsonWebSignature2020",
+        "created": "2024-10-23T10:32:24.418Z",
+        "proofPurpose": "assertionMethod",
+        "verificationMethod": "did:web:unique89-fr79537407926.dev-wizard.dynamo-demo.com#JWK2020-RSA",
+        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..XPu-bG8K_WnhzD6_kihWtOPz34CFVHJKdFb71x9UuC8C8sZHtCTH4Fhi5uCQJsf3lSqejWSpcHB0jNV7Pwk4wIimVBnXH6KPMF_cGHN4O55fF6-s54DtmykwjKPjvNV7qSvDV9g_0YumQpL3v17xd1baYebuPVHGIN_hTSRp32N34gvXdnHTsJV91XjdsH-OmbkZWsMLLSEa7XJ6mNnNjAFUko-YLVK5WK1maq8GQVl51r-xmhgE7n7H9evQf6yJsYBtxDD9bozpuYcyHpK6fbyU1owGJ9j-onJ3L0cBVYxqyBQVfWF43nN2KNag3t75-FnamO5XX5cCrmNXQIsxaA"
+      }
+    },
+    {
+      "issuanceDate": "2024-12-05T18:30:25.045148865Z",
       "credentialSubject": {
-        "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/service_iaas.json",
-        "type": "gx:VirtualMachineServiceOffering",
-        "gx:codeArtifact": {
-          "type": "gx:VMImage",
-          "gx:vmImageDiskFormat": "RAW",
-          "gx:hypervisorType": "quemu",
-          "gx:firmwareType": "UEFI",
-          "gx:hwRngTypeOfImage": "Electrical noise",
-          "gx:watchDogAction": "reset",
-          "gx:fileSize": {
-            "type": "gx:MemorySize",
-            "gx:value": {
-              "@value": 4,
-              "@type": "xsd:float"
-            },
-            "gx:unit": "GB"
-          },
-          "gx:operatingSystem": {
-            "type": "gx:OperatingSystem",
-            "gx:osDistribution": "Alpine Linux",
-            "gx:checksum": {
-              "type": "gx:CheckSum",
-              "gx:checkSumCalculation": "md5",
-              "gx:checkSumValue": "120EA8A25E5D487BF68B5F7096440019"
-            },
-            "gx:signature": {
-              "type": "gx:Signature",
-              "gx:signatureValue": "120EA8A25E5D487BF68B5F7096440019",
-              "gx:hashAlgorithm": "sha-1",
-              "gx:signatureAlgorithm": "KCDSA"
-            },
-            "gx:version": "Ubuntu 20.04 LTS",
-            "gx:patchLevel": "1",
-            "gx:buildDate": {
-              "@value": "2022-09-27T18:00:00.000",
-              "@type": "xsd:dateTime"
-            },
-            "gx:name": "Virtual Machine Service Offering",
-            "gx:description": "Offering virtual machine services with high-performance options"
-          },
-          "gx:cpuReq": {
-            "type": "gx:CPU",
-            "gx:cpuArchitecture": "x86-64",
-            "gx:cpuFlag": ["ADX"],
-            "gx:smtEnabled": true,
-            "gx:numberOfCores": 4,
-            "gx:numberOfThreads": 4,
-            "gx:baseFrequency": {
-              "type": "gx:FrequencyDefinition",
-              "gx:value": {
-                "@value": 4,
-                "@type": "xsd:float"
-              },
-              "gx:unit": "HZ"
-            },
-            "gx:boostFrequency": {
-              "type": "gx:FrequencyDefinition",
-              "gx:value": {
-                "@value": 4,
-                "@type": "xsd:float"
-              },
-              "gx:unit": "MegaHZ"
-            },
-            "gx:lastLevelCacheSize": {
-              "type": "gx:MemorySize",
-              "gx:value": {
-                "@value": 12.5,
-                "@type": "xsd:float"
-              },
-              "gx:unit": "MegaBYTE"
-            },
-            "gx:thermalDesignPower": {
-              "type": "gx:Power",
-              "gx:value": {
-                "@value": 12.5,
-                "@type": "xsd:float"
-              },
-              "gx:unit": "MegaW"
-            },
-            "gx:vendor": "AWS",
-            "gx:generation": "t2.micro",
-            "gx:defaultOversubscriptionRatio": 1,
-            "gx:supportedOversubscriptionRatio": 1
-          },
-          "gx:gpuReq": {
-            "type": "gx:GPU",
-            "gx:gpuMemory": {
-              "type": "gx:MemorySize",
-              "gx:value": {
-                "@value": 12,
-                "@type": "xsd:float"
-              },
-              "gx:unit": "TeraBYTE"
-            },
-            "gx:gpuInterconnection": "NVLink",
-            "gx:gpuProcessingUnits": 16,
-            "gx:gpuPassthrough": true,
-            "gx:vendor": "AWS",
-            "gx:generation": "t2.micro",
-            "gx:defaultOversubscriptionRatio": 1,
-            "gx:supportedOversubscriptionRatio": 1
-          },
-          "gx:ramReq": {
-            "type": "gx:Memory",
-            "gx:memorySize": {
-              "type": "gx:MemorySize",
-              "gx:value": {
-                "@value": 4,
-                "@type": "xsd:float"
-              },
-              "gx:unit": "GB"
-            },
-            "gx:memoryClass": "SDRAM",
-            "gx:memoryRank": "4R LRDIMM",
-            "gx:eccEnabled": true,
-            "gx:hardwareEncryption": true,
-            "gx:vendor": "Sandisk",
-            "gx:generation": "latest",
-            "gx:defaultOversubscriptionRatio": 1,
-            "gx:supportedOversubscriptionRatio": 1
-          },
-          "gx:videoRamSize": {
-            "type": "gx:MemorySize",
-            "gx:value": {
-              "@value": 4,
-              "@type": "xsd:float"
-            },
-            "gx:unit": "GB"
-          },
-          "gx:rootDiskReq": {
-            "type": "gx:Disk",
-            "gx:diskSize": {
-              "type": "gx:MemorySize",
-              "gx:value": {
-                "@value": 4,
-                "@type": "xsd:float"
-              },
-              "gx:unit": "GB"
-            },
-            "gx:diskType": "local SSD",
-            "gx:diskBusType": "SATA",
-            "gx:vendor": "Sandisk",
-            "gx:generation": "latest",
-            "gx:defaultOversubscriptionRatio": 1,
-            "gx:supportedOversubscriptionRatio": 1
-          },
-          "gx:encryption": {
-            "type": "gx:Encryption",
-            "gx:cipher": "RSA",
-            "gx:keyManagement": "BYOK"
-          },
-          "gx:checkSum": {
-            "type": "gx:CheckSum",
-            "gx:checkSumCalculation": "blake2",
-            "gx:checkSumValue": "120EA8A25E5D487BF68B5F7096440019"
-          },
-          "gx:secureBoot": true,
-          "gx:vPMU": true,
-          "gx:multiQueues": true,
-          "gx:updateStrategy": {
-            "type": "gx:UpdateStrategy",
-            "gx:replaceFrequency": "yearly",
-            "gx:hotfixHours": 5,
-            "gx:oldVersionsValidUntil": "forever",
-            "gx:providedUntil": "none"
-          },
-          "gx:licenseIncluded": true,
-          "gx:maintenance": {
-            "type": "gx:MaintenanceSubscription",
-            "gx:subscriptionIncluded": true,
-            "gx:subscriptionRequired": true,
-            "gx:maintainedUntil": {
-              "@value": "2025-12-31",
-              "@type": "xsd:date"
-            }
-          },
-          "gx:checksum": {
-            "type": "gx:CheckSum",
-            "gx:checkSumCalculation": "md5",
-            "gx:checkSumValue": "120EA8A25E5D487BF68B5F7096440019"
-          },
-          "gx:signature": {
-            "type": "gx:Signature",
-            "gx:signatureValue": "120EA8A25E5D487BF68B5F7096440019",
-            "gx:hashAlgorithm": "sha-1",
-            "gx:signatureAlgorithm": "KCDSA"
-          },
-          "gx:version": "Ubuntu 20.04 LTS",
-          "gx:patchLevel": "1",
-          "gx:buildDate": {
-            "@value": "2022-09-27T18:00:00.000",
-            "@type": "xsd:dateTime"
-          },
-          "gx:name": "Virtual Machine Service Offering",
-          "gx:description": "Offering virtual machine services with high-performance options"
-        },
-        "gx:instantiationReq": {
-          "type": "gx:ServerFlavor",
-          "gx:cpu": {
-            "type": "gx:CPU",
-            "gx:cpuArchitecture": "x86-64",
-            "gx:cpuFlag": ["ADX"],
-            "gx:smtEnabled": true,
-            "gx:numberOfCores": 4,
-            "gx:numberOfThreads": 4,
-            "gx:baseFrequency": {
-              "type": "gx:FrequencyDefinition",
-              "gx:value": {
-                "@value": 4,
-                "@type": "xsd:float"
-              },
-              "gx:unit": "HZ"
-            },
-            "gx:boostFrequency": {
-              "type": "gx:FrequencyDefinition",
-              "gx:value": {
-                "@value": 4,
-                "@type": "xsd:float"
-              },
-              "gx:unit": "MegaHZ"
-            },
-            "gx:lastLevelCacheSize": {
-              "type": "gx:MemorySize",
-              "gx:value": {
-                "@value": 128,
-                "@type": "xsd:float"
-              },
-              "gx:unit": "MegaBYTE"
-            },
-            "gx:thermalDesignPower": {
-              "type": "gx:Power",
-              "gx:value": {
-                "@value": 40.5,
-                "@type": "xsd:float"
-              },
-              "gx:unit": "MegaW"
-            },
-            "gx:vendor": "AWS",
-            "gx:generation": "t2.micro",
-            "gx:defaultOversubscriptionRatio": 1,
-            "gx:supportedOversubscriptionRatio": 1
-          },
-          "gx:ram": {
-            "type": "gx:Memory",
-            "gx:memorySize": {
-              "type": "gx:MemorySize",
-              "gx:value": {
-                "@value": 4,
-                "@type": "xsd:float"
-              },
-              "gx:unit": "GB"
-            },
-            "gx:memoryClass": "SDRAM",
-            "gx:memoryRank": "4R LRDIMM",
-            "gx:eccEnabled": true,
-            "gx:hardwareEncryption": true,
-            "gx:vendor": "Sandisk",
-            "gx:generation": "latest",
-            "gx:defaultOversubscriptionRatio": 1,
-            "gx:supportedOversubscriptionRatio": 1
-          },
-          "gx:gpu": {
-            "type": "gx:GPU",
-            "gx:gpuMemory": {
-              "type": "gx:MemorySize",
-              "gx:value": {
-                "@value": 2,
-                "@type": "xsd:float"
-              },
-              "gx:unit": "TeraBYTE"
-            },
-            "gx:gpuInterconnection": "NVLink",
-            "gx:gpuProcessingUnits": 16,
-            "gx:gpuPassthrough": true,
-            "gx:vendor": "AWS",
-            "gx:generation": "t2.micro",
-            "gx:defaultOversubscriptionRatio": 1,
-            "gx:supportedOversubscriptionRatio": 1
-          },
-          "gx:network": "10 Gbps",
-          "gx:bootVolume": {
-            "type": "gx:Disk",
-            "gx:diskSize": {
-              "type": "gx:MemorySize",
-              "gx:value": {
-                "@value": 2,
-                "@type": "xsd:float"
-              },
-              "gx:unit": "GB"
-            },
-            "gx:diskType": "local SSD",
-            "gx:diskBusType": "SATA",
-            "gx:vendor": "Sandisk",
-            "gx:generation": "latest",
-            "gx:defaultOversubscriptionRatio": 1,
-            "gx:supportedOversubscriptionRatio": 1
-          },
-          "gx:additionalVolume": [
-            {
-              "type": "gx:Disk",
-              "gx:diskSize": {
-                "type": "gx:MemorySize",
-                "gx:value": {
-                  "@value": 1,
-                  "@type": "xsd:float"
-                },
-                "gx:unit": "TB"
-              },
-              "gx:diskType": "local SSD",
-              "gx:diskBusType": "SATA",
-              "gx:vendor": "Sandisk",
-              "gx:generation": "latest",
-              "gx:defaultOversubscriptionRatio": 1,
-              "gx:supportedOversubscriptionRatio": 1
-            }
-          ],
-          "gx:confidentialComputing": {
-            "type": "gx:ConfidentialComputing",
-            "gx:technology": "GoLang",
-            "gx:attestationServiceURI": {
-              "@value": "https://github.com/topics/confidential-computing",
-              "@type": "xsd:anyURI"
-            }
-          },
-          "gx:hypervisor": {
-            "type": "gx:Hypervisor",
-            "gx:hypervisorType": "quemu",
-            "gx:checksum": {
-              "type": "gx:CheckSum",
-              "gx:checkSumCalculation": "md5",
-              "gx:checkSumValue": "120EA8A25E5D487BF68B5F7096440019"
-            },
-            "gx:signature": {
-              "type": "gx:Signature",
-              "gx:signatureValue": "120EA8A25E5D487BF68B5F7096440019",
-              "gx:hashAlgorithm": "sha-1",
-              "gx:signatureAlgorithm": "KCDSA"
-            },
-            "gx:version": "Ubuntu 20.04 LTS",
-            "gx:patchLevel": "1",
-            "gx:buildDate": {
-              "@value": "2022-09-27T18:00:00.000",
-              "@type": "xsd:dateTime"
-            }
-          },
-          "gx:hardwareAssistedVirtualization": true,
-          "gx:hwRngTypeOfFlavor": "Quantum",
-          "gx:name": "High Performance Server",
-          "gx:description": "High-performance server flavor for demanding applications"
-        },
-        "gx:tenantSeparation": "hw-virtualized",
-        "gx:providedBy": {
-          "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/participant.json#0"
-        },
-        "gx:servicePolicy": [
-          "https://wizard-api.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/service_8sQS_policy.json"
-        ],
-        "gx:dataAccountExport": {
-          "type": "gx:DataAccountExport",
-          "gx:requestType": "email",
-          "gx:accessType": "digital",
-          "gx:formatType": ["1d-interleaved-parityfec"]
-        },
         "gx:dataProtectionRegime": [
           "LGPD2019",
           "PDPA2012",
@@ -477,36 +103,420 @@
           "GDPR2016",
           "VCDPA2021"
         ],
-        "gx:serviceOfferingTermsAndConditions": {
-          "type": "gx:TermsAndConditions",
-          "gx:url": "http://www.stackoverflow.com",
-          "gx:hash": "d8402a23de560f5ab34b22d1a142feb9e13b3143"
+        "gx:providedBy": {
+          "id": "https://unique89-fr79537407926.dev-wizard.dynamo-demo.com/1e6fde96-c312-4ff0-a251-5a27a91b7067/participant.json#0"
         },
-        "gx:keyword": "Virtual Machine",
         "gx:provisionType": "Private",
-        "gx:name": "Virtual Machine Service Offering",
-        "gx:description": "Offering virtual machine services with high-performance options",
+        "gx:servicePolicy": [
+          "https://wizard-api.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/service_8sQS_policy.json"
+        ],
         "gx:endpoint": {
-          "type": "gx:Endpoint",
+          "gx:standardConformity": [
+            {
+              "gx:publisher": "OpenAPI",
+              "gx:standardReference": {
+                "@value": "https://github.com/topics/confidential-computing",
+                "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+              },
+              "type": "gx:StandardConformity",
+              "gx:title": "OpenAPI 3.0"
+            }
+          ],
           "gx:endpointURL": "https://pdfobject.com/pdf/sample/",
-          "gx:standardConformity": {
-            "type": "gx:StandardConformity",
-            "gx:title": "OpenAPI 3.0",
-            "gx:standardReference": {
+          "gx:formalDescription": "API for managing virtual machine services",
+          "type": "gx:Endpoint"
+        },
+        "gx:dataAccountExport": [
+          {
+            "gx:formatType": ["1d-interleaved-parityfec"],
+            "gx:requestType": "email",
+            "gx:accessType": "digital",
+            "type": "gx:DataAccountExport"
+          }
+        ],
+        "gx:serviceOfferingTermsAndConditions": [
+          {
+            "type": "gx:TermsAndConditions",
+            "gx:url": "http://www.stackoverflow.com",
+            "gx:hash": "d8402a23de560f5ab34b22d1a142feb9e13b3143"
+          }
+        ],
+        "gx:instantiationReq": {
+          "gx:hardwareAssistedVirtualization": true,
+          "gx:network": "10 Gbps",
+          "gx:cpu": {
+            "gx:numberOfCores": 4,
+            "gx:generation": "t2.micro",
+            "gx:cpuArchitecture": "x86-64",
+            "type": "gx:CPU",
+            "gx:numberOfThreads": 4,
+            "gx:vendor": "AWS",
+            "gx:smtEnabled": true,
+            "gx:lastLevelCacheSize": {
+              "gx:unit": "MegaBYTE",
+              "gx:value": {
+                "@value": 12,
+                "@type": "xsd:float"
+              },
+              "type": "gx:MemorySize"
+            },
+            "gx:thermalDesignPower": {
+              "gx:unit": "MegaW",
+              "gx:value": {
+                "@value": 12,
+                "@type": "xsd:float"
+              },
+              "type": "gx:Power"
+            },
+            "gx:cpuFlag": ["ADX"],
+            "gx:boostFrequency": {
+              "gx:unit": "MegaHZ",
+              "gx:value": {
+                "@value": 4,
+                "@type": "xsd:float"
+              },
+              "type": "gx:FrequencyDefinition"
+            },
+            "gx:defaultOversubscriptionRatio": 1,
+            "gx:baseFrequency": {
+              "gx:unit": "HZ",
+              "gx:value": {
+                "@value": 4,
+                "@type": "xsd:float"
+              },
+              "type": "gx:FrequencyDefinition"
+            },
+            "gx:supportedOversubscriptionRatio": 1
+          },
+          "gx:bootVolume": {
+            "gx:diskBusType": "SATA",
+            "gx:generation": "latest",
+            "gx:diskSize": {
+              "gx:unit": "GB",
+              "gx:value": {
+                "@value": 4,
+                "@type": "xsd:float"
+              },
+              "type": "gx:MemorySize"
+            },
+            "gx:defaultOversubscriptionRatio": 1,
+            "type": "gx:Disk",
+            "gx:vendor": "Sandisk",
+            "gx:diskType": "local SSD",
+            "gx:supportedOversubscriptionRatio": 1
+          },
+          "type": "gx:ServerFlavor",
+          "gx:hypervisor": {
+            "gx:patchLevel": "1",
+            "gx:checksum": {
+              "gx:checkSumValue": "120EA8A25E5D487BF68B5F7096440019",
+              "gx:checkSumCalculation": "md5",
+              "type": "gx:CheckSum"
+            },
+            "gx:signature": {
+              "gx:hashAlgorithm": "sha-1",
+              "gx:signatureValue": "120EA8A25E5D487BF68B5F7096440019",
+              "gx:signatureAlgorithm": "KCDSA",
+              "type": "gx:Signature"
+            },
+            "gx:hypervisorType": "quemu",
+            "gx:version": "Ubuntu 20.04 LTS",
+            "gx:resourcePolicy": ["ODRL", "Rego"],
+            "gx:buildDate": {
+              "@value": "2022-09-27T18:00:00.000",
+              "@type": "xsd:dateTime"
+            },
+            "type": "gx:Hypervisor",
+            "gx:copyrightOwnedBy": ["Example Corp. 1", "Example Corp. 2"],
+            "gx:license": ["Glide", "Abstyles", "AFL-1.1", "AFL-1.2"]
+          },
+          "gx:ram": {
+            "gx:memorySize": {
+              "gx:unit": "GB",
+              "gx:value": {
+                "@value": 4,
+                "@type": "xsd:float"
+              },
+              "type": "gx:MemorySize"
+            },
+            "gx:memoryClass": "SDRAM",
+            "gx:generation": "latest",
+            "gx:memoryRank": "4R LRDIMM",
+            "gx:defaultOversubscriptionRatio": 1,
+            "type": "gx:Memory",
+            "gx:vendor": "Sandisk",
+            "gx:hardwareEncryption": true,
+            "gx:eccEnabled": true,
+            "gx:supportedOversubscriptionRatio": 1
+          },
+          "gx:description": "High-performance server flavor for demanding applications",
+          "gx:confidentialComputing": {
+            "gx:technology": "GoLang",
+            "type": "gx:ConfidentialComputing",
+            "gx:attestationServiceURI": {
               "@value": "https://github.com/topics/confidential-computing",
               "@type": "xsd:anyURI"
-            },
-            "gx:publisher": "OpenAPI"
+            }
           },
-          "gx:formalDescription": "API for managing virtual machine services"
+          "gx:hwRngTypeOfFlavor": "Quantum",
+          "gx:name": "High Performance Server",
+          "gx:gpu": {
+            "gx:gpuProcessingUnits": 16,
+            "gx:gpuPassthrough": true,
+            "gx:generation": "t2.micro",
+            "gx:gpuMemory": {
+              "gx:unit": "TeraBYTE",
+              "gx:value": {
+                "@value": 12,
+                "@type": "xsd:float"
+              },
+              "type": "gx:MemorySize"
+            },
+            "gx:gpuInterconnection": "NVLink",
+            "gx:defaultOversubscriptionRatio": 1,
+            "type": "gx:GPU",
+            "gx:vendor": "AWS",
+            "gx:supportedOversubscriptionRatio": 1
+          },
+          "gx:additionalVolume": [
+            {
+              "gx:diskBusType": "SATA",
+              "gx:generation": "latest",
+              "gx:diskSize": {
+                "gx:unit": "TB",
+                "gx:value": {
+                  "@value": 1,
+                  "@type": "xsd:float"
+                },
+                "type": "gx:MemorySize"
+              },
+              "gx:defaultOversubscriptionRatio": 1,
+              "type": "gx:Disk",
+              "gx:vendor": "Sandisk",
+              "gx:diskType": "local SSD",
+              "gx:supportedOversubscriptionRatio": 1
+            }
+          ]
+        },
+        "type": "gx:VirtualMachineServiceOffering",
+        "gx:description": "Offering virtual machine services with high-performance options",
+        "gx:name": "Virtual Machine Service Offering",
+        "gx:keyword": ["Virtual Machine"],
+        "gx:tenantSeparation": "hw-virtualized",
+        "id": "https://dev-wizard.dynamo-demo.com/1e6fde96-c312-4ff0-a251-5a27a91b7067/virtual_machine_CKYrGC.json",
+        "gx:codeArtifact": {
+          "gx:hwRngTypeOfImage": "Electrical noise",
+          "gx:checkSum": {
+            "gx:checkSumValue": "120EA8A25E5D487BF68B5F7096440019",
+            "gx:checkSumCalculation": "blake2",
+            "type": "gx:CheckSum"
+          },
+          "gx:patchLevel": "1",
+          "gx:encryption": {
+            "type": "gx:Encryption",
+            "gx:keyManagement": "BYOK",
+            "gx:cipher": "RSA"
+          },
+          "type": "gx:VMImage",
+          "gx:hypervisorType": "quemu",
+          "gx:rootDiskReq": {
+            "gx:diskBusType": "SATA",
+            "gx:generation": "latest",
+            "gx:diskSize": {
+              "gx:unit": "GB",
+              "gx:value": {
+                "@value": 4,
+                "@type": "xsd:float"
+              },
+              "type": "gx:MemorySize"
+            },
+            "gx:defaultOversubscriptionRatio": 1,
+            "type": "gx:Disk",
+            "gx:vendor": "Sandisk",
+            "gx:diskType": "local SSD",
+            "gx:supportedOversubscriptionRatio": 1
+          },
+          "gx:watchDogAction": "reset",
+          "gx:version": "Ubuntu 20.04 LTS",
+          "gx:multiQueues": true,
+          "gx:ramReq": {
+            "gx:memorySize": {
+              "gx:unit": "GB",
+              "gx:value": {
+                "@value": 4,
+                "@type": "xsd:float"
+              },
+              "type": "gx:MemorySize"
+            },
+            "gx:memoryClass": "SDRAM",
+            "gx:generation": "latest",
+            "gx:memoryRank": "4R LRDIMM",
+            "gx:defaultOversubscriptionRatio": 1,
+            "type": "gx:Memory",
+            "gx:vendor": "Sandisk",
+            "gx:hardwareEncryption": true,
+            "gx:eccEnabled": true,
+            "gx:supportedOversubscriptionRatio": 1
+          },
+          "gx:gpuReq": {
+            "gx:gpuProcessingUnits": 16,
+            "gx:gpuPassthrough": true,
+            "gx:generation": "t2.micro",
+            "gx:gpuMemory": {
+              "gx:unit": "TeraBYTE",
+              "gx:value": {
+                "@value": 12,
+                "@type": "xsd:float"
+              },
+              "type": "gx:MemorySize"
+            },
+            "gx:gpuInterconnection": "NVLink",
+            "gx:defaultOversubscriptionRatio": 1,
+            "type": "gx:GPU",
+            "gx:vendor": "AWS",
+            "gx:supportedOversubscriptionRatio": 1
+          },
+          "gx:fileSize": {
+            "gx:unit": "GB",
+            "gx:value": {
+              "@value": 4,
+              "@type": "xsd:float"
+            },
+            "type": "gx:MemorySize"
+          },
+          "gx:updateStrategy": {
+            "gx:replaceFrequency": "yearly",
+            "type": "gx:UpdateStrategy",
+            "gx:providedUntil": "none",
+            "gx:oldVersionsValidUntil": "forever",
+            "gx:hotfixHours": 5
+          },
+          "gx:maintenance": {
+            "gx:subscriptionRequired": true,
+            "gx:maintainedUntil": {
+              "@value": "2025-12-31",
+              "@type": "xsd:date"
+            },
+            "gx:subscriptionIncluded": true,
+            "type": "gx:MaintenanceSubscription"
+          },
+          "gx:signature": {
+            "gx:hashAlgorithm": "sha-1",
+            "gx:signatureValue": "120EA8A25E5D487BF68B5F7096440019",
+            "gx:signatureAlgorithm": "KCDSA",
+            "type": "gx:Signature"
+          },
+          "gx:secureBoot": true,
+          "gx:vPMU": true,
+          "gx:resourcePolicy": ["ODRL", "Rego"],
+          "gx:vmImageDiskFormat": "RAW",
+          "gx:copyrightOwnedBy": ["Example Corp. 1", "Example Corp. 2"],
+          "gx:license": ["Glide", "Abstyles", "AFL-1.1", "AFL-1.2"],
+          "gx:description": "Offering virtual machine services with high-performance options",
+          "gx:cpuReq": {
+            "gx:numberOfCores": 4,
+            "gx:generation": "t2.micro",
+            "gx:cpuArchitecture": "x86-64",
+            "type": "gx:CPU",
+            "gx:numberOfThreads": 4,
+            "gx:vendor": "AWS",
+            "gx:smtEnabled": true,
+            "gx:lastLevelCacheSize": {
+              "gx:unit": "MegaBYTE",
+              "gx:value": {
+                "@value": 12,
+                "@type": "xsd:float"
+              },
+              "type": "gx:MemorySize"
+            },
+            "gx:thermalDesignPower": {
+              "gx:unit": "MegaW",
+              "gx:value": {
+                "@value": 12,
+                "@type": "xsd:float"
+              },
+              "type": "gx:Power"
+            },
+            "gx:cpuFlag": ["ADX"],
+            "gx:boostFrequency": {
+              "gx:unit": "MegaHZ",
+              "gx:value": {
+                "@value": 4,
+                "@type": "xsd:float"
+              },
+              "type": "gx:FrequencyDefinition"
+            },
+            "gx:defaultOversubscriptionRatio": 1,
+            "gx:baseFrequency": {
+              "gx:unit": "HZ",
+              "gx:value": {
+                "@value": 4,
+                "@type": "xsd:float"
+              },
+              "type": "gx:FrequencyDefinition"
+            },
+            "gx:supportedOversubscriptionRatio": 1
+          },
+          "gx:videoRamSize": {
+            "gx:unit": "GB",
+            "gx:value": {
+              "@value": 4,
+              "@type": "xsd:float"
+            },
+            "type": "gx:MemorySize"
+          },
+          "gx:licenseIncluded": true,
+          "gx:name": "Virtual Machine Service Offering",
+          "gx:buildDate": {
+            "@value": "2022-09-27T18:00:00.000",
+            "@type": "xsd:dateTime"
+          },
+          "gx:firmwareType": "UEFI",
+          "gx:operatingSystem": {
+            "gx:patchLevel": "1",
+            "gx:checksum": {
+              "gx:checkSumValue": "120EA8A25E5D487BF68B5F7096440019",
+              "gx:checkSumCalculation": "md5",
+              "type": "gx:CheckSum"
+            },
+            "gx:signature": {
+              "gx:hashAlgorithm": "sha-1",
+              "gx:signatureValue": "120EA8A25E5D487BF68B5F7096440019",
+              "gx:signatureAlgorithm": "KCDSA",
+              "type": "gx:Signature"
+            },
+            "gx:version": "Ubuntu 20.04 LTS",
+            "gx:name": "Virtual Machine Service Offering",
+            "gx:osDistribution": ["Alpine Linux"],
+            "gx:resourcePolicy": ["ODRL", "Rego"],
+            "gx:buildDate": {
+              "@value": "2022-09-27T18:00:00.000",
+              "@type": "xsd:dateTime"
+            },
+            "type": "gx:OperatingSystem",
+            "gx:copyrightOwnedBy": ["Example Corp. 1", "Example Corp. 2"],
+            "gx:license": ["Glide", "Abstyles", "AFL-1.1", "AFL-1.2"],
+            "gx:description": "Offering virtual machine services with high-performance options"
+          }
         }
       },
+      "id": "https://dev-wizard.dynamo-demo.com/1e6fde96-c312-4ff0-a251-5a27a91b7067/virtual_machine_CKYrGC.json",
+      "type": "VerifiableCredential",
+      "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://w3id.org/security/suites/jws-2020/v1",
+        {
+          "gx": "https://dev-registry.dynamo-demo.com/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#",
+          "xsd": "http://www.w3.org/2001/XMLSchema#"
+        }
+      ],
+      "issuer": "did:web:unique89-fr79537407926.dev-wizard.dynamo-demo.com",
       "proof": {
         "type": "JsonWebSignature2020",
-        "created": "2024-09-23T12:45:21.843Z",
+        "created": "2024-12-05T13:03:04.721Z",
         "proofPurpose": "assertionMethod",
-        "verificationMethod": "did:web:lakhani2024.dev.smart-x.smartsenselabs.com#JWK2020-RSA",
-        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..n6-A9rdRZz7gSlbdry6tdVlgMtXgl1mDVJ6cFlkQnDvZfo55JJ5ywP-E7O5o0OqGp9b1gqrCmhzFqsJAPfKdPPLqrnavhiPiqLduNSDow3MG1VAP7mM3zzEx-6VywOrCMoFGLopSMjAUQiY42o97cg5PN0HJH6pRvZrd-TaA_5ZSyA_UBEzqdXtTJ_1FYq4pxXkdSFzkhZIG5ZHnk1Emykwx1GkK5rEewb4wfO1sd6EUwyhIn9jD7R02A7jMAEEdQCLnB_TiMsLkio5ykPBDE1MwoSIl_lmgjbrAFpb37OJGfGOsgqFsDLAdlywwc60Hf4TUR8F7bzcxL_FJZhQzJg"
+        "verificationMethod": "did:web:unique89-fr79537407926.dev-wizard.dynamo-demo.com#JWK2020-RSA",
+        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..jAkMBDWdEglbqIzgFQ4jix326scXYmiP2FYvL0sp7kVMh9fvM0EMKQMCIOBvRmqorueAVyMLQFiQldsCEEpw6ltt04DmIM3kVV-YvQqIY9wXgbKUK-QmtmwkfnV8TLlNdwBM-3xLWdd7pqiKxjfPJROVe2oNl9Xw6_RnlyU4wvnnEQ6q3Pyc-U_xNGwZ4CXUm-6IGOnoHpC_3YTPuZS0_uH5oPF8L9q25WFj4fjenSvPFpmReBk82A3YdpxnlUN5-MhtuEqF-_Z1vtmkiAeFojgxg8A5HcoARXQqmy2dNfXh-NhOCHGvzX46uDLloFiYdHBKNHGGv4eW3SOr6HXmjg"
       }
     }
   ]

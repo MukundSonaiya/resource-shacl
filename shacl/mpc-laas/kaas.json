@@ -3,35 +3,35 @@
   "type": ["VerifiablePresentation"],
   "verifiableCredential": [
     {
+      "issuanceDate": "2024-12-16T10:58:12.073699919Z",
       "credentialSubject": {
-        "gx:legalName": "Pinank2024",
         "gx:headquarterAddress": {
-          "gx:countrySubdivisionCode": "AF-BDS"
+          "gx:countrySubdivisionCode": "IT-34"
+        },
+        "gx:legalRegistrationNumber": {
+          "id": "https://dec1620241623-fr79537407926.dev-wizard.dynamo-demo.com/d06583b4-17e4-48e3-adb4-f8b8969d5bbe/participant.json#1"
         },
         "gx:legalAddress": {
-          "gx:countrySubdivisionCode": "AF-BDS"
+          "gx:countrySubdivisionCode": "IT-34"
         },
-        "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/participant.json#0",
+        "id": "https://dec1620241623-fr79537407926.dev-wizard.dynamo-demo.com/d06583b4-17e4-48e3-adb4-f8b8969d5bbe/participant.json#0",
         "type": "gx:LegalParticipant",
-        "gx:legalRegistrationNumber": {
-          "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/participant.json#1"
-        }
+        "gx:legalName": "Dec1620241623"
       },
+      "id": "https://dec1620241623-fr79537407926.dev-wizard.dynamo-demo.com/d06583b4-17e4-48e3-adb4-f8b8969d5bbe/participant.json#0",
+      "type": ["VerifiableCredential"],
       "@context": [
         "https://www.w3.org/2018/credentials/v1",
         "https://w3id.org/security/suites/jws-2020/v1",
         "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
       ],
-      "type": ["VerifiableCredential"],
-      "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/participant.json#0",
-      "issuer": "did:web:lakhani2024.dev.smart-x.smartsenselabs.com",
-      "issuanceDate": "2024-08-07T12:39:41.320625325Z",
+      "issuer": "did:web:dec1620241623-fr79537407926.dev-wizard.dynamo-demo.com",
       "proof": {
         "type": "JsonWebSignature2020",
-        "created": "2024-08-07T12:39:43.123Z",
+        "created": "2024-12-16T10:58:12.665Z",
         "proofPurpose": "assertionMethod",
-        "verificationMethod": "did:web:lakhani2024.dev.smart-x.smartsenselabs.com#JWK2020-RSA",
-        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..lmS16OIAAMA4f7CXSr0W0ImOz9tyFCf2hRF_4kHggtbMUEM0AvCfRN9y5Vz6C87jhW_TgmLbxyJMfTg5USvhkH5ORQAbctqsXP1Jw5r0sr21bR_OSNANWCbXSx_mX-3C2PQ2X-xE-aApKHUlBhB46yNvROcrg4t1gJvDJ62BH59wTEvIUiw-NtHiFfqap5enAJV9XCTn-u3yGFtJ8OU9W6s6pKRpzWrl9VfffD-6EPWSGEAt4ASNaQo7TzyJtdZ0fVnZNEjHeHY096wN8013oVnwl3sIm39K4nvOZXtdMUcgBwQaW8jzcMNbSK9DeGLSKaXOgIz2QDUaCDyArAX36g"
+        "verificationMethod": "did:web:dec1620241623-fr79537407926.dev-wizard.dynamo-demo.com#JWK2020-RSA",
+        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..MreL9IQRch08qX3pl7tnPhHeFtz5n13-YdP0RTeY44_8q6mholBz9p0cM9tjrlzLbnqW75vzIR3jJ4qGOpVQ8ozMO6xqPDJSIAoOQW1QEYm_695iMSpKu5jcfZypwLyImVRgl-3xGubYAu4l7TFiD4X10o93CUbjNE5AWrn0OgIu-q1OYzZKxHypy-ZeoYjcLIQWipQ82MWw9kVHvcBiMDw8BFXuMlQJr2iSEUd-br4uU-12ulxoqv_ee7bAvKFG1jBwXgPAOlWMhM7i0ABQCkWBsCGMrA4FE3zYCr8eWuub526WKjptkQ8CpyB6Wu0x7YWtbcYak8y0Q1s-lg5ARw"
       }
     },
     {
@@ -40,40 +40,36 @@
         "https://w3id.org/security/suites/jws-2020/v1"
       ],
       "type": ["VerifiableCredential"],
-      "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/participant.json#1",
-      "issuer": "did:web:registration.lab.gaia-x.eu:v1",
-      "issuanceDate": "2024-08-07T12:39:41.898Z",
+      "id": "https://dec1620241623-fr79537407926.dev-wizard.dynamo-demo.com/d06583b4-17e4-48e3-adb4-f8b8969d5bbe/participant.json#1",
+      "issuer": "did:web:gx-notary.aruba.it:v1",
+      "issuanceDate": "2024-12-16T10:58:12.375Z",
       "credentialSubject": {
         "@context": "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#",
         "type": "gx:legalRegistrationNumber",
-        "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/participant.json#1",
+        "id": "https://dec1620241623-fr79537407926.dev-wizard.dynamo-demo.com/d06583b4-17e4-48e3-adb4-f8b8969d5bbe/participant.json#1",
         "gx:vatID": "FR79537407926",
         "gx:vatID-countryCode": "FR"
       },
       "evidence": [
         {
           "gx:evidenceURL": "http://ec.europa.eu/taxation_customs/vies/services/checkVatService",
-          "gx:executionDate": "2024-08-07T12:39:41.898Z",
+          "gx:executionDate": "2024-12-16T10:58:12.375Z",
           "gx:evidenceOf": "gx:vatID"
         }
       ],
       "proof": {
         "type": "JsonWebSignature2020",
-        "created": "2024-08-07T12:39:42.053Z",
+        "created": "2024-12-16T10:58:12.381Z",
         "proofPurpose": "assertionMethod",
-        "verificationMethod": "did:web:registration.lab.gaia-x.eu:v1#X509-JWK2020",
-        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..UorxvpR1Sig6F9eep4vVeSd8Ha1PpaX9Rmj2mwL3WkbYYayiB7DTPhsdXVhQHPdzDhCDp8FnaHYase06OJEYb2jeZIfMw7007xpxTK2CJDxFcJPJnlGk_lLCDoW-76qmlJ_7Q1vxHm5rtZ06WDrXIwk73bNhplMYkcw8_8Ke19ytHX45fKXoPrCLFf8fKb9jHr5Ze1DUQkWKxuIsJFKtGNuWF-eT34U6N15AMhAd7RE545dvF_71b3BoOJlLJKN3z25kNK_7m6Js00TZgpl9LPlE8aqqryOGqpvRHi8GH2O9AzKw3RjT8D_nOEIK93hwxlog8Ney_v62098axiwL5g"
+        "verificationMethod": "did:web:gx-notary.aruba.it:v1#X509-JWK2020",
+        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..qWXd2ujsuLxI7593viwSM7GPCAazmPF6ZrpUiruz3ZIi8oopfW-DQZJM0vCI8EdDa9oXo65wcZUehEwLTV8y8Iz2KtA_4j-shtC-vleL1Eiw0mTdcHefp1GVO8_bbPCSHEPpNIb-Q7ZCXJLN47j9zxdoFivCGLBjHQNq2lV3i0uSxHelADtV-5WpeicyM2MeShEOQUqtoSU2tj3SXfw8JOtvHwTiV4AbMIhjbqjgZ5LeyR9A7-1PxAPl653i6wwVxIjIxMTVB1WxSQ6YhyWfCyjJzS-fMmYep7tMtQ9ulGrKZ1Yiid68N6td97qFi_ZUO17BgQhAfKFmIoShN4B3wQ"
       }
     },
     {
-      "@context": [
-        "https://www.w3.org/2018/credentials/v1",
-        "https://w3id.org/security/suites/jws-2020/v1",
-        "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
-      ],
+      "issuanceDate": "2024-12-16T10:58:12.073699919Z",
       "credentialSubject": {
         "gx:termsAndConditions": "The PARTICIPANT signing the Self-Description agrees as follows:\n- to update its descriptions about any changes, be it technical, organizational, or legal - especially but not limited to contractual in regards to the indicated attributes present in the descriptions.\n\nThe keypair used to sign Verifiable Credentials will be revoked where Gaia-X Association becomes aware of any inaccurate statements in regards to the claims which result in a non-compliance with the Trust Framework and policy rules defined in the Policy Rules and Labelling Document (PRLD).",
-        "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/participant.json#2",
+        "id": "https://dec1620241623-fr79537407926.dev-wizard.dynamo-demo.com/d06583b4-17e4-48e3-adb4-f8b8969d5bbe/participant.json#2",
         "type": "gx:GaiaXTermsAndConditions",
         "@context": [
           "https://www.w3.org/2018/credentials/v1",
@@ -81,125 +77,136 @@
           "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
         ]
       },
-      "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/participant.json#2",
-      "issuanceDate": "2024-08-07T12:39:41.320625325Z",
-      "issuer": "did:web:lakhani2024.dev.smart-x.smartsenselabs.com",
+      "id": "https://dec1620241623-fr79537407926.dev-wizard.dynamo-demo.com/d06583b4-17e4-48e3-adb4-f8b8969d5bbe/participant.json#2",
       "type": ["VerifiableCredential"],
+      "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://w3id.org/security/suites/jws-2020/v1",
+        "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
+      ],
+      "issuer": "did:web:dec1620241623-fr79537407926.dev-wizard.dynamo-demo.com",
       "proof": {
         "type": "JsonWebSignature2020",
-        "created": "2024-08-07T12:39:43.644Z",
+        "created": "2024-12-16T10:58:12.832Z",
         "proofPurpose": "assertionMethod",
-        "verificationMethod": "did:web:lakhani2024.dev.smart-x.smartsenselabs.com#JWK2020-RSA",
-        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..XcqpWQXqCXwCiwqdDfajkIP9MXxh98hSrZzJR8yzeUUdhP3iy-cA-xzULNxqxdGFJxzD5rJWw1FT3xYfPLyF2tRRD0ex1eUx5HG0bq51N0SUTBNvWy6U7CqMtAA0-B9yA0ZmU-HorhTkGVnI13jdHjvF6B7qDIxPkrUeFBDyan_mz4bBEzNJVbCQB5DMGXdnubfhzzlH2soIIxRjbY0KzzKWJOS3Q1HuAVgKWbT6tu03CGmVWJnagsd90kEDsthGCtVwsnlO2CL3hlaA_6xaEtFu1OZ1V7AzNxkIIZaMPqM21BGJErIvG8N19g7uTXZl5aEvkoSwKjRCM_yloIw2Lg"
+        "verificationMethod": "did:web:dec1620241623-fr79537407926.dev-wizard.dynamo-demo.com#JWK2020-RSA",
+        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..Qcg34xFTwMdB8mXbqVsgSclgJ9LRhBxRKCLfV217UuUTnEhCbhTR2ZfYmOTyciYyS_sDbEW0mwYSf2SdsjuIJozZiilV3_ipdvDXM7sLqxU1bHOK6_x6o0delBibpCu159PV49NfNrIzMEC_34Wvf8RiW0L6YVzzBBQY5XGeggIkshNEnUWKOWR6t3pue5YCCSubrxLJ78QMZXdVezIuKekQDRq4fxj_l1ewzuewqjFRA3_a6VzgEFzOBzGG2ah_FfZ_XLbGuRGU2g_mfVzJ4sVwKI1qkr827LCdZnm21tIGSo1oyZFmAJgo9uD0LeD_rS9aNx-hGNmXCvtKa0O47A"
       }
     },
     {
+      "issuanceDate": "2024-12-26T12:16:05.381016427Z",
+      "credentialSubject": {
+        "gx:hostedOn": ["FR-75Ccc"],
+        "gx:industryCertification": [],
+        "gx:providedBy": {
+          "id": "https://dec1620241623-fr79537407926.dev-wizard.dynamo-demo.com/d06583b4-17e4-48e3-adb4-f8b8969d5bbe/participant.json#0"
+        },
+        "gx:cpuQuantity": 2,
+        "gx:dataAccountExport": {
+          "gx:formatType": ["application/aif+json"],
+          "gx:requestType": "API",
+          "gx:accessType": "digital",
+          "type": "gx1:DataAccountExport"
+        },
+        "gx:securityCertification": [],
+        "type": "gx:KubernetesServiceOffering",
+        "gx:storageQuantity": {
+          "gx:unit": "GigaBYTE",
+          "gx:value": {
+            "@value": 50,
+            "@type": "xsd:float"
+          },
+          "type": "gx:MemorySize"
+        },
+        "gx:dependsOn": [
+          {
+            "id": "https://dev-wizard.dynamo-demo.com/d06583b4-17e4-48e3-adb4-f8b8969d5bbe/service_QcmRrl.json"
+          }
+        ],
+        "gx:description": "OVHcloud deploys, hosts, and maintains all the components for Kubernetes®, including updates linked to bugs and security patches.",
+        "gx:minimumCellRate": {
+          "gx:unit": "KiloBYTE-PER-SEC",
+          "gx:value": {
+            "@value": 1,
+            "@type": "xsd:float"
+          },
+          "type": "gx:DataRate"
+        },
+        "gx:policy": "https://smartsensesolutions.com/privacy-policy",
+        "gx:name": "B3-8",
+        "gx:termsAndConditions": {
+          "type": "gx1:SOTermsAndConditions",
+          "gx:hash": "ebfc7b17441807c58917236995a0c927fcf462cdadf01c7893f23ba4497cc072",
+          "gx:URL": "https://smartsensesolutions.com/privacy-policy"
+        },
+        "gx:gpuQuantity": 1,
+        "id": "https://dev-wizard.dynamo-demo.com/d06583b4-17e4-48e3-adb4-f8b8969d5bbe/kaas_thVq4N.json",
+        "gx:memoryQuantity": {
+          "gx:unit": "MegaBYTE",
+          "gx:value": {
+            "@value": 8192,
+            "@type": "xsd:float"
+          },
+          "type": "gx:MemorySize"
+        },
+        "gx:kubernetesVersion": ["1.31.0"]
+      },
+      "id": "https://dev-wizard.dynamo-demo.com/d06583b4-17e4-48e3-adb4-f8b8969d5bbe/kaas_thVq4N.json",
+      "type": "VerifiableCredential",
       "@context": [
         "https://www.w3.org/2018/credentials/v1",
         "https://w3id.org/security/suites/jws-2020/v1",
         {
-          "gx": "https://dev-registry.learn.smartsenselabs.com/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#",
+          "gx": "https://dev-registry.dynamo-demo.com/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#",
           "gx1": "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#",
           "xsd": "http://www.w3.org/2001/XMLSchema#"
         }
       ],
-      "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/service_iaas.json",
-      "type": "VerifiableCredential",
-      "issuer": "did:web:lakhani2024.dev.smart-x.smartsenselabs.com",
-      "issuanceDate": "2024-07-06T00:00:00Z",
-      "credentialSubject": {
-        "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/service_iaas.json",
-        "type": "gx:KubernetesServiceOffering",
-        "gx:providedBy": {
-          "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/participant.json#0"
-        },
-        "gx:policy": "https://wizard-api.dev.smart-x.smartsenselabs.com/2c9317d0-f1b2-451b-a80e-ef40750417ce/service_8sQS_policy.json",
-        "gx:termsAndConditions": {
-          "type": "gx:SOTermsAndConditions",
-          "gx:URL": "https://www.smartsensesolutions.com/privacy-policy",
-          "gx:hash": "b0c34459c1ecb9e72cbfc80386a11b07bdc43b5907f03163baa2361bc7b3f664"
-        },
-        "gx:dataAccountExport": {
-          "type": "gx:DataAccountExport",
-          "gx:requestType": "email",
-          "gx:accessType": "digital",
-          "gx:formatType": "application/1d-interleaved-parityfec"
-        },
-        "gx:hostedOn": [{
-          "id": "https://wizard-api.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/resource_dc865598-19c7-4f0c-b636-394ba275d0d3.json"
-        }],
-        "gx:name": "Kubernetes Service Offering",
-        "gx:description": "Offering virtual machine services with high-performance options",
-        "gx:cpuQuantity": 1,
-        "gx:memoryQuantity": {
-          "type": "gx:MemorySize",
-          "gx:value": {
-            "@value": 128,
-            "@type": "xsd:float"
-          },
-          "gx:unit": "MegaBYTE"
-        },
-        "gx:storageQuantity": {
-          "type": "gx:MemorySize",
-          "gx:value": {
-            "@value": 128,
-            "@type": "xsd:float"
-          },
-          "gx:unit": "MegaBYTE"
-        },
-        "gx:gpuQuantity": 2,
-        "gx:minimumCellRate": {
-          "type": "gx:DataRate",
-          "gx:value": {
-            "@value": 16,
-            "@type": "xsd:float"
-          },
-          "gx:unit": "BIT-PER-SEC"
-        },
-        "gx:kubernetesVersion": "1.27.16"
+      "issuer": "did:web:dec1620241623-fr79537407926.dev-wizard.dynamo-demo.com",
+      "proof": {
+        "type": "JsonWebSignature2020",
+        "created": "2024-12-26T12:16:05.519Z",
+        "proofPurpose": "assertionMethod",
+        "verificationMethod": "did:web:dec1620241623-fr79537407926.dev-wizard.dynamo-demo.com#JWK2020-RSA",
+        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..CzOf2GLOV3QGcl9JgsM8lROaPMGt1DUIMP6Sv3g5VQYO0HyMrV0X87LNNlacn1vZOkwMceqVGmZJQrd8e66u2xiOxr0p5PQwBXqVoxZehhw7S1STuvB7mBTyR0bCr5GKqvL0QFsoJi_M9usXvrGux90Btu9qGFkrtemf8z2d9Z_elPnESB_baqsplsb_ZJ_4HjJqeEWf_UXoS6n6Evi8hYzP11AneFo9PxBJGetzJfA1SmjZ4BR_V3lTXKUjCn5muFp1VSwJt1GNBjEfIsuoKY0aT3un5QZPNDCXximECR4G27rHXj_Okk1Va20E-H1tuG0gV7pB9y5ks0Ur_zDKEw"
       }
     },
     {
-      "issuanceDate": "2024-09-17T08:42:23.28118943Z",
+      "type": "VerifiableCredential",
+      "id": "https://dev-wizard.dynamo-demo.com/d06583b4-17e4-48e3-adb4-f8b8969d5bbe/service_QcmRrl.json",
+      "issuer": "did:web:dec1620241623-fr79537407926.dev-wizard.dynamo-demo.com",
+      "issuanceDate": "2024-12-26T12:15:51.326054096Z",
       "credentialSubject": {
-        "type": "gx:PhysicalResource",
-        "gx:name": "AWS-Hardware",
-        "gx:aggregationOfExists": [
-          {
-            "id": "https://wizard-api.dev.smart-x.smartsenselabs.com/9871a17d-1a71-4a8b-b7ec-c12283cac007/resource_bbb40348-d58c-4136-b6f1-648d36a2958a.json"
-          }
-        ],
-        "gx:maintainedBy": [
-          {
-            "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/participant.json#0"
-          }
-        ],
-        "gx:ownedBy": [
-          {
-            "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/participant.json#0"
-          }
-        ],
-        "gx:manufacturedBy": [
-          {
-            "id": "https://lakhani2024.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/participant.json#0"
-          }
-        ],
-        "gx:locationAddress": [
-          {
-            "@type": "vcard:Address",
-            "gx:countryCode": "AD"
-          }
-        ],
-        "id": "https://wizard-api.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/resource_dc865598-19c7-4f0c-b636-394ba275d0d3.json"
+        "gx:providedBy": {
+          "id": "https://dec1620241623-fr79537407926.dev-wizard.dynamo-demo.com/d06583b4-17e4-48e3-adb4-f8b8969d5bbe/participant.json#0"
+        },
+        "gx:policy": ["https://smartsensesolutions.com/privacy-policy"],
+        "gx:name": "B3-8",
+        "gx:termsAndConditions": {
+          "gx:hash": "69916d1951b99c87b3417f702bb7aaeb37acbd7feb36dd29a84cc491d2b68ab3",
+          "gx:URL": "https://smartsensesolutions.com/privacy-policy"
+        },
+        "gx:dataAccountExport": {
+          "gx:formatType": "application/aif+json",
+          "gx:requestType": "API",
+          "gx:accessType": "digital"
+        },
+        "id": "https://dev-wizard.dynamo-demo.com/d06583b4-17e4-48e3-adb4-f8b8969d5bbe/service_QcmRrl.json",
+        "type": "gx:ServiceOffering",
+        "gx:description": "OVHcloud deploys, hosts, and maintains all the components for Kubernetes®, including updates linked to bugs and security patches."
       },
-      "id": "https://wizard-api.dev.smart-x.smartsenselabs.com/16c45dca-a187-412c-94c4-e8f6b0f0210b/resource_dc865598-19c7-4f0c-b636-394ba275d0d3.json",
-      "type": ["VerifiableCredential"],
       "@context": [
         "https://www.w3.org/2018/credentials/v1",
-        "http://www.w3.org/2006/vcard/ns#",
+        "https://w3id.org/security/suites/jws-2020/v1",
         "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#"
       ],
-      "issuer": "did:web:lakhani2024.dev.smart-x.smartsenselabs.com"
+      "proof": {
+        "type": "JsonWebSignature2020",
+        "created": "2024-12-26T12:15:51.519Z",
+        "proofPurpose": "assertionMethod",
+        "verificationMethod": "did:web:dec1620241623-fr79537407926.dev-wizard.dynamo-demo.com#JWK2020-RSA",
+        "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..ePiPA6anEH9CK0U6rzxAOhFh7_tly1-xqig2eUPbLMWdGy1NvUW9kkMgiZRbqvYyJvW2ERxqTcbecmAKnppxzo2UXcrOJgEcPHgnYrrreZHHAxKxND28v1MzwoIYz0oXnWznV47g2HXTy79Vf1houqhrQe8uvtP4WUytv1DuEu-disxavagW2pWvqZ7JfxgPoomS4Vf-UduvlIEpVHQqPMmCcoOlbE5gy8uhSFQdVpPnH6AGGzTHLAEGp_kdFMNK9WD9n4tKAnMeAG54R4NSfz8Qvix2qBBjJhnZhf_RmXmb9D7-zgL6O7la_HPaj9Mxh-xW0bMq-R_5z8wbcJ4CBQ"
+      }
     }
   ]
 }

@@ -1,4 +1,4 @@
-@prefix gx: <https://dev-registry.learn.smartsenselabs.com/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#> .
+@prefix gx: <https://dev-registry.dynamo-demo.com/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#> .
 @prefix gx1: <https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -36,7 +36,7 @@ gx:KubernetesServiceOfferingShape a sh:NodeShape ;
             sh:maxCount 1 ;
             sh:order 2 ;
             sh:description "a resolvable link to the service offering self-description related to the service and that can exist independently of it." ;
-            sh:node gx:SOTermsAndConditions ] ,
+            sh:node gx1:SOTermsAndConditions ] ,
 
         [ sh:path gx:dataAccountExport ;
             sh:name "data account export" ;
@@ -44,7 +44,7 @@ gx:KubernetesServiceOfferingShape a sh:NodeShape ;
             sh:maxCount 1 ;
             sh:order 3 ;
             sh:description "list of methods to export data from your user’s account out of the service" ;
-            sh:node gx:DataAccountExport ] ,
+            sh:node gx1:DataAccountExport ] ,
 
         [ sh:datatype xsd:string ;
             sh:description "A human readable name of the entity." ;
@@ -64,10 +64,11 @@ gx:KubernetesServiceOfferingShape a sh:NodeShape ;
             sh:order 5 ;
             sh:path gx:description ] ,
 
-        [ sh:description "List of Resource references where service is hosted and can be instantiated. Can refer to availabilty zones, data centers, regions, etc." ;
-            sh:name "hosted on" ;
-            sh:or ( [ sh:class gx1:VirtualResource ] [ sh:class gx1:PhysicalResource ] ) ;
+        [ sh:description "List of Resource references where service is hosted and can be instantiated. Can refer to availabilty zones, data centers, regions, etc.." ;
+            sh:datatype xsd:string ;
             sh:minCount 1 ;
+            sh:pattern "^[A-Z]{2}-[A-Z0-9]{1,3}$" ;
+            sh:flags "i" ;
             sh:order 6 ;
             sh:path gx:hostedOn ] ,
 
@@ -124,7 +125,35 @@ gx:KubernetesServiceOfferingShape a sh:NodeShape ;
             sh:order 12 ;
             sh:pattern "^1\\.(1[6-9]|[2-9][0-9])\\.\\d+$" ; # Regex pattern for Kubernetes version validation
 	        sh:message "Invalid Kubernetes version format. Expected format: '1.x.y' with x >= 16." ;
-            sh:path gx:kubernetesVersion ] ;
+            sh:path gx:kubernetesVersion ] ,
+        
+        [ sh:datatype xsd:string ;
+            sh:description "Name of Industry Certificate for this Service" ;
+            sh:name "industryCertification" ;
+            sh:nodeKind sh:Literal ;
+            sh:order 13 ;
+            sh:path gx:industryCertification ] ,
+
+        [ sh:datatype xsd:string ;
+            sh:description "Name of Security Certificate for this Service" ;
+            sh:name "securityCertification" ;
+            sh:nodeKind sh:Literal ;
+            sh:order 14 ;
+            sh:path gx:securityCertification ] ,
+            
+        [ sh:description "Kubernetes billing mode" ;
+            sh:in ( "Hourly" "Monthly" ) ;
+            sh:maxCount 1 ;
+            sh:name "Kubernetes Billing Mode" ;
+            sh:order 15 ;
+            sh:path gx:kubernetesBillingMode ] , 
+        
+        [ sh:description "A list of resolvable links to Gaia-X Credentials of service offerings related to the service and that can exist independently of it." ;
+            sh:name "depends on" ;
+            sh:minCount 1 ;
+            sh:or ( [ sh:class gx1:ServiceOffering ] [ sh:class gx:VirtualMachineServiceOffering ] ) ;
+            sh:order 16 ;
+            sh:path gx:dependsOn ] ;
 
     sh:targetClass gx:KubernetesServiceOffering .
 
